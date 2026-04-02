@@ -3,35 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自動化に向けたCTK監視是正 | FunUni-lab</title>
+    <title>VMware CBT不整合の自動検知と是正 | FunUni-lab</title>
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">← カテゴリに戻る</a>
-            <h1 style="margin-top: 2rem; font-size: 2.5rem;">自動化に向けたCTK監視是正</h1>
+    <div class="container" style="max-width: 800px;">
+        <header class="animate-in">
+            <a href="index.html" class="nav-link">← カテゴリに戻る</a>
+            <h1 style="margin-top: 2rem; font-size: clamp(2rem, 6vw, 3.5rem);">自動化に向けたCTK監視是正</h1>
+            <p class="subtitle">VMware vSphere環境におけるバックアップトラブルを防ぐ。CBT（Changed Block Tracking）不整合の検知と是正を自動化する実践手法。</p>
         </header>
 
-        <main style="background: var(--card-bg); padding: 3rem; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <main class="article-content animate-in" style="animation-delay: 0.2s;">
             <section>
-                <h2>背景・課題</h2>
-                <p>VMware環境において、増分バックアップからフルバックアップへ意図せず切り替わる問題が発生。原因は ctkEnabled / scsiX:Y.ctkEnabled の不整合であることを特定しました。</p>
+                <h2>背景：なぜCBT/CTKは不整合を起こすのか</h2>
+                <p>VMwareの増分バックアップに不可欠な機能であるCBT（Changed Block Tracking）は、仮想マシンの構成パラメータ（ctkEnabled）と実際の仮想ディスク（scsiX:Y.ctkEnabled）の不整合により、予期せず無効化されることがあります。</p>
+                <p>主な原因として、スナップショットの頻繁な作成・削除、VMの強制終了、あるいは一部の移行作業に伴う設定情報の不一致が挙げられます。これが起きると、バックアップソフトはデータの整合性を保つためにフルスキャン（事実上のフルバックアップ）にフォールバックし、バックアップ時間とストレージ容量を圧迫します。</p>
             </section>
 
-            <section style="margin-top: 2rem;">
-                <h2>解決策：CBT/CTK監視の自動化</h2>
-                <p>手動オペレーションを削減するため、PowerCLIとJenkinsを組み合わせた自動是正フローを構築しました。これにより、毎日12時の定期実行による早期検知と自動復旧が可能になりました。</p>
+            <section>
+                <h2>技術スタック：PowerCLI × Jenkins</h2>
+                <p>手動での確認を排除するため、PowerCLIを使用して全VMのCBTステータスを走査し、不整合（パラメータがFalse、あるいは欠落）を検知した場合に自動的にリセットするフローを構築しました。</p>
+                <p>Jenkinsを用いることで、毎日12:00（バックアップ実行前）の定期実行と、是正結果の通知を一元管理しています。</p>
             </section>
 
-            <section style="margin-top: 2rem;">
-                <h2>今後の展望</h2>
-                <p>この自動化を基盤として、来年度の目標である「標準化・自動化・AI活用」への展開を加速させていきます。</p>
+            <section>
+                <h2>自動是正スクリプトの実装例</h2>
+                <span class="code-header">PowerCLI Script (CBT Reset logic)</span>
+<pre><code># CBTの不整合をチェックし、必要に応じてリセットする
+$vmlist = Get-VM | Where-Object { $_.PowerState -eq "PoweredOn" }
+
+foreach ($vm in $vmlist) {
+    $cbtEnabled = $vm.ExtensionData.Config.ChangeTrackingEnabled
+    if ($cbtEnabled -ne $true) {
+        Write-Host "Resetting CBT for $($vm.Name)..."
+        
+        # CBTの再有効化プロセス
+        $spec = New-Object VMware.Vim.VirtualMachineConfigSpec
+        $spec.ChangeTrackingEnabled = $true
+        $vm.ExtensionData.ReconfigVM($spec)
+        
+        # 設定を反映させるために一時的なスナップショットを作成・削除
+        $snap = New-Snapshot -VM $vm -Name "CBT-Reset-Temp"
+        Remove-Snapshot $snap -Confirm:$false
+        
+        Write-Host "CBT for $($vm.Name) has been restored."
+    }
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>運用上の注意点と今後の展望</h2>
+                <p>この自動是正は非常に強力ですが、高負荷なワークロード（DBサーバー等）に対しスナップショットを頻繁に作成・削除すると、スタン（一瞬のフリーズ）が発生する可能性があるため、実行タイミングには注意が必要です。今後はAIを活用し、バックアップの過去ログから不整合の兆候を予測検知する仕組みを検討しています。</p>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2026 FunUni-lab</p>
+        <footer class="animate-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2026 FunUni-lab | IT Infrastructure Excellence</p>
         </footer>
     </div>
 </body>

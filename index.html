@@ -3,52 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FunUni-lab | IT・ポイ活・AIの総合情報発信ポータル</title>
-    <meta name="description" content="FunUni-labは、IT技術、ポイ活（お得情報）、AI活用術など、明日の生活を少し豊かにする情報を発信するラボです。">
+    <title>FunUni-lab | IT・ポイ活・AIの総合技術ラボ</title>
+    <meta name="description" content="FunUni-labは、IT技術、ポイ活、AI活用術を研究し、明日の生活を豊かにするためのエンジニアリング情報を発信するラボです。">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="animate-in">
             <h1>FunUni-lab</h1>
-            <p class="subtitle">IT技術・ポイ活・AI活用。未来を少しだけ先取りする、FunUniエンジニアの実験場。</p>
+            <p class="subtitle">未来を少しだけ先取りする、FunUniエンジニアの実験場。<br>インフラ自動化からAI活用まで、技術の力で日常をアップデートします。</p>
         </header>
 
-        <main class="grid">
-            <!-- 新着記事 -->
-            <a href="it/2026-04-03-operation-automation.html" class="card">
-                <span class="icon">⚙️</span>
-                <h2>新着：運用の手間を減らし、品質を上げる</h2>
-                <p>更新作業の標準化、バックアップ運用の自動是正、責任分界点の明確化など、運用改善の実践記録。</p>
+        <main class="grid animate-in" style="animation-delay: 0.2s;">
+            <!-- 新着記事 (Featured) -->
+            <a href="it/2026-04-02-ctk-auto-remediation.html" class="card" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));">
+                <span class="icon">🚀</span>
+                <div style="display: flex; flex-direction: column;">
+                    <span style="color: var(--primary); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.1em;">Featured Post</span>
+                    <h2>VMware CBT不整合の自動検知と是正フローの構築</h2>
+                    <p>バックアップ運用の安定性を劇的に向上させる、PowerCLIとJenkinsを組み合わせた自動是正スクリプトの実装解説。</p>
+                </div>
             </a>
 
             <!-- IT系 Category -->
             <a href="it/index.html" class="card">
-                <span class="icon">🚀</span>
-                <h2>IT系</h2>
-                <p>インフラ自動化、クラウド基盤、開発効率化などの技術情報を発信。自動是正スクリプトや設計の勘所を公開。</p>
+                <span class="icon">⚙️</span>
+                <h2>IT & Infra</h2>
+                <p>インフラ自動化、クラウド基盤、開発効率化。自動是正スクリプトやIaC（Infrastructure as Code）の知見を公開。</p>
             </a>
 
             <!-- ポイ活 Category -->
             <a href="points/index.html" class="card">
-                <span class="icon">💰</span>
-                <h2>ポイ活</h2>
-                <p>日常生活をお得にするポイント獲得術や、最新のキャンペーン情報、マイル・資産形成のテクニックをまとめます。</p>
+                <span class="icon">💎</span>
+                <h2>Points & Finance</h2>
+                <p>生活をお得にするポイ活術や、最新キャンペーン、マイル獲得・資産形成のエンジニアリング的アプローチ。</p>
             </a>
 
             <!-- AI系 Category -->
             <a href="ai/index.html" class="card">
                 <span class="icon">🤖</span>
-                <h2>AI系</h2>
-                <p>ChatGPTやプロンプトエンジニアリング、業務効率化AIツールの使いこなし術から、最新のAIトレンドまでをカバー。</p>
+                <h2>AI & Agents</h2>
+                <p>LLMプロンプト開発や業務AIツールの活用術。OpenClawを含む次世代エージェントの研究記録。</p>
             </a>
         </main>
 
-        <footer>
-            <p>&copy; 2026 FunUni-lab. All Rights Reserved. | Powered by GitHub Pages & OpenClaw</p>
+        <footer class="animate-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2026 FunUni-lab. All Rights Reserved.<br>Elevating daily life through engineering excellence.</p>
         </footer>
     </div>
 </body>

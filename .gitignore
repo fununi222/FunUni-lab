@@ -1,0 +1,13 @@
+# Private documentation
+SKILL.md
+
+# Temporary and local files
+.DS_Store
+*.tmp
+*.log
+node_modules/
+.openclaw/
+
+# Environment variables
+.env
+.env.local
