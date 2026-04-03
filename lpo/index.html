@@ -198,6 +198,68 @@
                     </tbody>
                 </table>
             </section>
+            <section class="radar-box">
+                <div style="width: 100%; max-width: 600px;">
+                    <canvas id="skillRadarChart"></canvas>
+                </div>
+            </section>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('skillRadarChart').getContext('2d');
+                
+                // AIエージェントの出力(LPO_SYSTEM.md)に合わせてここを更新します
+                const data = {
+                    labels: [
+                        '技術適応力', '推進力', 'SL力', '改善提案', 'ドメイン知識',
+                        'IaC・構成管理', '監視', '開発力', '生成AI活用', 'AIエージェント',
+                        '学習・好奇心', '自己投資', '心身メンテ', '自己管理', '情報整理'
+                    ],
+                    datasets: [{
+                        label: 'Current Skills',
+                        data: [85, 75, 70, 75, 80, 85, 85, 80, 75, 70, 85, 70, 65, 75, 80],
+                        fill: true,
+                        backgroundColor: 'rgba(78, 201, 176, 0.2)',
+                        borderColor: 'rgb(78, 201, 176)',
+                        pointBackgroundColor: 'rgb(78, 201, 176)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(78, 201, 176)'
+                    },
+                    {
+                        label: 'Target (80点)',
+                        data: [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+                        fill: false,
+                        borderColor: 'rgba(255, 255, 255, 0.3)',
+                        borderDash: [5, 5],
+                        pointRadius: 0
+                    }]
+                };
+
+                const config = {
+                    type: 'radar',
+                    data: data,
+                    options: {
+                        scales: {
+                            r: {
+                                min: 0,
+                                max: 100,
+                                ticks: { stepSize: 20, color: 'rgba(255, 255, 255, 0.5)' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                pointLabels: {
+                                    color: 'rgba(255, 255, 255, 0.7)',
+                                    font: { family: "'Noto Sans JP', sans-serif", size: 11 }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: { labels: { color: 'rgba(255, 255, 255, 0.7)' } }
+                        }
+                    }
+                };
+
+                new Chart(ctx, config);
+            </script>
         </main>
 
         <footer class="animate-in" style="animation-delay: 0.4s;">
