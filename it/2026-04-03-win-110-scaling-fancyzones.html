@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Windows設定】110%スケール＆マウスのみの6画面分割 | FunUni-lab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="animate-in">
+            <a href="index.html" class="nav-link">← cd ..</a>
+            <h1>Windows Optimization</h1>
+            <p class="subtitle">【Windows設定】かゆい所に手が届く！画面表示「110%」＆マウスだけで完結する「6画面分割」の作り方</p>
+        </header>
+
+        <main class="article-content animate-in" style="animation-delay: 0.2s;">
+            <p><span class="syntax-comment">// デスクトップ環境の快適性を極限まで高めるカスタマイズ</span></p>
+            
+            <p>Windows PCを使っていて、「100%だと文字が小さいけど、125%だとデカすぎる…」とか、「画面を分割したいけど、いちいちShiftキーを押すのが面倒…」と感じたことはありませんか？</p>
+
+            <p>特に、大画面モニターを広々と使いたい時や、ROG AllyのようなキーボードがないハンドヘルドPCを使っている時、マウス（またはタッチ）操作だけでサクサクと快適な環境を作れると最高ですよね。今回は、実際に試して「これだ！」と感動したカスタマイズ方法をご紹介します。</p>
+
+            <h2>1. 絶妙なサイズ感！画面の表示スケールを「110%」にする方法</h2>
+            <p>Windows 11/10の「ディスプレイの拡大縮小」設定は、標準だと100%、125%、150%といった25%刻みになっています。しかし、これだと「100%と125%の間が欲しい！」という絶妙なニーズを満たせません。</p>
+            <p>実は<span class="syntax-type">「カスタムスケーリング」</span>という機能を使えば、110%に設定することが可能です。</p>
+
+            <div class="code-block">
+                <p><strong>設定手順:</strong></p>
+                <ol>
+                    <li><span class="syntax-keyword">Win</span> + <span class="syntax-keyword">I</span> キーで「設定」アプリを開く。</li>
+                    <li>左メニューの「システム」＞「ディスプレイ」をクリック。</li>
+                    <li>「拡大縮小とレイアウト」の中にある「拡大縮小」をクリックして詳細を開く。</li>
+                    <li>「カスタム スケール」の入力欄に <span class="syntax-string">110</span> と入力し、チェックマークをクリック。</li>
+                    <li>「今すぐサインアウト」をクリックして再起動。</li>
+                </ol>
+            </div>
+
+            <blockquote>
+                <p><strong>💡 注意点:</strong> カスタムスケーリングを使用すると、一部の古いアプリでレイアウトが崩れることがあります。気になった場合は元の設定に戻せます。</p>
+            </blockquote>
+
+            <h2>2. Shiftキーは不要！マウスだけで完結する「6画面分割」</h2>
+            <p>Microsoft公式の無料拡張ツール<span class="syntax-type">「PowerToys」</span>。その中にある「FancyZones」という機能は、自分好みのレイアウトを作れる最強ツールです。しかし、初期設定のままだと「Shiftキーを押しながらドラッグ」する必要があり、マウスだけで完結しません。</p>
+            <p>そこで、<strong>「マウスの右クリック」だけで分割エリアを呼び出せる</strong>ように設定を変更します。</p>
+
+            <h3>設定のポイント</h3>
+            <ul>
+                <li>PowerToys の<strong>「FancyZones」</strong>メニューを開き、有効化する。</li>
+                <li><strong>「ゾーンの動作」</strong>項目で、以下の 2 箇所を変更：</li>
+                <ul>
+                    <li>❌ 「Shiftキーを押してゾーンをアクティブにする」のチェックを<strong>外す</strong></li>
+                    <li>✅ 「マウスの主ボタンでウィンドウをドラッグ時に、副ボタンをクリックしてアクティブ化を切り替える」にチェックを<strong>入れる</strong></li>
+                </ul>
+            </ul>
+
+            <p>これだけで、ウィンドウを左クリックでドラッグしながら<span class="syntax-keyword">右クリック</span>を 1 回押すだけで、分割エリアが浮かび上がります！</p>
+
+            <h2>まとめ</h2>
+            <p>表示スケールは「カスタムスケーリング」で110%に微調整し、画面分割は「FancyZones」の右クリック設定でマウスのみの操作にする。この2つを設定するだけで、文字の見やすさが向上し、ウィンドウの整理もサクサク終わるようになります。</p>
+
+            <p><span class="syntax-keyword">const</span> result = <span class="syntax-string">"快適なデスクトップ環境の完成"</span>;</p>
+            <p>自分だけの最適なPC環境を作りたい方は、ぜひ試してみてくださいね！</p>
+        </main>
+
+        <footer class="animate-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2026 FunUni-lab. Built with <span class="syntax-keyword">DisplayScale.js</span> and PowerToys.</p>
+        </footer>
+    </div>
+</body>
+</html>
