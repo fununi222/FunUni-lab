@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三井住友カード100万円修行の新ルート整理 | FunUni-lab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        .timeline {
+            display: grid;
+            gap: 1rem;
+            margin: 1.6rem 0 2rem;
+        }
+        .timeline-item {
+            border: 1px solid rgba(170, 164, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .timeline-item strong {
+            color: var(--text-bright);
+        }
+        .route-box {
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(0, 210, 255, 0.08), rgba(170, 164, 255, 0.06));
+            border: 1px solid rgba(0, 210, 255, 0.18);
+        }
+        .route-box pre {
+            margin: 0;
+        }
+        .article-content h2 span,
+        .article-content h3 span {
+            color: var(--secondary);
+        }
+    </style>
+
+    <meta name="description" content="2026年3月の改定後に三井住友カード100万円修行をどう進めるか、対象外サービスとRevolut経由ルートの注意点を整理。">
+    <meta property="og:site_name" content="FunUni-lab">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="三井住友カード100万円修行の新ルート整理 | FunUni-lab">
+    <meta property="og:description" content="2026年3月の改定後に三井住友カード100万円修行をどう進めるか、対象外サービスとRevolut経由ルートの注意点を整理。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="三井住友カード100万円修行の新ルート整理 | FunUni-lab">
+    <meta name="twitter:description" content="2026年3月の改定後に三井住友カード100万円修行をどう進めるか、対象外サービスとRevolut経由ルートの注意点を整理。">
+</head>
+<body>
+    <div class="container">
+        <header class="animate-in">
+            <a href="index.html" class="nav-link">← cd ..</a>
+            <h1>SMBC Million Challenge</h1>
+            <p class="subtitle">2026年3月改定後の100万円修行で、旧ルートの変更点と Revolut 経由の代替案を整理。</p>
+        </header>
+
+        <main class="article-content animate-in" style="animation-delay: 0.2s;">
+            <p><span class="syntax-comment">// 2026-04 update for payment-route optimization</span></p>
+
+            <p>三井住友カード ゴールド（NL）などで知られる「100万円修行」は、2026年3月1日利用分から一部のチャージ先が年間利用額とポイント付与の対象外になり、従来の攻略法をそのまま使いにくくなりました。</p>
+            <p>ここでは、変更点の要約と、代替候補として話題に上がる <span class="syntax-keyword">Revolut</span> 経由ルートの実務上の注意点を、確認用メモとしてまとめます。</p>
+
+            <h2><span>01.</span> まず押さえたい変更点</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>変更適用日:</strong> 2026年3月1日利用分から
+                </div>
+                <div class="timeline-item">
+                    <strong>対象外サービス:</strong> JAL Pay / au PAY / Kyash / バンドルカード
+                </div>
+                <div class="timeline-item">
+                    <strong>影響:</strong> 旧来の <code>三井住友カード → JAL Pay → ANA Pay</code> 系ルートが、修行用途では大きく弱体化
+                </div>
+            </div>
+
+            <p>特に JAL Pay と au PAY は、これまで日常決済へつなぎやすい主力チャージ先でした。ここが塞がれたことで、年間100万円到達のための「経由チャージ戦略」を再設計する必要があります。</p>
+
+            <h2><span>02.</span> 代替候補: Revolut → ANA Pay</h2>
+            <p>現時点の代替候補として整理しやすいのは、次の流れです。</p>
+
+            <div class="route-box">
+                <pre><code>三井住友カード ゴールド（NL）
+  ↓ チャージ
+Revolut
+  ↓ チャージ
+ANA Pay
+  ↓ 利用
+モバイルSuica / 楽天Edy / 店舗決済</code></pre>
+            </div>
+
+            <p>このルートの狙いは、<code>Revolut</code> へのチャージが修行対象として機能する間に年間利用額を積み上げつつ、その先を <code>ANA Pay</code> 経由で生活圏の支払いへ接続することです。</p>
+
+            <h2><span>03.</span> 運用前に見るべき3つの注意点</h2>
+
+            <h3><span>A.</span> Mastercard 前提で設計する</h3>
+            <p>Revolut へのチャージでは、Visa ブランドだと手数料が発生するケースがあります。100万円規模で回すなら、手数料負担が収支を崩しやすいため、まずは <code>Mastercard</code> ブランド前提で考えるのが安全です。</p>
+            <p>Olive は Visa ブランドですが、デビットモードを使うことで手数料回避の余地があります。ただし、クレジット利用とは資金拘束や決済タイミングが違うため、運用感は別物として見た方がよいです。</p>
+
+            <h3><span>B.</span> ANA Pay のチャージ上限を織り込む</h3>
+            <p>Revolut などのカードから ANA Pay へは、過去30日間で10万円までという上限で運用されるケースがあります。そのため、修行期限直前にまとめて大きく流すより、月次でコツコツ積み上げる前提の設計が必要です。</p>
+
+            <h3><span>C.</span> このルートも恒久策ではない</h3>
+            <p>ポイ活ルートは固定資産ではなく、条件変更や対象外化が起こります。今は有効でも、数か月後に見直される可能性は常にあるため、使えるうちに早めに進める姿勢が重要です。</p>
+
+            <h2><span>04.</span> ANA Pay 残高の出口戦略</h2>
+            <p>ANA Pay に寄せた残高は、そのまま店舗やモバイルSuicaに使うだけでも十分ですが、Android 環境なら次のような出口も検討できます。</p>
+
+            <pre><code>ANA Pay → 楽天Edy → 楽天キャッシュ</code></pre>
+
+            <p>この動線が取れれば、楽天ペイ決済や楽天証券まわりへの接続余地も残せます。一方で iPhone では同じ抜け道を使いにくい場面があるため、端末環境に応じて「使い切りやすい出口」を選ぶのが実務的です。</p>
+
+            <h2><span>05.</span> まとめ</h2>
+            <p>2026年3月1日以降、<code>JAL Pay</code> と <code>au PAY</code> を軸にした従来ルートは、100万円修行の主戦略としてはかなり厳しくなりました。</p>
+            <ul>
+                <li>旧ルートを使える期間が残っていたなら、2026年2月末までの前倒し消化が有効</li>
+                <li>2026年3月以降は、<code>Mastercard → Revolut → ANA Pay</code> を代替候補として確認</li>
+                <li>チャージ上限と将来改定リスクを前提に、早め・分散で進めるのが現実的</li>
+            </ul>
+
+            <p><span class="syntax-keyword">const</span> policy = <span class="syntax-string">"修行ルートは固定せず、条件変更を前提に動く"</span>;</p>
+            <p>参照元: <a href="https://note.com/tanayan_poi/n/nf889f1477813" target="_blank" rel="noopener noreferrer">note.com/tanayan_poi/n/nf889f1477813</a></p>
+        </main>
+
+        <footer class="animate-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2026 FunUni-lab. Powered by <span class="syntax-keyword">PointsRouting.js</span></p>
+        </footer>
+    </div>
+</body>
+</html>
