@@ -111,11 +111,11 @@
                 RG((楽天ギフト))
                 O((楽天Cash))
                 P((楽天Pay))
-                W{{店<br>4.1~8.5%}}
-                X{{公共料金<br>0.5~10%}}
-                AA{{楽天証券<br>1.0~8.0%}}
-                T{{交通系<br>2.0%前後}}
-                L{{VISA加盟店<br>2.0%前後}}
+                W{{店<br>3.5~8.5%}}
+                X{{公共料金<br>2.0~10%}}
+                AA{{楽天証券<br>3.0~8.0%}}
+                T{{交通系<br>2.0%}}
+                L{{VISA加盟店<br>2.0%}}
                 LP["LawsonPonta+<br>(M)"]
                 S{{OKストア等<br>13%}}
                 OL["OliveG(V)"]
@@ -156,15 +156,16 @@
             <div class="route-step"><span class="number">3</span><span>ANA Pay チャージ <strong>0.5%</strong></span></div>
             <div class="route-step"><span class="number">4</span><span>楽天Edy → 楽天キャッシュ <strong>0.0%</strong></span></div>
             <div class="route-step"><span class="number">5</span><span>楽天ペイ決済 <strong>1.5%</strong></span></div>
-            <p><strong>合計還元率の考え方: 修行加算 1.5% + ANA Pay / 楽天ペイ側の還元</strong></p>
+            <p><strong>合計還元率: 3.5%</strong>（三井住友 1.5% + ANA Pay 0.5% + 楽天ペイ 1.5%）</p>
             <p>旧来の <code>JAL Pay → ANA Pay</code> ルートは、2026年3月1日利用分以降は修行の主力として扱えません。現在は <code>Revolut</code> を経由しつつ、ANA Pay 側の月次上限やブランド手数料を見ながら運用するのが実務的です。</p>
+            <p>出口側の目安は、楽天ペイ加盟店で <strong>3.5%</strong>、楽天証券の楽天キャッシュ積立で <strong>3.0%</strong>、楽天ペイ請求書払いで <strong>2.0%</strong> です。</p>
 
             <h2>2. 交通系IC & VISA加盟店：2.6% ルート</h2>
             <p>楽天ペイが使えない店舗や、電車移動で威力を発揮するルートです。ただし、旧来の <code>JAL Pay → au PAY → VポイントPay</code> は修行ルートとしては失効しました。</p>
             <ul>
                 <li>旧ルート: 三井住友G(M) → JAL Pay → au PAYプリペイド → VポイントPay</li>
                 <li>現行の実運用候補: 三井住友G(M) → Revolut → ANA Pay → Suica / PASMO / VISA加盟店</li>
-                <li><strong>還元率は固定値よりも、対象判定とチャージ上限の確認が重要</strong></li>
+                <li><strong>現行ルートの合計還元率は 2.0%</strong>（三井住友 1.5% + ANA Pay 0.5%）</li>
             </ul>
             <p>この領域は還元率の数字そのものより、どのチャージが「修行対象か」「手数料なしで維持できるか」で実質価値が変わります。古い図表をそのまま信じず、都度アップデート前提で見てください。</p>
 
@@ -176,7 +177,7 @@
             </ul>
 
             <p><span class="syntax-keyword">const</span> strategy = <span class="syntax-string">"どこで・何を使って支払うかで未来の資産が変わる"</span>;</p>
-            <p>ポイ活のルートは常に変化します。特に三井住友カードの100万円修行を絡める場合は、最新の対象判定をチェックし、古いチャージルートをそのまま使わないよう注意しましょう。</p>
+            <p>ポイ活のルートは常に変化します。特に三井住友カードの100万円修行を絡める場合は、入口だけでなく出口側の合計還元率も最新条件で再計算するのが大切です。</p>
         </main>
 
         <footer class="animate-in" style="animation-delay: 0.4s;">
