@@ -57,6 +57,18 @@
             font-size: 0.8rem;
             font-family: 'JetBrains Mono', monospace;
         }
+        .update-note {
+            background: linear-gradient(135deg, rgba(255, 180, 90, 0.12), rgba(170, 164, 255, 0.08));
+            border-left: 4px solid #ffb45a;
+            padding: 1.3rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .update-note h3 {
+            margin-top: 0 !important;
+            color: #ffcf8a !important;
+            border: none !important;
+        }
     </style>
 
     <meta name="description" content="2026年4月時点の高還元決済ルートを整理し、主要サービスを組み合わせた還元率最大化の考え方を解説。">
@@ -82,11 +94,17 @@
             
             <p>ポイ活やキャッシュレス決済のルートは日々進化し、時には「封鎖」と呼ばれるルートの閉鎖を乗り越えながら、よりお得な方法が模索されています。今回は、ガチ勢の間で話題の最新決済ルート図を読み解き、日常の買い物を劇的にお得にする最強ルートを解説します。</p>
 
+            <div class="update-note">
+                <h3>Update: 2026年3月改定を反映</h3>
+                <p>この記事の初版では <code>JAL Pay</code> や <code>au PAY</code> を経由するルートを主力として紹介していましたが、2026年3月1日利用分から三井住友カードの100万円修行対象外となりました。現在は「高還元決済の考え方」を残しつつ、修行ルートとしては <code>Revolut → ANA Pay</code> などへの読み替えが必要です。</p>
+                <p>修行ルートの整理は <a href="2026-04-05-smbc-million-challenge-revolut-route.html">こちらの更新記事</a> に分離しています。</p>
+            </div>
+
             <h2>🗺️ 決済ルート全体図 (2026.04)</h2>
             <div class="mermaid">
                 graph TD
                 A["三井住友OG(M)<br>三井住友G(M)<br>年100万"]
-                I((JALPay))
+                I((Revolut))
                 J((ANAPay))
                 N((楽天Edy))
                 F["ファミペイ<br>(ローン契約)"]
@@ -94,28 +112,22 @@
                 O((楽天Cash))
                 P((楽天Pay))
                 W{{店<br>4.1~8.5%}}
-                X{{公共料金<br>2.6~10%}}
-                AA{{楽天証券<br>2.6~8.0%}}
-                U((AUPAY<br>プリペイド))
-                V((Vポイント<br>Pay))
-                T{{交通系<br>2.6%}}
-                L{{VISA加盟店<br>2.6%}}
+                X{{公共料金<br>0.5~10%}}
+                AA{{楽天証券<br>1.0~8.0%}}
+                T{{交通系<br>2.0%前後}}
+                L{{VISA加盟店<br>2.0%前後}}
                 LP["LawsonPonta+<br>(M)"]
                 S{{OKストア等<br>13%}}
                 OL["OliveG(V)"]
                 H{{コンビニ・カフェ等<br>10.5%}}
 
                 A ==>|1.5%| I
-                I ==>|0.1%| J
-                A -->|1.5%| J
+                I ==>|0.0%| J
                 J ==>|0.5%| N
                 N ==>|0.0%| O
 
-                I ==>|0.1%| U
-                U ==>|0.5%| V
-                V ==>|0.5%| T
-                V ==>|0.5%| L
                 J -->|0.5%| T
+                J -->|0.5%| L
 
                 LP ==>|13%| S  
                 OL ==>|10.5%| H  
@@ -138,21 +150,23 @@
             <h2>1. 楽天経済圏を攻略！「楽天キャッシュ」錬金術</h2>
             <p>日常の買い物や投資信託の積立に欠かせない「楽天キャッシュ」をお得に調達する最強の布陣です。</p>
 
-            <h3>安定の王道：三井住友ゴールド(M) 起点</h3>
+            <h3>現行の主力候補: 三井住友ゴールド(M) → Revolut → ANA Pay</h3>
             <div class="route-step"><span class="number">1</span><span>三井住友G (Mastercard) <strong>1.5%</strong> (修行込)</span></div>
-            <div class="route-step"><span class="number">2</span><span>JAL Pay チャージ <strong>0.1%</strong></span></div>
+            <div class="route-step"><span class="number">2</span><span>Revolut チャージ <strong>修行対象候補</strong></span></div>
             <div class="route-step"><span class="number">3</span><span>ANA Pay チャージ <strong>0.5%</strong></span></div>
             <div class="route-step"><span class="number">4</span><span>楽天Edy → 楽天キャッシュ <strong>0.0%</strong></span></div>
             <div class="route-step"><span class="number">5</span><span>楽天ペイ決済 <strong>1.5%</strong></span></div>
-            <p><strong>合計還元率：3.6% 以上</strong></p>
+            <p><strong>合計還元率の考え方: 修行加算 1.5% + ANA Pay / 楽天ペイ側の還元</strong></p>
+            <p>旧来の <code>JAL Pay → ANA Pay</code> ルートは、2026年3月1日利用分以降は修行の主力として扱えません。現在は <code>Revolut</code> を経由しつつ、ANA Pay 側の月次上限やブランド手数料を見ながら運用するのが実務的です。</p>
 
             <h2>2. 交通系IC & VISA加盟店：2.6% ルート</h2>
-            <p>楽天ペイが使えない店舗や、電車移動で威力を発揮する隙のない構成です。</p>
+            <p>楽天ペイが使えない店舗や、電車移動で威力を発揮するルートです。ただし、旧来の <code>JAL Pay → au PAY → VポイントPay</code> は修行ルートとしては失効しました。</p>
             <ul>
-                <li>三井住友G(M) → JAL Pay → au PAYプリペイド → VポイントPay</li>
-                <li>最終利用先：Suica / PASMO / VISAタッチ決済</li>
-                <li><strong>合計還元率：2.6%</strong></li>
+                <li>旧ルート: 三井住友G(M) → JAL Pay → au PAYプリペイド → VポイントPay</li>
+                <li>現行の実運用候補: 三井住友G(M) → Revolut → ANA Pay → Suica / PASMO / VISA加盟店</li>
+                <li><strong>還元率は固定値よりも、対象判定とチャージ上限の確認が重要</strong></li>
             </ul>
+            <p>この領域は還元率の数字そのものより、どのチャージが「修行対象か」「手数料なしで維持できるか」で実質価値が変わります。古い図表をそのまま信じず、都度アップデート前提で見てください。</p>
 
             <h2>3. 特定店舗で爆発！直撃 10.5% 〜 13%</h2>
             <p>面倒な経由不要、カードをかざすだけで高還元を受けられる特化型ルートです。</p>
@@ -162,7 +176,7 @@
             </ul>
 
             <p><span class="syntax-keyword">const</span> strategy = <span class="syntax-string">"どこで・何を使って支払うかで未来の資産が変わる"</span>;</p>
-            <p>ポイ活のルートは常に変化します。最新の情報をチェックし、臨機応変に切り替えていきましょう！</p>
+            <p>ポイ活のルートは常に変化します。特に三井住友カードの100万円修行を絡める場合は、最新の対象判定をチェックし、古いチャージルートをそのまま使わないよう注意しましょう。</p>
         </main>
 
         <footer class="animate-in" style="animation-delay: 0.4s;">
