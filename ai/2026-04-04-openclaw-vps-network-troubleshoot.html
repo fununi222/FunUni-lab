@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【技術レポート】OpenClaw 外部通信疎通トラブルシュート | FunUni-lab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <meta name="description" content="OpenClaw の fetch failed を VPS 特有のパケットフィルター制約から切り分け、復旧までをまとめた技術レポート。">
+</head>
+<body>
+    <div class="container">
+        <header class="animate-in">
+            <a href="index.html" class="nav-link">← cd ..</a>
+            <h1>OpenClaw Network Troubleshoot</h1>
+            <p class="subtitle">VPS 環境におけるパケットフィルターの罠と解決策</p>
+        </header>
+
+        <main class="article-content animate-in" style="animation-delay: 0.2s;">
+            <p><span class="syntax-comment">// XServer VPS 上で browser-js が fetch failed になる問題をインフラ起点で切り分け</span></p>
+
+            <h2>1. 発生した現象と環境</h2>
+            <ul>
+                <li><strong>対象:</strong> OpenClaw v2026.4.1（XServer VPS / Ubuntu）</li>
+                <li><strong>現象:</strong> skills check は Ready だが、外部サイトアクセスがタイムアウト / fetch failed。</li>
+                <li><strong>補足:</strong> <code>curl</code> は無反応、<code>nslookup</code> のみ成功。</li>
+            </ul>
+
+            <h2>2. 主因：VPS 固有のパケットフィルター</h2>
+            <p>根本原因は OS 内部ではなく、VPS 事業者側のパケットフィルター仕様でした。フィルター ON 時は許可ポート以外が双方向遮断されます。</p>
+            <ul>
+                <li>DNS（UDP 53）が通るケースはある。</li>
+                <li>HTTP/HTTPS（TCP 80/443）は戻りパケットが遮断され失敗しうる。</li>
+            </ul>
+
+            <h2>3. 解決ステップ</h2>
+            <h3>ステップ1：Scope 権限を解放</h3>
+            <pre><code>openclaw devices list
+openclaw devices approve &lt;REQUEST_ID&gt;</code></pre>
+
+            <h3>ステップ2：DNS の安定化</h3>
+            <pre><code>echo "nameserver 8.8.8.8" &gt; /etc/resolv.conf</code></pre>
+
+            <h3>ステップ3：インフラ・フィルターを開放（最重要）</h3>
+            <ol>
+                <li>パケットフィルターを一時 OFF。</li>
+                <li>または TCP 80/443 を許可ポートに追加。</li>
+            </ol>
+
+            <h2>4. 診断コマンド</h2>
+            <pre><code>nslookup google.com
+curl -v --connect-timeout 5 https://www.google.com</code></pre>
+
+            <h2>5. 結論</h2>
+            <p>今回のボトルネックは LLM ではなく、ネットワーク・インフラ制約でした。軽量モデルでも、インフラ要件が整えば十分にツール運用可能です。</p>
+        </main>
+
+        <footer class="animate-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2026 FunUni-lab.</p>
+        </footer>
+    </div>
+</body>
+</html>
