@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freeman Project HP 制作記録 | FunUni-lab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Freeman Project HP の制作背景、情報設計で意識したこと、学びと改善点を振り返る制作記録。">
+    <meta property="og:site_name" content="FunUni-lab">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Freeman Project HP 制作記録 | FunUni-lab">
+    <meta property="og:description" content="過去制作したホームページを振り返り、構成、可読性、レスポンシブ設計の観点から学びを整理。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Freeman Project HP 制作記録 | FunUni-lab">
+    <meta name="twitter:description" content="ホームページ制作で考えた情報設計と UI 調整、今ならどう改善するかをまとめた制作ふりかえり。">
+</head>
+<body>
+    <div class="container">
+        <header class="animate-in">
+            <a href="index.html" class="nav-link">← cd ..</a>
+            <h1>Freeman Project HP</h1>
+            <p class="subtitle">情報設計と見やすさを意識したホームページ制作のふりかえり</p>
+        </header>
+
+        <main class="article-content animate-in" style="animation-delay: 0.2s;">
+            <p><span class="syntax-comment">// 過去制作したホームページを、設計意図と学びの観点から振り返る記録</span></p>
+
+            <p>過去に制作した <span class="syntax-type">Freeman Project HP</span> は、情報を整理してわかりやすく届けることを目的に作ったホームページです。今振り返ると、派手な機能を増やすよりも、<strong>「何を、どの順番で、どう見せるか」</strong> を強く意識していた制作だったと感じます。</p>
+
+            <h2>1. 制作背景</h2>
+            <p>当時は、単にページを作るだけではなく、訪れた人が迷わず内容を理解できるホームページを目指していました。ホームページは一見シンプルですが、情報量、見出し、余白、色のトーンといった細かい要素の積み重ねで印象が大きく変わります。</p>
+            <p>この制作では、デザインと実装を切り分けて考えるのではなく、<strong>見た目の印象と読みやすさを両立させること</strong> をテーマに進めました。</p>
+
+            <h2>2. 制作で意識したこと</h2>
+            <h3>情報が自然に流れる構成</h3>
+            <p>訪問者が最初にどこを見て、次に何を知りたくなるのかを意識しながら、ページ全体の流れを組み立てました。情報を詰め込みすぎると読みにくくなるため、見出しやセクションの役割を整理し、必要な内容が自然に目に入る構成を目指しました。</p>
+
+            <h3>見た目より先に可読性を整える</h3>
+            <p>ホームページ制作では、装飾を増やせばよく見えるわけではありません。そこで今回は、配色やアニメーションより先に、文字サイズ、余白、要素間のまとまり方を優先して調整しました。結果として、派手すぎず、それでも印象に残るページに近づけたと思います。</p>
+
+            <h3>レスポンシブ対応</h3>
+            <p>PC だけでなくスマートフォンでも自然に見えることを意識して調整しました。特に、画面幅が変わったときの余白や要素の並びは印象に直結するため、崩れないことだけでなく、<strong>小さい画面でも読みやすいこと</strong> を重視しました。</p>
+
+            <h2>3. 制作を通して学んだこと</h2>
+            <p>このホームページ制作を通して強く感じたのは、Web 制作では「作れること」と「伝わること」は別だという点です。HTML や CSS を使って形にするだけならある程度進められても、相手にとって見やすく、理解しやすい形に整えるには、もう一段深い視点が必要でした。</p>
+            <p>また、完成直後には気づけなかった改善点も、時間が経ってから見返すことで見えてきました。コードの整理、再利用しやすい構成、命名の統一など、今ならもっと保守しやすい形にできると思います。</p>
+
+            <h2>4. 今ならこう改善する</h2>
+            <ol>
+                <li>コンポーネント単位で整理し、保守しやすい構成にする</li>
+                <li>余白やタイポグラフィをさらに設計し、ブランド感を強める</li>
+                <li>ページ導線を改善し、ユーザーが次の情報へ進みやすくする</li>
+            </ol>
+
+            <p>過去の制作物を振り返ると、その時点での技術力だけでなく、どこまで相手目線で考えられていたかも見えてきます。Freeman Project HP は、自分にとって <strong>「デザインと情報設計を同時に考える大切さ」</strong> を学べた制作のひとつでした。</p>
+
+            <h2>5. リンク</h2>
+            <p><a href="https://github.com/fumiya5222/freemanpjt-hp">GitHub: fumiya5222/freemanpjt-hp</a></p>
+        </main>
+
+        <footer class="animate-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2026 FunUni-lab. Built with <span class="syntax-keyword">HTML</span> and Reflection.</p>
+        </footer>
+    </div>
+</body>
+</html>
