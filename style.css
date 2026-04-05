@@ -12,9 +12,9 @@
   --secondary: #00d2ff;
   --tertiary: #b0aaff;
 
-  --border: rgba(170, 164, 255, 0.18);
-  --border-strong: rgba(170, 164, 255, 0.34);
-  --glow: 0 0 40px rgba(108, 92, 231, 0.12);
+  --border: rgba(170, 164, 255, 0.12);
+  --border-strong: rgba(170, 164, 255, 0.24);
+  --glow: 0 0 40px rgba(108, 92, 231, 0.04);
 }
 
 * {
