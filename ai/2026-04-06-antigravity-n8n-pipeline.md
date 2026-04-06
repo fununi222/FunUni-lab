@@ -67,15 +67,13 @@ Gemini 3 Proを搭載した[Antigravity](../glossary/index.html)と[n8n](../glos
 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
 <h3 class="text-lg font-bold text-slate-800 mb-2">平均修復時間 (MTTR) の推移</h3>
 <p class="text-sm text-slate-500 mb-4">バグ発生から修正PRが作成されるまでの時間比較（分）</p>
-<div class="relative w-full mx-auto h-[300px] max-h-[400px] md:h-[350px]">
-<canvas id="mttrChart"></canvas>
+<div id="mttrChartContainer" class="chart-container" style="position: relative; width: 100%; margin: 0 auto; min-height: 300px; height: 300px;">
 </div>
 </div>
 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
 <h3 class="text-lg font-bold text-slate-800 mb-2">自動修復の成功率 (カテゴリ別)</h3>
 <p class="text-sm text-slate-500 mb-4">Antigravity + Gemini 3 Proが人手を介さず解決できた割合</p>
-<div class="relative w-full mx-auto h-[300px] max-h-[400px] md:h-[350px]">
-<canvas id="successChart"></canvas>
+<div id="successChartContainer" class="chart-container" style="position: relative; width: 100%; margin: 0 auto; min-height: 300px; height: 300px;">
 </div>
 </div>
 </div>
@@ -137,7 +135,6 @@ Body:
 </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 const pipelineData = {
 1: {
@@ -204,7 +201,7 @@ btnElement.classList.remove('text-slate-600');
 }
 window.switchTab = switchTab;
 
-document.addEventListener('sme-loaded', function() {
+setTimeout(function() {
 const chartOptions = {
 responsive: true,
 maintainAspectRatio: false,
@@ -214,9 +211,10 @@ tooltip: { backgroundColor: 'rgba(15, 23, 42, 0.9)', titleFont: { size: 13, fami
 }
 };
 
-const mttrChartElem = document.getElementById('mttrChart');
-if (mttrChartElem) {
-const ctxMttr = mttrChartElem.getContext('2d');
+const mttrChartContainer = document.getElementById('mttrChartContainer');
+if (mttrChartContainer) {
+mttrChartContainer.innerHTML = '<canvas id="mttrChart"></canvas>';
+const ctxMttr = document.getElementById('mttrChart').getContext('2d');
 new Chart(ctxMttr, {
 type: 'bar',
 data: {
@@ -234,9 +232,10 @@ options: { ...chartOptions, indexAxis: 'y', scales: { x: { grid: { color: '#f1f5
 });
 }
 
-const successChartElem = document.getElementById('successChart');
-if (successChartElem) {
-const ctxSuccess = successChartElem.getContext('2d');
+const successChartContainer = document.getElementById('successChartContainer');
+if (successChartContainer) {
+successChartContainer.innerHTML = '<canvas id="successChart"></canvas>';
+const ctxSuccess = document.getElementById('successChart').getContext('2d');
 new Chart(ctxSuccess, {
 type: 'doughnut',
 data: {
@@ -258,7 +257,7 @@ style.textContent = `
 .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
 `;
 document.head.appendChild(style);
-});
+}, 200);
 </script>
 
 ## 変更履歴 (Changelog)
