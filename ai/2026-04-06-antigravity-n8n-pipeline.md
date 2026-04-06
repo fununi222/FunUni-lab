@@ -12,41 +12,33 @@ Gemini 3 Proを搭載した[Antigravity](../glossary/index.html)と[n8n](../glos
 ## 自律修復アーキテクチャ
 このセクションでは、エラー検知からコード修正、PR作成までの全体像を解説します。以下のパイプラインの各ステップをクリックして、背後で動く詳細なプロセスを確認してください。
 
-<style>
-.chart-container { position: relative; width: 100%; margin: 0 auto; height: 300px; max-height: 400px; }
-@media (min-width: 768px) { .chart-container { height: 350px; } }
-.pipeline-node { transition: all 0.3s ease; }
-.pipeline-node:hover, .pipeline-node.active { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2); border-color: #10b981; }
-.tab-btn.active { border-bottom: 2px solid #10b981; color: #10b981; font-weight: bold; }
-</style>
-
 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden lg:flex my-8 text-slate-800">
 <div class="lg:w-1/2 p-8 bg-slate-50 border-r border-slate-200">
 <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-6">ワークフロー図 (クリックで詳細表示)</h3>
 <div class="space-y-4 relative">
 <div class="absolute left-6 top-8 bottom-8 w-1 bg-emerald-200 rounded-full z-0"></div>
-<div class="pipeline-node relative z-10 flex items-center p-4 bg-white border-2 border-slate-200 rounded-xl cursor-pointer" data-step="1" onclick="updatePipeline(1)">
+<div id="step-1" class="pipeline-node transition-all duration-300 ease-in-out relative z-10 flex items-center p-4 bg-white border-2 border-slate-200 rounded-xl cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:border-emerald-500" onclick="updatePipeline(1)">
 <div class="w-12 h-12 flex-shrink-0 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-sm">🚨</div>
 <div>
 <h4 class="font-bold text-slate-800">1. エラー検知 (Sentry/Datadog)</h4>
 <p class="text-sm text-slate-500">本番環境での例外発生を捕捉</p>
 </div>
 </div>
-<div class="pipeline-node relative z-10 flex items-center p-4 bg-white border-2 border-slate-200 rounded-xl cursor-pointer" data-step="2" onclick="updatePipeline(2)">
+<div id="step-2" class="pipeline-node transition-all duration-300 ease-in-out relative z-10 flex items-center p-4 bg-white border-2 border-slate-200 rounded-xl cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:border-emerald-500" onclick="updatePipeline(2)">
 <div class="w-12 h-12 flex-shrink-0 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-sm">⚙️</div>
 <div>
 <h4 class="font-bold text-slate-800">2. n8n ワークフロー起動</h4>
 <p class="text-sm text-slate-500">Webhook経由で自動化処理を開始</p>
 </div>
 </div>
-<div class="pipeline-node active relative z-10 flex items-center p-4 bg-white border-2 border-emerald-500 rounded-xl cursor-pointer shadow-md" data-step="3" onclick="updatePipeline(3)">
+<div id="step-3" class="pipeline-node transition-all duration-300 ease-in-out relative z-10 flex items-center p-4 bg-white border-2 border-emerald-500 rounded-xl cursor-pointer -translate-y-1 shadow-lg hover:-translate-y-1 hover:shadow-lg hover:border-emerald-500" onclick="updatePipeline(3)">
 <div class="w-12 h-12 flex-shrink-0 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-sm">🧠</div>
 <div>
 <h4 class="font-bold text-slate-800">3. Gemini 3 Pro (Antigravity)</h4>
 <p class="text-sm text-slate-500">文脈解析と自律的なコード修正</p>
 </div>
 </div>
-<div class="pipeline-node relative z-10 flex items-center p-4 bg-white border-2 border-slate-200 rounded-xl cursor-pointer" data-step="4" onclick="updatePipeline(4)">
+<div id="step-4" class="pipeline-node transition-all duration-300 ease-in-out relative z-10 flex items-center p-4 bg-white border-2 border-slate-200 rounded-xl cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:border-emerald-500" onclick="updatePipeline(4)">
 <div class="w-12 h-12 flex-shrink-0 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-sm">📫</div>
 <div>
 <h4 class="font-bold text-slate-800">4. GitHub PRの自動作成</h4>
@@ -59,14 +51,12 @@ Gemini 3 Proを搭載した[Antigravity](../glossary/index.html)と[n8n](../glos
 <div class="inline-flex items-center justify-center px-3 py-1 mb-4 text-xs font-bold text-emerald-800 bg-emerald-100 rounded">STEP 3</div>
 <h3 class="text-2xl font-bold text-slate-900 mb-4" id="detail-title">Antigravity空間でのコード推論</h3>
 <p class="text-slate-600 mb-6 leading-relaxed" id="detail-desc">ここが最大のキモです。エラーログだけをLLMに投げるのではなく、AntigravityのAPIを経由させることで、「リポジトリ全体の文脈」「関連ファイルの依存関係」をGemini 3 Proが把握した状態で修正案を生成します。ただのエディタではなく、自律エージェントの作業空間として機能します。</p>
-<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-emerald-400 overflow-x-auto shadow-inner" id="detail-code">
-{
+<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-emerald-400 overflow-x-auto shadow-inner whitespace-pre" id="detail-code">{
   "action": "antigravity.analyze_and_fix",
   "context": "repo://backend/api",
   "error_trace": "{{$json.body.stacktrace}}",
   "model": "gemini-3-pro"
-}
-</div>
+}</div>
 </div>
 </div>
 
@@ -77,14 +67,14 @@ Gemini 3 Proを搭載した[Antigravity](../glossary/index.html)と[n8n](../glos
 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
 <h3 class="text-lg font-bold text-slate-800 mb-2">平均修復時間 (MTTR) の推移</h3>
 <p class="text-sm text-slate-500 mb-4">バグ発生から修正PRが作成されるまでの時間比較（分）</p>
-<div class="chart-container">
+<div class="relative w-full mx-auto h-[300px] max-h-[400px] md:h-[350px]">
 <canvas id="mttrChart"></canvas>
 </div>
 </div>
 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
 <h3 class="text-lg font-bold text-slate-800 mb-2">自動修復の成功率 (カテゴリ別)</h3>
 <p class="text-sm text-slate-500 mb-4">Antigravity + Gemini 3 Proが人手を介さず解決できた割合</p>
-<div class="chart-container">
+<div class="relative w-full mx-auto h-[300px] max-h-[400px] md:h-[350px]">
 <canvas id="successChart"></canvas>
 </div>
 </div>
@@ -95,7 +85,7 @@ Gemini 3 Proを搭載した[Antigravity](../glossary/index.html)と[n8n](../glos
 
 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden my-8 text-slate-800">
 <div class="flex border-b border-slate-200 bg-slate-50 overflow-x-auto">
-<button class="tab-btn active px-6 py-4 text-sm font-medium text-slate-600 hover:text-emerald-600 whitespace-nowrap" onclick="switchTab('tab-n8n', this)">n8n Webhook設定</button>
+<button class="tab-btn active px-6 py-4 text-sm font-medium border-b-2 border-emerald-500 text-emerald-600 font-bold whitespace-nowrap" onclick="switchTab('tab-n8n', this)">n8n Webhook設定</button>
 <button class="tab-btn px-6 py-4 text-sm font-medium text-slate-600 hover:text-emerald-600 whitespace-nowrap" onclick="switchTab('tab-prompt', this)">Gemini システムプロンプト</button>
 <button class="tab-btn px-6 py-4 text-sm font-medium text-slate-600 hover:text-emerald-600 whitespace-nowrap" onclick="switchTab('tab-github', this)">GitHub PR Action</button>
 </div>
@@ -103,8 +93,7 @@ Gemini 3 Proを搭載した[Antigravity](../glossary/index.html)と[n8n](../glos
 <div id="tab-n8n" class="tab-content block">
 <h4 class="font-bold text-slate-800 mb-3">n8n: Error Receiver Node</h4>
 <p class="text-sm text-slate-600 mb-4">監視ツールからのアラートを受け取るWebhookノードの基本設定です。ペイロードからスタックトレースを抽出します。</p>
-<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto">
-const body = $input.item.json.body;
+<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto whitespace-pre">const body = $input.item.json.body;
 if (!body.stacktrace) {
   return [{ json: { status: "ignored", reason: "No stacktrace" } }];
 }
@@ -115,14 +104,12 @@ return [{
     file_path: extractFilePath(body.stacktrace),
     full_log: body.stacktrace
   }
-}];
-</div>
+}];</div>
 </div>
 <div id="tab-prompt" class="tab-content hidden">
 <h4 class="font-bold text-slate-800 mb-3">Antigravity Context注入用プロンプト</h4>
 <p class="text-sm text-slate-600 mb-4">Gemini 3 Proに渡すシステムプロンプトです。エディタ空間（Antigravity）へのアクセス権を意識させます。</p>
-<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto">
-You are an autonomous DevOps AI agent operating within the Antigravity workspace.
+<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto whitespace-pre">You are an autonomous DevOps AI agent operating within the Antigravity workspace.
 Your task is to fix the following production error.
 
 1. USE the `antigravity.search_symbol` tool to find the error origin.
@@ -131,14 +118,12 @@ Your task is to fix the following production error.
 4. DO NOT break existing tests.
 
 Error Log:
-{{$json.full_log}}
-</div>
+{{$json.full_log}}</div>
 </div>
 <div id="tab-github" class="tab-content hidden">
 <h4 class="font-bold text-slate-800 mb-3">n8n: GitHub API 連携</h4>
 <p class="text-sm text-slate-600 mb-4">生成された修正パッチを用いて、新しいブランチを作成しPull Requestを発行します。</p>
-<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto">
-// HTTP Request Node configuration
+<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto whitespace-pre">// HTTP Request Node configuration
 Method: POST
 URL: https://api.github.com/repos/{{$env.REPO_NAME}}/pulls
 Body:
@@ -147,8 +132,7 @@ Body:
   "body": "This PR was generated automatically by Antigravity Pipeline.\n\n**Root Cause:**\n{{$node[\"GeminiAnalysis\"].json.root_cause}}\n\n**Fix:**\nApplied patch to safely handle null values.",
   "head": "auto-fix-{{$node[\"ExtractError\"].json.issue_id}}",
   "base": "main"
-}
-</div>
+}</div>
 </div>
 </div>
 </div>
@@ -184,13 +168,13 @@ code: "curl -X POST -H \"Authorization: token $GITHUB_TOKEN\" \\\n -d '{\"title\
 
 function updatePipeline(stepIndex) {
 document.querySelectorAll('.pipeline-node').forEach(node => {
-node.classList.remove('active', 'border-emerald-500', 'shadow-md');
+node.classList.remove('border-emerald-500', 'shadow-lg', '-translate-y-1');
 node.classList.add('border-slate-200');
 });
-const selectedNode = document.querySelector(`.pipeline-node[data-step="${stepIndex}"]`);
+const selectedNode = document.getElementById(`step-${stepIndex}`);
 if (selectedNode) {
 selectedNode.classList.remove('border-slate-200');
-selectedNode.classList.add('active', 'border-emerald-500', 'shadow-md');
+selectedNode.classList.add('border-emerald-500', 'shadow-lg', '-translate-y-1');
 }
 
 const data = pipelineData[stepIndex];
@@ -209,13 +193,13 @@ tab.classList.remove('block');
 tab.classList.add('hidden');
 });
 document.querySelectorAll('.tab-btn').forEach(btn => {
-btn.classList.remove('active', 'border-emerald-500', 'text-emerald-600', 'font-bold');
+btn.classList.remove('border-b-2', 'border-emerald-500', 'text-emerald-600', 'font-bold');
 btn.classList.add('text-slate-600');
 });
 
 document.getElementById(tabId).classList.remove('hidden');
 document.getElementById(tabId).classList.add('block');
-btnElement.classList.add('active', 'border-emerald-500', 'text-emerald-600', 'font-bold');
+btnElement.classList.add('border-b-2', 'border-emerald-500', 'text-emerald-600', 'font-bold');
 btnElement.classList.remove('text-slate-600');
 }
 window.switchTab = switchTab;
