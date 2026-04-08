@@ -1,6 +1,6 @@
 ---
 title: "三井住友カード×Revolut 攻略ダッシュボード"
-date: "2026-04-07"
+date: "2026-04-09"
 category: "Finance"
 description: "「100万円修行」を効率的に達成するための最適解。ブランド別手数料回避術とチャージ残高の高還元ルートをインタラクティブに整理。"
 ---
@@ -11,6 +11,8 @@ description: "「100万円修行」を効率的に達成するための最適解
 
 ## 超要約
 [三井住友カード](../glossary/index.html)から[Revolut](../glossary/index.html)へのチャージは、2024年6月の手数料改定により、**Mastercardブランドなら完全無料**、**VisaブランドでもOliveデビットモードなら無料**で修行（100万円利用）にカウント可能です。本ダッシュボードでは、お持ちのブランドに応じた最適設定と、チャージ後の「高還元な出口戦略」をシミュレートできます。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 
@@ -322,3 +324,6 @@ setTimeout(() => {
     updateRouteView('android');
 }, 300);
 </script>
+
+## 変更履歴 (Changelog)
+- 2026-04-09: `SKILL.md` の運用ルールに合わせ、更新日表示と更新履歴を追記。

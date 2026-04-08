@@ -157,7 +157,7 @@ Android端末（特にXiaomi / HyperOS）上でBonsaiを動かすための具体
 <div class="mt-8 pt-6 border-t border-white/10">
 <h3 class="text-xl font-bold mb-3">次のステップ：最強AIスマホの構築</h3>
 <p class="text-on-surface-variant leading-relaxed">
-スマホのCPUだけで8Bモデルがこれほど軽快に動く時代が来ました。今後はこのローカルAPIを <code>llama-server</code> としてバックグラウンドで立ち上げ、<a href="../glossary/index.html" class="text-secondary hover:underline cursor-help">OpenClaw</a> 等の自動化エージェントツールと連携させることで、完全オフラインで動作するセキュアな自動化環境を構築することが可能です。
+スマホのCPUだけで8Bモデルがこれほど軽快に動く時代が来ました。今後はこのローカルAPIを <code>llama-server</code> としてバックグラウンドで立ち上げ、OpenClaw 等の自動化エージェントツールと連携させることで、完全オフラインで動作するセキュアな自動化環境を構築することが可能です。
 </p>
 </div>
 </section>

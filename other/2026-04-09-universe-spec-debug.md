@@ -1,12 +1,12 @@
 ---
 title: "宇宙仕様書検証レポート v2026.04"
-date: "2026-04-06"
+date: "2026-04-09"
 category: "Other / Misc"
 description: "物理法則をシステムの「仕様書」として再解釈し、観測データの異常値をデバッグ情報としてまとめたレポート。"
 ---
 
 # 宇宙仕様書検証レポート v2026.04
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono mt-2">Last Updated: 2026-04-06</div>
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono mt-2">Last Updated: 2026-04-09</div>
 
 ## 超要約
 
@@ -171,3 +171,6 @@ initChart('alpha');
 
 ### Patch 3.0: 加速膨張パッチ (T=約70億年)
 謎のパラメータ「ダークエネルギー」の有効化。膨張速度が加速に転じ、将来の「引き裂き（Big Rip）」へ向けた仕様変更とされる。
+
+## 変更履歴 (Changelog)
+- 2026-04-09: `SKILL.md` の運用ルールに合わせ、変更履歴セクションを追加。

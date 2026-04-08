@@ -1,8 +1,8 @@
 ---
-date: "2026-04-06"
+date: "2026-04-09"
 ---
 
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-06</div>
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 # 2026年春 決済・ポイ活戦略ダッシュボード - 新生活の最適解
 
@@ -379,3 +379,6 @@ setTimeout(() => {
     }
 }, 300);
 </script>
+
+## 変更履歴 (Changelog)
+- 2026-04-09: `SKILL.md` の運用ルールに合わせ、変更履歴セクションを追加。

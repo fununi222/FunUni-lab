@@ -9,7 +9,7 @@ description: "最新LLMの「ポチョムキン理解」の仕組みと、弱点
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono mt-2">Last Updated: 2026-04-06</div>
 
 ## 超要約
-本レポートは、最新のAIが論理的破綻に気づかず出力してしまう「<a href="../glossary/index.html" class="text-secondary hover:underline cursor-help">ポチョムキン理解</a>（見せかけの理解）」のメカニズムを解明し、それを防ぐためのハードウェア（推論特化型モデル等）とソフトウェア（ガードレール等）の両面からの最新アプローチを整理しています。合わせて、各分野（コーディング・論理構築・検索・クリエイティブ）へ最適なAIモデルを割り振る「使い分け（オーケストレーション）」のベストプラクティスを、インタラクティブなチャートUIを通じて解説します。
+本レポートは、最新のAIが論理的破綻に気づかず出力してしまう「ポチョムキン理解（見せかけの理解）」のメカニズムを解明し、それを防ぐためのハードウェア（推論特化型モデル等）とソフトウェア（ガードレール等）の両面からの最新アプローチを整理しています。合わせて、各分野（コーディング・論理構築・検索・クリエイティブ）へ最適なAIモデルを割り振る「使い分け（オーケストレーション）」のベストプラクティスを、インタラクティブなチャートUIを通じて解説します。
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
@@ -62,7 +62,7 @@ Interactive Report
 AIの「知ったかぶり」は直ったのか？
 </h1>
 <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto">
-最新LLMの「<a href="../glossary/index.html" class="text-secondary hover:underline cursor-help">ポチョムキン理解</a>」の仕組みと、弱点を補うための最適な「使い分け」術を解説します。
+最新LLMの「ポチョムキン理解」の仕組みと、弱点を補うための最適な「使い分け」術を解説します。
 </p>
 </header>
 
@@ -70,7 +70,7 @@ AIの「知ったかぶり」は直ったのか？
 <div class="bg-surface-container-high p-6 rounded-2xl shadow-xl border border-white/5 cyber-glow hover:-translate-y-1 transition-transform">
 <div class="text-3xl mb-3">🤔</div>
 <h3 class="font-bold text-lg mb-2 text-primary">初歩的なミスの原因</h3>
-<p class="text-on-surface-variant text-sm">全体像を考えず確率的に次の単語を予測する「<a href="../glossary/index.html" class="text-secondary hover:underline cursor-help">自己回帰モデル</a>」だから。</p>
+<p class="text-on-surface-variant text-sm">全体像を考えず確率的に次の単語を予測する「自己回帰モデル」だから。</p>
 </div>
 <div class="bg-surface-container-high p-6 rounded-2xl shadow-xl border border-white/5 cyber-glow hover:-translate-y-1 transition-transform">
 <div class="text-3xl mb-3">💡</div>

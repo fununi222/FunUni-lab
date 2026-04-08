@@ -1,6 +1,6 @@
 ---
 title: "次世代CMDB戦略 2026 | 自律型デジタルツインへの道"
-date: "2026-04-07"
+date: "2026-04-09"
 category: "Infrastructure"
 description: "IT資産管理から「自律型デジタルツイン」へ。ServiceNowが示すロードマップと5つの衝撃的転換点。"
 ---
@@ -9,7 +9,9 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono mt-2 transition-opacity hover:opacity-100 uppercase">SYS_LOG: 2026-04-07_01 // ACCESS_LEVEL: ALPHA</div>
 
 ## 超要約
-本記事は、進化し続ける <a href="../glossary/index.html" class="text-secondary hover:underline">ServiceNow</a> プラットフォームの中核である <a href="../glossary/index.html" class="text-secondary hover:underline">CMDB</a> の 2026 年に向けた戦略的ロードマップを解説します。単なる「IT資産の在庫リスト」としての役割を超え、<a href="../glossary/index.html" class="text-secondary hover:underline">IRE</a> による高いデータ品質、<a href="../glossary/index.html" class="text-secondary hover:underline">CSDM</a> 5.0 によるビジネス価値の紐付け、そして <a href="../glossary/index.html" class="text-secondary hover:underline">RaptorDB</a> やエージェント型 <a href="../glossary/index.html" class="text-secondary hover:underline">AI</a> による自律的な意思決定エンジン（<a href="../glossary/index.html" class="text-secondary hover:underline">デジタルツイン</a>）へと昇華する 5 つの転換点を詳解します。
+本記事は、進化し続ける ServiceNow プラットフォームの中核である CMDB の 2026 年に向けた戦略的ロードマップを解説します。単なる「IT資産の在庫リスト」としての役割を超え、IRE による高いデータ品質、CSDM 5.0 によるビジネス価値の紐付け、そして RaptorDB やエージェント型 AI による自律的な意思決定エンジン（デジタルツイン）へと昇華する 5 つの転換点を詳解します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 
@@ -42,11 +44,11 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <section id="sec-intro" class="tab-content fade-in">
 <div class="max-w-3xl border-l-2 border-primary/30 pl-8 mb-12">
 <h2 class="text-3xl font-bold mb-6 text-on-surface leading-tight font-headline tracking-tighter">データに溺れる現代ITへの<br><span class="text-primary italic">究極の処方箋</span></h2>
-<p class="text-lg text-on-surface-variant leading-relaxed mb-8 opacity-90">このセクションでは、<a href="../glossary/index.html" class="text-secondary hover:underline">CMDB</a> を取り巻く現状の課題と、目指すべき未来の姿の概要を示します。なぜ静的な管理から脱却しなければならないのか、その核心に触れます。</p>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8 opacity-90">このセクションでは、CMDB を取り巻く現状の課題と、目指すべき未来の姿の概要を示します。なぜ静的な管理から脱却しなければならないのか、その核心に触れます。</p>
 </div>
 
 <div class="bg-gradient-to-br from-primary/10 to-transparent p-8 rounded-2xl border border-primary/10 mb-12 shadow-2xl">
-<p class="text-xl md:text-2xl font-light text-on-surface tracking-wide leading-snug">「多くの組織において、<a href="../glossary/index.html" class="text-secondary hover:underline">CMDB</a> は『一度構築したら腐敗が始まる台帳』というレッテルを貼られています。しかし、それはプラットフォーム全体の心臓部であり、唯一の真実のソースです。」</p>
+<p class="text-xl md:text-2xl font-light text-on-surface tracking-wide leading-snug">「多くの組織において、CMDB は『一度構築したら腐敗が始まる台帳』というレッテルを貼られています。しかし、それはプラットフォーム全体の心臓部であり、唯一の真実のソースです。」</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -58,14 +60,14 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <div class="group p-8 rounded-2xl bg-primary/5 border border-primary/20 transition-all hover:border-primary/40 cyber-glow">
 <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-500">🌌</div>
 <h3 class="text-xl font-bold mb-4 uppercase tracking-widest text-primary">Future_Vision</h3>
-<p class="text-base text-on-surface-variant leading-relaxed">リアルタイムな<a href="../glossary/index.html" class="text-secondary hover:underline">デジタルツイン</a>。<br>動く意思決定エンジンへ。</p>
+<p class="text-base text-on-surface-variant leading-relaxed">リアルタイムなデジタルツイン。<br>動く意思決定エンジンへ。</p>
 </div>
 </div>
 </section>
 
 <section id="sec-rel" class="tab-content hide-content">
 <h2 class="text-3xl font-bold mb-8 text-on-surface tracking-tight">本質は「在庫リスト」ではなく「<span class="text-secondary">関係性</span>」</h2>
-<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-4xl">識別および調整エンジン（<a href="../glossary/index.html" class="text-secondary hover:underline">IRE</a>）を通じた関係性の可視化がもたらす価値を解説します。障害時の影響範囲（爆発半径）シミュレーションと、実際の復旧時間（<a href="../glossary/index.html" class="text-secondary hover:underline">MTTR</a>）短縮データを確認してください。</p>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-4xl">識別および調整エンジン（IRE）を通じた関係性の可視化がもたらす価値を解説します。障害時の影響範囲（爆発半径）シミュレーションと、実際の復旧時間（MTTR）短縮データを確認してください。</p>
 
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
 <div class="lg:col-span-12">
@@ -85,7 +87,7 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 </div>
 </div>
 <div class="lg:col-span-5 flex flex-col justify-center">
-<h3 class="text-xl font-bold mb-6 text-on-surface uppercase tracking-tight">Analytics: <a href="../glossary/index.html" class="text-secondary hover:underline">MTTR</a>_Impact</h3>
+<h3 class="text-xl font-bold mb-6 text-on-surface uppercase tracking-tight">Analytics: MTTR_Impact</h3>
 <div class="chart-container h-64 md:h-80">
 <canvas id="mttrChart"></canvas>
 </div>
@@ -94,7 +96,7 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 </div>
 <div class="bg-secondary/10 border border-secondary/20 p-6 rounded-2xl text-base text-on-surface flex items-center gap-6">
 <span class="text-3xl text-secondary">💡</span>
-<p><strong>資産（Asset）と <a href="../glossary/index.html" class="text-secondary hover:underline">CI</a> の違い：</strong> 物理サーバーを購入した時点では財務的な「資産」。稼働し運用能力を提供し始めた瞬間に「<a href="../glossary/index.html" class="text-secondary hover:underline">CI</a>」となり、ライフサイクル管理が開始されます。</p>
+<p><strong>資産（Asset）と CI の違い：</strong> 物理サーバーを購入した時点では財務的な「資産」。稼働し運用能力を提供し始めた瞬間に「CI」となり、ライフサイクル管理が開始されます。</p>
 </div>
 </section>
 
@@ -111,7 +113,7 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <span class="text-xl font-medium opacity-80">IT Component Centric</span>
 </div>
 <div class="border-b border-white/5 pb-6">
-<span class="text-[10px] text-on-surface-variant block uppercase font-mono mb-2">Primary Infrastructure <a href="../glossary/index.html" class="text-secondary hover:underline">CI</a></span>
+<span class="text-[10px] text-on-surface-variant block uppercase font-mono mb-2">Primary Infrastructure CI</span>
 <span class="text-xl font-medium opacity-80">Business Application</span>
 </div>
 <div class="pb-2">
@@ -129,7 +131,7 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <span class="text-xl font-black text-on-surface">Digital Product Centric</span>
 </div>
 <div class="border-b border-primary/10 pb-6">
-<span class="text-[10px] text-primary block uppercase font-mono mb-2">Primary Infra <a href="../glossary/index.html" class="text-primary hover:underline">CI</a> Redefined</span>
+<span class="text-[10px] text-primary block uppercase font-mono mb-2">Primary Infra CI Redefined</span>
 <span class="text-xl font-black text-on-surface">Service System / Instance</span>
 </div>
 <div class="pb-2">
@@ -142,13 +144,13 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <div class="p-8 border border-primary/20 bg-white/5 rounded-3xl backdrop-blur-xl relative overflow-hidden">
 <div class="absolute -right-4 -bottom-4 text-9xl font-black opacity-[0.03] select-none uppercase">IDEATION</div>
 <h4 class="text-2xl font-bold text-primary mb-4 italic">Ideation_Domain</h4>
-<p class="text-base text-on-surface-variant leading-relaxed max-w-2xl">市場や内部チームからの「アイデア」を「需要」や「プロジェクト」へ繋げ、イノベーションのライフサイクル全体を <a href="../glossary/index.html" class="text-secondary hover:underline">CMDB</a> 上で捕捉可能にしました。これは開発初期段階からのデータ統合を意味します。</p>
+<p class="text-base text-on-surface-variant leading-relaxed max-w-2xl">市場や内部チームからの「アイデア」を「需要」や「プロジェクト」へ繋げ、イノベーションのライフサイクル全体を CMDB 上で捕捉可能にしました。これは開発初期段階からのデータ統合を意味します。</p>
 </div>
 </section>
 
 <section id="sec-sub" class="tab-content hide-content">
 <h2 class="text-3xl font-bold mb-8 text-on-surface tracking-tight">戦略的引き算の美学</h2>
-<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-4xl">過剰なエンジニアリングは <a href="../glossary/index.html" class="text-secondary hover:underline">CMDB</a> を破壊します。「<span class="text-secondary italic">監視できないものは登録しない</span>」という鉄則を徹底することで、データ純度を維持し、圧倒的な収益率を確保します。</p>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-4xl">過剰なエンジニアリングは CMDB を破壊します。「<span class="text-secondary italic">監視できないものは登録しない</span>」という鉄則を徹底することで、データ純度を維持し、圧倒的な収益率を確保します。</p>
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 <div class="space-y-8">
@@ -171,7 +173,7 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <span class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary border border-secondary/20 rounded-xl text-2xl group-hover:scale-110 transition-transform">✓</span>
 <div>
 <h4 class="text-lg font-bold mb-2">100%自動化された技術詳細</h4>
-<p class="text-base text-on-surface-variant opacity-80 leading-snug"><a href="../glossary/index.html" class="text-secondary hover:underline">Service Graph Connectors</a> を活用し、他システムからのデータを人手を介さず同期します。</p>
+<p class="text-base text-on-surface-variant opacity-80 leading-snug">Service Graph Connectors を活用し、他システムからのデータを人手を介さず同期します。</p>
 </div>
 </div>
 </div>
@@ -190,7 +192,7 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 
 <section id="sec-db" class="tab-content hide-content">
 <h2 class="text-3xl font-bold mb-8 text-on-surface tracking-tight">RaptorDB：AI 時代の高速エンジン</h2>
-<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-4xl">数千万件規模の <a href="../glossary/index.html" class="text-primary hover:underline">CI</a> や <a href="../glossary/index.html" class="text-primary hover:underline">AI</a> ワークロードを瞬時に処理する <span class="text-primary italic">RaptorDB</span>。その圧倒的なスループットをデータで視覚化します。</p>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-4xl">数千万件規模の CI や AI ワークロードを瞬時に処理する <span class="text-primary italic">RaptorDB</span>。その圧倒的なスループットをデータで視覚化します。</p>
 
 <div class="p-8 bg-black/30 rounded-3xl border border-white/5 shadow-2xl mb-12">
 <div class="chart-container h-80">
@@ -225,25 +227,25 @@ description: "IT資産管理から「自律型デジタルツイン」へ。Serv
 <div class="min-h-[250px] relative">
 <div id="step1" class="step-content p-10 bg-white/5 rounded-3xl border border-white/10 fade-in backdrop-blur-xl">
 <h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-4"><span class="text-4xl">🔍</span> Now Assistによる管理の革新</h3>
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">複雑な依存関係を即座に要約する「<a href="../glossary/index.html" class="text-secondary hover:underline">AI</a>主導の <a href="../glossary/index.html" class="text-secondary hover:underline">CI</a> 要約」機能と、インポートエラーの根本原因を <a href="../glossary/index.html" class="text-secondary hover:underline">AI</a> がデバッグする「SGC診断スキル」を提供。</p>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">複雑な依存関係を即座に要約する「AI主導の CI 要約」機能と、インポートエラーの根本原因を AI がデバッグする「SGC診断スキル」を提供。</p>
 <div class="inline-block px-4 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-[11px] font-bold uppercase tracking-widest">RESULT: Log decryption becomes archaic</div>
 </div>
 
 <div id="step2" class="step-content p-10 bg-white/5 rounded-3xl border border-white/10 hide-content backdrop-blur-xl">
-<h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-4"><span class="text-4xl">🤖</span> 自律型エージェント (Agentic <a href="../glossary/index.html" class="text-secondary hover:underline">AI</a>)</h3>
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">過去90日間の <a href="../glossary/index.html" class="text-secondary hover:underline">CI</a> 更新履歴を <a href="../glossary/index.html" class="text-secondary hover:underline">AI</a> が自動で評価。ガバナンスの欠如を指摘するだけでなく、自ら修復のためのガイダンスを提示します。</p>
+<h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-4"><span class="text-4xl">🤖</span> 自律型エージェント (Agentic AI)</h3>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">過去90日間の CI 更新履歴を AI が自動で評価。ガバナンスの欠如を指摘するだけでなく、自ら修復のためのガイダンスを提示します。</p>
 <div class="inline-block px-4 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-[11px] font-bold uppercase tracking-widest">RESULT: Proactive self-healing lifecycle</div>
 </div>
 
 <div id="step3" class="step-content p-10 bg-white/5 rounded-3xl border border-white/10 hide-content backdrop-blur-xl">
-<h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-4"><span class="text-4xl">⚙️</span> <a href="../glossary/index.html" class="text-secondary hover:underline">AI</a> Control Tower</h3>
+<h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-4"><span class="text-4xl">⚙️</span> AI Control Tower</h3>
 <p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">最も強力な機能であるガバナンスの「リアルタイム執行」。事後監査ではなく、ポリシーに反する構成変更をインフラ層で事前にブロックします。</p>
 <div class="inline-block px-4 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-[11px] font-bold uppercase tracking-widest">RESULT: Zero-trust configuration governance</div>
 </div>
 
 <div id="step4" class="step-content p-10 bg-white/5 rounded-3xl border border-white/10 hide-content backdrop-blur-xl">
 <h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-4"><span class="text-4xl">⚡</span> データグラビティ (Zero Copy) 解決</h3>
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">「Zero Copy Connector Hub」を通じて、機密データをプラットフォームに物理的に移動させることなく、<a href="../glossary/index.html" class="text-secondary hover:underline">AI</a> がオンプレミス環境のデータを直接参照し推論します。</p>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed opacity-90">「Zero Copy Connector Hub」を通じて、機密データをプラットフォームに物理的に移動させることなく、AI がオンプレミス環境のデータを直接参照し推論します。</p>
 <div class="inline-block px-4 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-[11px] font-bold uppercase tracking-widest">RESULT: Insight without migration risk</div>
 </div>
 </div>
@@ -428,6 +430,7 @@ setTimeout(() => {
 ---
 
 ## 変更履歴 (Changelog)
+- 2026-04-09: `SKILL.md` の運用ルールに合わせ、更新日表示を追加。
 - **2026-04-07 v2.0**:
   - レイアウトの抜本的改善：垂直ナビゲーションから水平「コマンドセンター」タブへの移行を実施。
   - タイポグラフィの強化：ベースフォントサイズを `text-base` へ引き上げ、行間とコントラストを最適化。

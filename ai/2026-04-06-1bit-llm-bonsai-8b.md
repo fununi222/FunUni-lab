@@ -50,7 +50,7 @@ description: "推論に高価なGPUはほぼ不要になる。究極の軽量化
 <canvas id="performanceChart"></canvas>
 </div>
 <div id="chart-insight" class="mt-6 text-center text-on-surface-variant bg-background/50 p-4 rounded-lg border border-white/5 text-sm">
-<p><strong>インサイト:</strong> 8B（80億パラメータ）クラスのモデルを動かす場合、FP16では約16GBの [GPU](../glossary/index.html) [VRAM](../glossary/index.html) が必要ですが、1ビット化することで約1.5GBまで縮小し、一般的なスマホやPCのメインメモリで十分動作します。</p>
+<p><strong>インサイト:</strong> 8B（80億パラメータ）クラスのモデルを動かす場合、FP16では約16GBの GPU VRAM が必要ですが、1ビット化することで約1.5GBまで縮小し、一般的なスマホやPCのメインメモリで十分動作します。</p>
 </div>
 </div>
 
@@ -63,7 +63,7 @@ description: "推論に高価なGPUはほぼ不要になる。究極の軽量化
 <div class="text-3xl mb-3">📱</div>
 <h3 class="text-xl font-bold font-headline text-on-surface mb-3">エッジAIの爆発的普及</h3>
 <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
-スマートフォン、IoT家電、自動車など、あらゆるエッジデバイス上で高度な [LLM](../glossary/index.html) がローカル動作可能になります。クラウドとの通信遅延（レイテンシ）や圏外の問題が解消されます。
+スマートフォン、IoT家電、自動車など、あらゆるエッジデバイス上で高度な LLM がローカル動作可能になります。クラウドとの通信遅延（レイテンシ）や圏外の問題が解消されます。
 </p>
 <div class="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 ease-in-out">
 <p class="text-primary text-sm bg-primary/10 p-3 rounded mt-2">
@@ -77,7 +77,7 @@ description: "推論に高価なGPUはほぼ不要になる。究極の軽量化
 <div class="text-3xl mb-3">📉</div>
 <h3 class="text-xl font-bold font-headline text-on-surface mb-3">NVIDIA一強体制への影響</h3>
 <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
-学習（トレーニング）工程においては依然として [GPU](../glossary/index.html) が必須ですが、爆発的に市場が拡大する「推論（インファレンス）」において、高価なH100等の [GPU](../glossary/index.html) が不要になります。
+学習（トレーニング）工程においては依然として GPU が必須ですが、爆発的に市場が拡大する「推論（インファレンス）」において、高価なH100等の GPU が不要になります。
 </p>
 <div class="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 ease-in-out">
 <p class="text-secondary text-sm bg-secondary/10 p-3 rounded mt-2">
@@ -91,7 +91,7 @@ description: "推論に高価なGPUはほぼ不要になる。究極の軽量化
 <div class="text-3xl mb-3">🔒</div>
 <h3 class="text-xl font-bold font-headline text-on-surface mb-3">究極のプライバシー保護</h3>
 <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
-機密情報や個人情報をクラウドのAPIに送信することなく、手元の端末内でAI処理が完結します。セキュリティ要件の厳しい医療、金融、行政での [LLM](../glossary/index.html) 導入が進みます。
+機密情報や個人情報をクラウドのAPIに送信することなく、手元の端末内でAI処理が完結します。セキュリティ要件の厳しい医療、金融、行政での LLM 導入が進みます。
 </p>
 <div class="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 ease-in-out">
 <p class="text-tertiary text-sm bg-tertiary/10 p-3 rounded mt-2">
@@ -105,7 +105,7 @@ description: "推論に高価なGPUはほぼ不要になる。究極の軽量化
 <div class="text-3xl mb-3">💰</div>
 <h3 class="text-xl font-bold font-headline text-on-surface mb-3">運用コストの劇的低下</h3>
 <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
-[LLM](../glossary/index.html) サービス提供者のインフラコストが激減します。消費電力が下がることで、データセンターの維持費や環境負荷（カーボンフットプリント）も大幅に改善されます。
+LLM サービス提供者のインフラコストが激減します。消費電力が下がることで、データセンターの維持費や環境負荷（カーボンフットプリント）も大幅に改善されます。
 </p>
 <div class="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 ease-in-out">
 <p class="text-orange-500 text-sm bg-orange-500/10 p-3 rounded mt-2">
@@ -168,14 +168,14 @@ labels: ['従来型 (FP16)', '8ビット量子化', '1ビット (Bonsai-8B等)']
 label: '必要メモリ容量 (GB)',
 data: [16.0, 8.0, 1.5],
 colors: ['#6d758c', '#a3aac4', '#aaa4ff'],
-insight: '<strong>インサイト:</strong> 8B（80億パラメータ）クラスのモデルを動かす場合、FP16では約16GBの [GPU](../glossary/index.html) [VRAM](../glossary/index.html) が必要ですが、1ビット化することで約1.5GBまで縮小し、一般的なスマホやPCのメインメモリで十分動作します。'
+insight: '<strong>インサイト:</strong> 8B（80億パラメータ）クラスのモデルを動かす場合、FP16では約16GBの GPU VRAM が必要ですが、1ビット化することで約1.5GBまで縮小し、一般的なスマホやPCのメインメモリで十分動作します。'
 },
 speed: {
 labels: ['従来型 (FP16)', '8ビット量子化', '1ビット (Bonsai-8B等)'],
 label: 'CPUでの推論速度 (Tokens/sec) ※推定値',
 data: [1.5, 4.0, 25.0],
 colors: ['#6d758c', '#a3aac4', '#00d2ff'],
-insight: '<strong>インサイト:</strong> [GPU](../glossary/index.html) を持たない標準的なCPU環境において、従来のモデルは実用的な速度が出ませんが、1ビットモデルは乗算が不要なため、CPUのみで人間が読む速度を上回る高速生成が可能です。'
+insight: '<strong>インサイト:</strong> GPU を持たない標準的なCPU環境において、従来のモデルは実用的な速度が出ませんが、1ビットモデルは乗算が不要なため、CPUのみで人間が読む速度を上回る高速生成が可能です。'
 },
 energy: {
 labels: ['従来型 (FP16)', '8ビット量子化', '1ビット (Bonsai-8B等)'],
