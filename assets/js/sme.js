@@ -116,6 +116,9 @@ async function loadMarkdown() {
         // 7. Handle Scroll to Text Fragment (for Cloud latency issues)
         handleTextFragments();
 
+        // 8. Initialize Lightbox for all images
+        initLightbox();
+
     } catch (error) {
         console.error('SME Error:', error);
         contentArea.innerHTML = `<div class="p-8 border border-red-500/20 bg-red-500/10 rounded-2xl text-red-400 text-xs font-mono">
@@ -209,6 +212,51 @@ function handleTextFragments() {
             finalTarget.classList.add('sme-highlight-target');
         }
     }, 200); 
+}
+
+// Synthetic Lightbox: Unified Image Magnification System
+function initLightbox() {
+    let lightbox = document.querySelector('.sme-lightbox');
+    
+    // Create lightbox if it doesn't exist
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.className = 'sme-lightbox';
+        lightbox.innerHTML = `
+            <span class="sme-lightbox-close material-symbols-outlined">close</span>
+            <img src="" alt="Lightbox Image">
+        `;
+        document.body.appendChild(lightbox);
+
+        // Close on click (anywhere on the overlay/image)
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Close on Esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+            }
+        });
+    }
+
+    const contentArea = document.getElementById('sme-content');
+    const lightboxImg = lightbox.querySelector('img');
+
+    // Use event delegation on the content area for high performance
+    contentArea.removeEventListener('click', handleImageClick); // Clear previous if any
+    contentArea.addEventListener('click', handleImageClick);
+
+    function handleImageClick(e) {
+        const target = e.target;
+        if (target.tagName === 'IMG' && !target.closest('a')) {
+            e.preventDefault();
+            lightboxImg.src = target.src;
+            lightboxImg.alt = target.alt || 'Magnified View';
+            lightbox.classList.add('active');
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', loadMarkdown);
