@@ -19,7 +19,7 @@ themes: ["other:glossary", "other:spec"]
     <input type="text" id="glossarySearch" placeholder="用語・技術名またはカテゴリでフィルター..." 
       class="bg-transparent border-none text-on-surface text-sm w-full focus:ring-0 placeholder:text-slate-500 placeholder:text-[10px] placeholder:uppercase placeholder:tracking-widest">
     <div id="searchCounter" class="text-[9px] font-bold text-slate-500 uppercase tracking-widest whitespace-nowrap ml-4 border-l border-white/5 pl-4">
-      Total: 144 Definitions
+      Total: 145 Definitions
     </div>
   </div>
 </div>
@@ -174,6 +174,7 @@ themes: ["other:glossary", "other:spec"]
 | "PII" | Security / Data | Personally Identifiable Information（個人情報）。氏名、住所、電話番号など、特定の個人を識別できる情報。 |
 | "PCI" | Security / Data | Payment Card Industry。クレジットカード情報の安全な取り扱いを目的としたセキュリティ基準（PCI DSS）に関連するデータ領域。 |
 | "Multi-AZ" | Infra | AWS RDS 等における可用性向上のための機能。複数のアベイラビリティゾーンにデータベースを冗長配置し、自動故障検知とフェイルオーバーを実現する。 |
+| "Rubrik Cloud Vault" | Security / Infra | Rubrikが提供するフルマネージドのイミュータブル（不変）なクラウドストレージ。AWS等からデータブロックを「引き抜いて（Vaulting）」格納し、アカウント侵害時にも削除不能な独立したバックアップを担保する。 |
 
 ## 変更履歴 (Changelog)
 - **2026-04-10**: 用語の追加 (Rubrik関連: Atlas, SLA Domain, Retention Lock, Live Mount, Multi-AZ)。最新リサーチ記事の統合に伴うアップデート。
