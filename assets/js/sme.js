@@ -113,6 +113,9 @@ async function loadMarkdown() {
         });
         window.dispatchEvent(event);
 
+        // 7. Handle Scroll to Text Fragment (for Cloud latency issues)
+        handleTextFragments();
+
     } catch (error) {
         console.error('SME Error:', error);
         contentArea.innerHTML = `<div class="p-8 border border-red-500/20 bg-red-500/10 rounded-2xl text-red-400 text-xs font-mono">
@@ -149,6 +152,48 @@ function decorateActiveUI(mdPath) {
             a.classList.add(...inactiveNavClass);
         }
     });
+}
+
+// Handle Scroll to Text Fragments (#:~:text=...) in a dynamic SPA context
+function handleTextFragments() {
+    const hash = window.location.hash;
+    if (!hash || !hash.includes(':~:text=')) return;
+
+    // Small delay to ensure browser rendering and library (Prism/Mermaid) stabilization
+    setTimeout(() => {
+        const textParam = hash.split(':~:text=')[1];
+        if (!textParam) return;
+        
+        const decodedText = decodeURIComponent(textParam);
+        const contentArea = document.getElementById('sme-content');
+
+        // Strategy A: Try Native window.find (if available)
+        // This is non-standard but Chrome/Edge support it well for simple text
+        if (typeof window.find === 'function') {
+            const found = window.find(decodedText, false, false, true, false, true, false);
+            if (found) {
+                // Flash the container
+                if (window.getSelection().rangeCount > 0) {
+                    const range = window.getSelection().getRangeAt(0);
+                    const parent = range.commonAncestorContainer.parentElement;
+                    parent.classList.add('sme-highlight-target');
+                }
+                return;
+            }
+        }
+
+        // Strategy B: Fallback DOM Walk
+        const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+        while (node = walker.nextNode()) {
+            if (node.textContent.includes(decodedText)) {
+                const parent = node.parentElement;
+                parent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                parent.classList.add('sme-highlight-target');
+                break;
+            }
+        }
+    }, 200); 
 }
 
 document.addEventListener('DOMContentLoaded', loadMarkdown);

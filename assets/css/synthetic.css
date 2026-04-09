@@ -48,3 +48,14 @@
 #sme-content th, #sme-content td { min-width: 7rem; padding: 0.9rem 1rem; text-align: left; vertical-align: top; white-space: normal; }
 #sme-content th { color: #dee5ff; font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 #sme-content td { color: #a3aac4; }
+
+/* Scroll to Text Highlight Effect */
+.sme-highlight-target {
+    animation: highlight-pulse 2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+}
+
+@keyframes highlight-pulse {
+    0% { background-color: rgba(0, 210, 255, 0.3); outline: 2px solid rgba(0, 210, 255, 0.5); }
+    100% { background-color: transparent; outline: 2px solid transparent; }
+}
