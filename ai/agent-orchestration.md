@@ -1,16 +1,21 @@
 ---
 title: "AIエージェント | オーケストレーションの最新動向 2026"
 date: "2026-04-09"
-category: "AI & Agents"
+category: "ai"
 description: "単一のLLMから、複数の特化型エージェントを束ねるオーケストレーションへの転換とその技術的背景。"
 themes: ["ai:orchestration", "ai:agent", "ai:architecture"]
 ---
 
 # AIエージェント | オーケストレーションの最新動向 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
+<figure class="my-10 max-w-4xl mx-auto cyber-glow">
+  <img src="assets/img/agent-orchestration.png" alt="AI Agent Orchestration Visualization" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
+</figure>
+
 本記事では、AI開発の最前線である「[オーケストレーター](article.html?md=glossary/system-glossary.md#:~:text="オーケストレーター")」による複数エージェントの統合管理について解説します。単一モデルの限界を、役割分担（Manager, Specialist等）によって克服し、信頼性と拡張性を両立させる「Graph型」への進化が、次世代のAI運用において不可欠な視点となることを示します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

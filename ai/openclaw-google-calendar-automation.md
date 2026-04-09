@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw | Googleカレンダー自動管理と認証エラー解決 2026"
 date: "2026-04-09"
-category: "AI & Agents"
+category: "ai"
 description: "ローカル PC 構築の理由から Google Calendar API 連携、403 access_denied の解消までを一気通貫で解説。"
 themes: ["ai:automation", "ai:tool-integration", "google:calendar"]
 ---

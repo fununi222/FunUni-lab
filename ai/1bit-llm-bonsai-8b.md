@@ -1,17 +1,22 @@
 ---
 title: "1ビットLLM | Bonsai-8Bがもたらす推論パラダイムシフト 2026"
 date: "2026-04-09"
-category: "AI Research"
+category: "ai"
 description: "推論に高価なGPUはほぼ不要になる。究極の軽量化技術「1ビット量子化」がもたらすAIパラダイムシフトと、その先に待つ未来を読み解く。"
 themes: ["ai:research", "ai:llm", "ai:hardware"]
 ---
 
 # 1ビットLLM | Bonsai-8Bがもたらす推論パラダイムシフト 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
+<figure class="my-10 max-w-4xl mx-auto cyber-glow">
+  <img src="assets/img/1bit-llm-bonsai-8b.png" alt="1-bit LLM Bonsai-8B Visualization" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
+</figure>
+
 本レポートでは、16ビットの浮動小数点(FP16)を「-1, 0, 1」の3値（実質1.58ビット）へと極限圧縮する「1ビット量子化技術」と、その実用モデルである「Bonsai-8B」の衝撃について解説します。
 パラメータの簡略化により複雑な乗算処理が不要となり、[VRAM](article.html?md=glossary/system-glossary.md#:~:text="VRAM") の消費量を激減させることで「数十万円の [GPU](article.html?md=glossary/system-glossary.md#:~:text="GPU") なしに、普通のCPUやスマホで十分な速度の推論」が可能になります。この技術的ブレイクスルーは、エッジAIの爆発的普及やNVIDIA一強体制へのカウンターとなり、AIインフラのコスト構造やプライバシー要件に巨大なパラダイムシフトをもたらします。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

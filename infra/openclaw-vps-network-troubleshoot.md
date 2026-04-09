@@ -1,16 +1,16 @@
 ---
 title: "OpenClaw | VPS外部通信トラブルシュート 2026"
 date: "2026-04-09"
-category: "Infrastructure"
+category: "infra"
 description: "VPS パケットフィルター制約による fetch failed を切り分け、復旧まで整理。"
 themes: ["infra:network", "infra:vps", "other:troubleshoot"]
 ---
 
 # OpenClaw | VPS外部通信トラブルシュート 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
-
 ## 超要約
 本レポートは、[VPS (Virtual Private Server)](article.html?md=glossary/system-glossary.md#:~:text="VPS (Virtual Private Server")) 環境に構築した [OpenClaw](article.html?md=glossary/system-glossary.md#:~:text="OpenClaw") において、外部通信（HTTP/HTTPS）がタイムアウトする原因と[トラブルシュート](article.html?md=glossary/system-glossary.md#:~:text="トラブルシュート")プロセスをまとめたものです。OS内部ではなく「事業者の[パケットフィルター](article.html?md=glossary/system-glossary.md#:~:text="パケットフィルター")」による双方向通信の遮断を特定し、[DNS (UDP 53)](article.html?md=glossary/system-glossary.md#:~:text="DNS (UDP 53")) は通るが [TCP 80/443](article.html?md=glossary/system-glossary.md#:~:text="TCP 80/443") が落ちるという特殊な挙動に対する具体的対策を提示します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 
@@ -22,7 +22,7 @@ themes: ["infra:network", "infra:vps", "other:troubleshoot"]
   - サーバー内からの `curl` も無反応。ただし [DNS](article.html?md=glossary/system-glossary.md#:~:text="DNS")（名前解決）のみ成功する。
 
 ## 2. トラブルの主因：VPS 固有のパケットフィルター
-今回の最大の問題は、OS 内部の設定ではなく、**[VPS](article.html?md=glossary/system-glossary.md#:~:text="VPS") 事業者側（インフラ層）の[パケットフィルター](article.html?md=glossary/system-glossary.md#:~:text="パケットフィルター")仕様**にありました。
+今回の最大の問題は、OS 内部の設定ではなく、**[VPS](article.html?md=glossary/system-glossary.md#:~:text="VPS") 事業者側（インフラ層）の [パケットフィルター](article.html?md=glossary/system-glossary.md#:~:text="パケットフィルター") 仕様**にありました。
 
 ### インフラ・レイヤー：双方向遮断の壁
 XServer [VPS](article.html?md=glossary/system-glossary.md#:~:text="VPS") の[パケットフィルター](article.html?md=glossary/system-glossary.md#:~:text="パケットフィルター")が「ON」の場合、許可したポート（デフォルトでは SSH 用の 22番など）以外の通信を**双方向で遮断**します。

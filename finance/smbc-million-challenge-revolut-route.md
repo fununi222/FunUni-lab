@@ -1,7 +1,7 @@
 ---
 title: "三井住友カード×Revolut 攻略ダッシュボード"
 date: "2026-04-09"
-category: "Finance"
+category: "finance"
 description: "「100万円修行」を効率的に達成するための最適解。ブランド別手数料回避術とチャージ残高の高還元ルートをインタラクティブに整理。"
 ---
 

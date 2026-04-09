@@ -1,16 +1,17 @@
 ---
 title: "LPO | 80点円による自己最適化フレームワーク 2026"
 date: "2026-04-09"
-category: "LPO"
+category: "lpo"
 description: "ホームのレーダーチャートとサマリーバーを更新するための運用ガイドと評価基準。"
 themes: ["lpo:framework", "lpo:optimization", "dev:automation"]
 ---
 
 # LPO | 80点円による自己最適化フレームワーク 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 このページは、ホーム画面のレーダーチャートと3本のサマリーバーを更新するための記事です。`index.html` はこのMarkdown内のスコア行を直接読み取り、ホーム表示へ反映します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

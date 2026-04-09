@@ -1,16 +1,16 @@
 ---
 title: "2026年春 決済・ポイ活戦略ダッシュボード"
 date: "2026-04-09"
-category: "Finance"
+category: "finance"
 description: "Vポイント統合、三井住友カード修行の封鎖、ファミペイ改定など、2026年春の激変する決済環境への対策まとめ。"
 ---
-
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 # 2026年春 決済・ポイ活戦略ダッシュボード - 新生活の最適解
 
 ## 超要約
 [三井住友カード](article.html?md=glossary/system-glossary.md#:~:text="三井住友カード")の[100万円修行](article.html?md=glossary/system-glossary.md#:~:text="100万円修行")対象外拡大、[ファミペイ](article.html?md=glossary/system-glossary.md#:~:text="ファミペイ")のPOSA還元ルール改定、転機となる[Vポイント](article.html?md=glossary/system-glossary.md#:~:text="Vポイント")・[WAON](article.html?md=glossary/system-glossary.md#:~:text="WAON")の統合。2026年春は決済インフラが「広範なバラ撒き（量）」から「特定経済圏への囲い込み（質）」へと劇的にシフトした転換点です。本レポートでは、この荒波を乗りこなすための最新ルートと[ポイ活](article.html?md=glossary/system-glossary.md#:~:text="ポイ活")防衛策を整理します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

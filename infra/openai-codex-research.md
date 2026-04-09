@@ -1,16 +1,17 @@
 ---
 title: "OpenAI Codex 基礎知識 | 2026年最新アーキテクチャ調査"
 date: "2026-04-09"
-category: "Infrastructure"
+category: "infra"
 description: "OpenAI Codex の原点と、GPT-5 時代におけるエンジニアリングの最適解。アーキテクチャ、データパイプライン、および最新の性能指標を詳解。"
 themes: ["ai:llm", "ai:engineering", "infra:automation"]
 ---
 
 # OpenAI Codex 基礎知識：2026年エンジニアリング展望
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 OpenAI Codex は、自然言語をコードに変換する [LLM](article.html?md=glossary/system-glossary.md#:~:text="LLM") の標準を確立しました。2026 年現在、そのエッセンスは [GPT-5](article.html?md=glossary/system-glossary.md#:~:text="GPT5") シリーズに統合され、エージェント型エンジニアリングへと進化しています。本レポートでは、Codex の基盤構造から最新の 2024-2026 ベンチマーク、およびセキュアな開発のための回避策を整理します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

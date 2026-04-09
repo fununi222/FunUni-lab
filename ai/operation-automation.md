@@ -1,16 +1,17 @@
 ---
 title: "運用自動化 | vSphere基盤の効率化と品質改善 2026"
 date: "2026-04-09"
-category: "AI & Agents"
+category: "ai"
 description: "vSphere基盤等における運用負担を減らし、品質を維持するための自動化と整理の記録。"
 themes: ["ai:ops", "infra:automation", "other:workflow"]
 ---
 
 # 運用自動化 | vSphere基盤の効率化と品質改善 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 本記事では、[vSphere](article.html?md=glossary/system-glossary.md#:~:text="vSphere")環境を中心としたインフラ運用の効率化プロセスについて解説します。更新作業の標準化、バックアップの自動是正（検知から修正までの自動化）、および責任分界点の明確化を通じて、人的ミスを最小化し、保守性の高い「負債を残さない運用基盤」を構築した取り組みをまとめています。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

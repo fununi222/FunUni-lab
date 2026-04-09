@@ -1,7 +1,7 @@
 ---
 title: "Glossary | システム用語集 & ナレッジベース v2026.04.09"
 date: "2026-04-09"
-category: "System"
+category: "glossary"
 description: "ブログ内で登場する専門用語や略語を、記事を読み進めやすい粒度で整理したページです。"
 themes: ["other:glossary", "other:spec"]
 ---
@@ -123,7 +123,6 @@ themes: ["other:glossary", "other:spec"]
 | "Confluence" | KM | Atlassian社が提供するチーム向けWikiツール。エンタープライズ領域で広く普及しているナレッジ共有プラットフォーム。 |
 | "三井住友銀行 (SMBC)" | Business | 日本のメガバンク。全社規模でのRAG活用（SMBC-GAI）や内製開発を強力に推進している。 |
 | "SHIFT" | Business / Dev | ソフトウェアテストや品質保証を主軸とする企業。AIを用いたレガシープログラムの解析や構造化ドキュメント化にも注力。 |
-
 | "EPP" | Security | Endpoint Protection Platform の略。端末上のウイルス検知や、既知の脅威からの保護を主眼に置くセキュリティ製品。 |
 | "SOC" | Security | Security Operations Center の略。24時間365日体制でネットワークやシステムのセキュリティを監視、インシデントの検知と初期対応を行う専門組織。 |
 | "VPN" | Network / Security | Virtual Private Network の略。インターネット等の公衆網を利用して、仮想的な専用線を構築し、安全な通信経路を確保する技術。 |

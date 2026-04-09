@@ -1,16 +1,17 @@
 ---
 title: "Finance | 2026年最新：高還元決済ルート決定版"
 date: "2026-04-09"
-category: "Finance"
+category: "finance"
 description: "三井住友カード × Olive × 各種プリペイドカードを組み合わせた、最大還元率を目指す決済最適化ガイド。"
 themes: ["finance:route", "finance:poi"]
 ---
 
 # Finance | 2026年最新：高還元決済ルート決定版
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 本レポートは、2026年最新の[キャッシュレス決済](article.html?md=glossary/system-glossary.md#:~:text="キャッシュレス決済")戦略を、三井住友カードの「[100万円修行](article.html?md=glossary/system-glossary.md#:~:text="100万円修行")」を主軸に解説したものです。かつての主力ルート（JAL Pay/au PAY）の封鎖を考慮し、現在は [Revolut](article.html?md=glossary/system-glossary.md#:~:text="Revolut") や ANA Pay を経由して楽天キャッシュを調達し、街のお店での還元率を最大化（3.5%〜）する最新の[アルゴリズム](article.html?md=glossary/system-glossary.md#:~:text="アルゴリズム")を図解します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

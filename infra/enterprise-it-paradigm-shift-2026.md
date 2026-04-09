@@ -1,16 +1,17 @@
 ---
 title: "Enterprise IT 2026 | 4つの定説とパラダイムシフト"
 date: "2026-04-09"
-category: "Infrastructure"
+category: "infra"
 description: "クラウド、AI翻訳、AIエージェント、AI防御をめぐる4つの定説を再検証するインタラクティブ分析。"
 themes: ["infra:strategy", "infra:cloud", "ai:enterprise"]
 ---
 
 # Enterprise IT 2026 | 4つの定説とパラダイムシフト
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 2026年のエンタープライズITでは、クラウド、AI翻訳、AIエージェント、AIセキュリティをめぐる「わかりやすい定説」が、現場ではそのまま通用しなくなっています。本記事は4つの神話を「神話 vs 現実」で比較しながら、次世代IT戦略に必要な前提を整理します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

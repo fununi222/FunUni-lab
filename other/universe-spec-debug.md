@@ -8,14 +8,14 @@ themes: ["other:physics", "other:spec", "other:research"]
 
 # Other | 宇宙基盤システム 技術要件定義書 (Universal Infrastructure System TRD)
 
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
-
 ## 超要約
 <figure class="my-10 max-w-4xl mx-auto cyber-glow">
   <img src="assets/img/universe-spec-debug.png" alt="Universal Infrastructure System TRD Hero" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
 </figure>
 
 本ドキュメントは、我々が「物理世界」と呼称する全領域を、高度に構造化された情報処理システム（[Universal Infrastructure System]）として再定義する技術要件定義書（TRD）である。物理法則を「実行仕様（Specification）」、宇宙を「ランタイム環境（Runtime Environment）」として扱い、最新の観測データに含まれる不整合をシステムの「バグ」や「パッチ未適用」として技術的に分析。初期デプロイ（Version 1.0）から最終仕様変更（Big Rip）に至るまでのシステムロードマップを詳解する。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 
@@ -200,7 +200,7 @@ initChart('hubble');
 ### 4.2 パッチ未適用の例外処理
 ダークマター等の現象は、標準模型APIに未統合の「プレイスホルダー」である。これらはミッシング・マス（不明な変数）を補填するための暫定的な例外処理であり、次世代の統合仕様書（量子重力理論パッチ）の適用を待つ「Issue」として管理されている。
 
-## 5. 将来の仕様変更：[Big Rip](article.html?md=glossary/system-glossary.md#:~:text="Big Rip")に向けた技術的考察
+## 5. 将来の仕様変更：Big Rip に向けた技術的考察
 
 将来的な加速膨張は、システムの完全性（Integrity）を不可逆的に破壊する。
 

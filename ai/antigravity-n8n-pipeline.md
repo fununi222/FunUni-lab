@@ -1,7 +1,7 @@
 ---
 title: "Antigravity × n8n | 自律修復パイプラインの構築と完全解剖"
 date: "2026-04-09"
-category: "AI & Agents"
+category: "ai"
 description: "Gemini 3 Proを搭載したAntigravityとn8nを連携し、エラー検知から修正PR作成までを完全自動化するパイプライン解説。"
 themes: ["ai:agent", "ai:automation", "dev:devops"]
 ---

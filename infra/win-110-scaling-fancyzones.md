@@ -1,16 +1,17 @@
 ---
 title: "Windows 11 | 表示スケール110%設定とFancyZones活用 2026"
 date: "2026-04-09"
-category: "Infrastructure"
+category: "infra"
 description: "大画面モニターやROG Allyでの作業効率を最大化する、カスタムスケーリングとマウスのみでの画面分割手法。"
 themes: ["infra:os", "infra:automation", "windows:config"]
 ---
 
 # Windows 11 | 表示スケール110%設定とFancyZones活用 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 本記事は、Windows 11環境における視認性と作業効率を極限まで高めるカスタマイズ手法の記録です。標準設定にはない「110%」の[カスタムスケーリング](article.html?md=glossary/system-glossary.md#:~:text="カスタムスケーリング")を適用し、[PowerToys](article.html?md=glossary/system-glossary.md#:~:text="PowerToys") の [FancyZones](article.html?md=glossary/system-glossary.md#:~:text="FancyZones") 機能をマウスの副ボタン（右クリック）のみで呼び出せるよう調整することで、キーボードを介さない直感的なマルチウィンドウ環境を構築します。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

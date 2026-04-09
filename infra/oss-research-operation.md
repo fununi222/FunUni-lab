@@ -1,16 +1,16 @@
 ---
 title: "OSS自動化リサーチ | 運用フロー標準化 2026"
 date: "2026-04-09"
-category: "Infrastructure"
+category: "infra"
 description: "定期的に最新トレンドや PoC に関連するツール情報をリサーチするための運用フロー定義。"
 themes: ["infra:automation", "other:research", "infra:workflow"]
 ---
 
 # OSS自動化リサーチ | 運用フロー標準化 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
-
 ## 超要約
 本ドキュメントは、インフラ自動化領域における [OSS](article.html?md=glossary/system-glossary.md#:~:text="OSS") の最新トレンドを効率的にキャッチアップし、[PoC](article.html?md=glossary/system-glossary.md#:~:text="PoC") へ迅速にフィードバックするための運用フローを定義したものです。毎週・毎月の定期リサーチを [Cron](article.html?md=glossary/system-glossary.md#:~:text="Cron") や [GitHub Actions](article.html?md=glossary/system-glossary.md#:~:text="GitHub Actions") でスケジューリングし、情報の評価・反映プロセスを標準化することで、技術選定の品質と速度を両立させます。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

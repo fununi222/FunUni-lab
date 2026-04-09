@@ -1,16 +1,17 @@
 ---
 title: "Development | altra-recommender 開発の舞台裏と推薦ロジック 2026"
 date: "2026-04-09"
-category: "Development"
+category: "dev"
 description: "推薦ロジック、データ構造、結果の見せ方を振り返るレコメンド系 Web アプリの制作記録。"
 themes: ["dev:webapp", "dev:algorithm", "other:retrospective"]
 ---
 
 # Development | altra-recommender 開発の舞台裏と推薦ロジック 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 本記事は、過去に制作したレコメンドエンジン「altra-recommender」の開発プロセスを振り返ったものです。単なる[アルゴリズム](article.html?md=glossary/system-glossary.md#:~:text="アルゴリズム")の実装にとどまらず、推薦結果の「納得感」や「可読性」といった [UI](article.html?md=glossary/system-glossary.md#:~:text="UI") 体験、および[フロントエンド](article.html?md=glossary/system-glossary.md#:~:text="フロントエンド")とロジックを密結合させないデータ構造の設計について、実務に繋がる学びをまとめています。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

@@ -1,16 +1,16 @@
 ---
 title: "Rubrik | ゼロトラスト・データセキュリティ基盤調査 2026"
 date: "2026-04-09"
-category: "Infrastructure"
+category: "infra"
 description: "Rubrik のゼロトラスト設計、不変バックアップ、脅威ハンティング、機密データ分析を統合した、究極のデータセキュリティ・リサーチ・ポータル。"
 themes: ["infra:security", "infra:backup", "infra:cyber-recovery"]
 ---
 
 # Rubrik | ゼロトラスト・データセキュリティ基盤調査 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
-
 ## 超要約
 Rubrik を「バックアップ」から「データセキュリティ基盤」へと再定義するための統合リサーチ・ポータルです。不変性による防御、AIベースの異常検知、機密データの自動分類、そしてオーケストレーションされた迅速な復旧までを一つの画面で横断的に把握できます。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

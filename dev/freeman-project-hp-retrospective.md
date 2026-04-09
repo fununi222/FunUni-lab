@@ -1,16 +1,17 @@
 ---
 title: "Development | Freeman プロジェクトのホームページ制作記録 2026"
 date: "2026-04-09"
-category: "Development"
+category: "dev"
 description: "情報設計と見やすさを意識したホームページ制作のふりかえり。可読性とレスポンシブ対応の重要性。"
 themes: ["dev:webapp", "other:retrospective"]
 ---
 
 # Development | Freeman プロジェクトのホームページ制作記録 2026
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ## 超要約
 本記事は、情報設計の原点となったホームページ「Freeman Project HP」の制作プロセスを振り返ったものです。派手な装飾よりも「情報の自然な流れ」と「可読性」を最優先し、[HTML](article.html?md=glossary/system-glossary.md#:~:text="HTML") / [CSS](article.html?md=glossary/system-glossary.md#:~:text="CSS") による構造化と、デバイスを選ばない[レスポンシブ](article.html?md=glossary/system-glossary.md#:~:text="レスポンシブ")対応の本質について、当時の学びを整理しています。
+
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
 ---
 

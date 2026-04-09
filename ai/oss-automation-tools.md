@@ -1,7 +1,7 @@
 ---
 title: "OSS自動化 | インフラ運用エコシステムのリサーチ 2026"
 date: "2026-04-09"
-category: "AI & Agents"
+category: "ai"
 description: "AnsibleやTerraform、独自開発の自動化ツールを組み合わせたインフラ運用の効率化リサーチ。"
 themes: ["ai:automation", "infra:oss", "other:research"]
 ---
