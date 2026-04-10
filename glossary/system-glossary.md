@@ -19,7 +19,7 @@ themes: ["other:glossary", "other:spec"]
     <input type="text" id="glossarySearch" placeholder="用語・技術名またはカテゴリでフィルター..." 
       class="bg-transparent border-none text-on-surface text-sm w-full focus:ring-0 placeholder:text-slate-500 placeholder:text-[10px] placeholder:uppercase placeholder:tracking-widest">
     <div id="searchCounter" class="text-[9px] font-bold text-slate-500 uppercase tracking-widest whitespace-nowrap ml-4 border-l border-white/5 pl-4">
-      Total: 155 Definitions
+      Total: 160 Definitions
     </div>
   </div>
 </div>
@@ -165,7 +165,7 @@ themes: ["other:glossary", "other:spec"]
 | "SLA Domain" | Infra / Security | バックアップの頻度、保持期間、レプリケーション先などを一括定義する Rubrik の宣言型ポリシーエンジン。ジョブベースではなく「あるべき状態」を定義する。 |
 | "Retention Lock" | Infra / Security | バックアップデータの保持期間内における、管理者を含むあらゆるユーザーによるデータ削除を不可能にする機能。ランサムウェアによる証跡抹消を防御する。 |
 | "Live Mount" | Infra / Security | バックアップデータをストレージから直接サーバーにマウントし、データのリストア（書き戻し）を待たずに数分でシステムを即時稼働させる機能。 |
-| "AWS RDS" | Infra | Amazon Relational Database Service (マネージド型リレーショナルデータベースサービス)。リソースタグ等に基づいた[SLA Domain](../article.html?md=glossary/system-glossary.md#:~:text="SLA%20Domain")の自動適用（オートプロテクション）が可能。 |
+| "AWS RDS" | Infra | Amazon Relational Database Service (マネージド型リレーショナルデータベースサービス)。リソースタグ等に基づいた[SLA Domain](article.html?md=glossary/system-glossary.md#:~:text="SLA%20Domain")の自動適用（オートプロテクション）が可能。 |
 | "Amazon Aurora" | Infra | クラウド向けに構築された、Amazon RDS の MySQL および PostgreSQL と互換性のあるリレーショナルデータベース。クラスタ単位での保護に対応。 |
 | "PITR" | Infra | Point-in-Time Recovery。バックアップ時点だけでなく、トランザクションログを活用して過去の任意の時点までデータを復旧する機能。 |
 | "KMS" | Security / Infra | Key Management Service。AWS での暗号化キー管理サービス。クロスアカウント/リージョンでのリストア時に、移行先へキーの使用権限を付与する必要がある。 |
@@ -185,6 +185,11 @@ themes: ["other:glossary", "other:spec"]
 | "Boto3" | AI / Dev | Python用のAWS SDK。プログラムからAWSリソース（S3, EC2など）を自動操作・管理するための標準的なライブラリ。 |
 | "AWS CDK" | Infra | Cloud Development Kit。TypeScriptやPython等のプログラミング言語を使用してクラウドインフラを定義し、CloudFormationを通じてデプロイするIaCフレームワーク。 |
 | "AWS Well-Architected Framework" | Process / Infra | クラウド上での安全、高性能、高効率、かつ復元力のあるインフラを設計・運用するためのベストプラクティスに基づいたフレームワーク。 |
+| "Amazon RDS Proxy" | Infra | データベースの前に立ち、接続（コネクション）をプールして再利用するフルマネージドのプロキシサービス。Lambda等のサーバーレス環境からの大量の接続要求を効率的に処理し、可用性とスケーラビリティを向上させる。 |
+| "Veeam" | Infra | 業界標準のデータ保護ソフトウェア。ESXi/Hyper-V、物理サーバー、AWS等のクラウド環境を統合的に保護し、オンプレミスリポジトリへのセキュアなコピーをサポートする。 |
+| "Commvault" | Infra | エンタープライズ向けの統合データ管理プラットフォーム。高度な重複排除機能と広範なプラットフォームサポート、および複雑なハイブリッド環境でのデータ移動管理が特徴。 |
+| "AWS DataSync" | Infra | オンプレミス、エッジ、クラウドストレージ間でのデータ転送を簡素化・高速化する安全なオンラインデータ転送サービス。RDSからのエクスポートデータの同期に利用される。 |
+| "Parquet" | AI / Data | Apache Parquet。列指向（カラムナ）のデータストレージフォーマット。分析クエリの効率が高く、AIOpsデータレイクや大規模データセットの持ち出し用フォーマットとして最適。 |
 
 ## 変更履歴 (Changelog)
 - **2026-04-10**: 用語の追加 (Rubrik関連: Atlas, SLA Domain, Retention Lock, Live Mount, Multi-AZ)。最新リサーチ記事の統合に伴うアップデート。
