@@ -1,13 +1,13 @@
 ---
-title: "Glossary | システム用語集 & ナレッジベース v2026.04.10.1"
-date: "2026-04-10"
+title: "Glossary | システム用語集 & ナレッジベース v2026.04.13.1"
+date: "2026-04-13"
 category: "glossary"
 description: "ブログ内で登場する専門用語や略語を、記事を読み進めやすい粒度で整理したページです。"
 themes: ["other:glossary", "other:spec"]
 ---
 
 # Glossary | システム用語集 & ナレッジベース v2026.04.10.1
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-10</div>
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-13</div>
 
 ブログ内で登場する専門用語や略語を、記事を読み進めやすい粒度で整理したページです。
 以下の表は、各ヘッダーをクリックしてソートしたり、キーワードで検索することができます。
@@ -190,8 +190,12 @@ themes: ["other:glossary", "other:spec"]
 | "Commvault" | Infra | エンタープライズ向けの統合データ管理プラットフォーム。高度な重複排除機能と広範なプラットフォームサポート、および複雑なハイブリッド環境でのデータ移動管理が特徴。 |
 | "AWS DataSync" | Infra | オンプレミス、エッジ、クラウドストレージ間でのデータ転送を簡素化・高速化する安全なオンラインデータ転送サービス。RDSからのエクスポートデータの同期に利用される。 |
 | "Parquet" | AI / Data | Apache Parquet。列指向（カラムナ）のデータストレージフォーマット。分析クエリの効率が高く、AIOpsデータレイクや大規模データセットの持ち出し用フォーマットとして最適。 |
+| "Obsidian" | Knowledge Management | ローカルファーストの知識管理（PKM）ツール。Markdown形式でメモを保存し、強力なグラフビューやプラグインエコシステムを持つ。 |
+| "Vault (保管庫)" | Knowledge Management | Obsidianにおけるメモのルートフォルダ。設定やプラグインもこの中に含まれる。 |
+| "Google Drive Sync" | Infrastructure / Sync | Obsidianのコミュニティプラグインの一つ。Google Drive APIを介して、複数のデバイス間で保管庫（Vault）を同期するためのツール。 |
 
 ## 変更履歴 (Changelog)
+- **2026-04-13**: 用語の追加 (Obsidian, Vault, Google Drive Sync)。マルチプラットフォーム同期記事の統合に伴うアップデート。
 - **2026-04-10**: 用語の追加 (Rubrik関連: Atlas, SLA Domain, Retention Lock, Live Mount, Multi-AZ)。最新リサーチ記事の統合に伴うアップデート。
 - **2026-04-10**: リアルタイムフィルター機能の追加。ブラウザ上での瞬時の用語検索を可能にする動的スクリプトを統合。
 - **2026-04-09**: 全体的な標準化アップデート。「Synthetic Edition」デザイン規格に基づき、メタデータの再定義、およびタイトルと日付の同期を実施。PagerDutyアーキテクチャ記事の追加に伴い、PagerDuty、AIOps、SRE、Event Orchestration、Runbook Automation、MTTA、インシデント管理を追加。さらに宇宙仕様書TRDおよびアウトドア小売戦略レポの各専門用語も反映。
