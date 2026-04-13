@@ -180,7 +180,7 @@ const contentData = {
     routes: {
         android: {
             title: "還元率維持に最適！楽天Edy ➡️ 楽天キャッシュルート",
-            note: "<strong>解説：</strong> Androidのおサイフケータイ機能を活用し、[楽天Edy](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="楽天Edy")を経由して[楽天キャッシュ](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="楽天キャッシュ")に変換するルートです。これにより、楽天証券での投信積立（月5万円まで）に充当でき、安定してポイント還元を受けつつ残高を現金化に近い形で消化できます。",
+            note: "<strong>解説：</strong> Androidのおサイフケータイ機能を活用し、[楽天Edy](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text=\"楽天Edy\")を経由して[楽天キャッシュ](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text=\"楽天キャッシュ\")に変換するルートです。これにより、楽天証券での投信積立（月5万円まで）に充当でき、安定してポイント還元を受けつつ残高を現金化に近い形で消化できます。",
             nodes: [
                 { name: "Revolut", icon: "💳", color: "bg-surface" },
                 { name: "ANA Pay", icon: "✈️", color: "bg-blue-900/20" },
