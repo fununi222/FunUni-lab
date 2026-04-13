@@ -7,7 +7,7 @@ themes: ["other:glossary", "other:spec"]
 ---
 
 # Glossary | システム用語集 & ナレッジベース v2026.04.10.1
-<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-13</div>
+<div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-14</div>
 
 ブログ内で登場する専門用語や略語を、記事を読み進めやすい粒度で整理したページです。
 以下の表は、各ヘッダーをクリックしてソートしたり、キーワードで検索することができます。
@@ -19,7 +19,7 @@ themes: ["other:glossary", "other:spec"]
     <input type="text" id="glossarySearch" placeholder="用語・技術名またはカテゴリでフィルター..." 
       class="bg-transparent border-none text-on-surface text-sm w-full focus:ring-0 placeholder:text-slate-500 placeholder:text-[10px] placeholder:uppercase placeholder:tracking-widest">
     <div id="searchCounter" class="text-[9px] font-bold text-slate-500 uppercase tracking-widest whitespace-nowrap ml-4 border-l border-white/5 pl-4">
-      Total: 160 Definitions
+      Total: 164 Definitions
     </div>
   </div>
 </div>
@@ -27,6 +27,10 @@ themes: ["other:glossary", "other:spec"]
 
 | 用語・技術名 | カテゴリ | 概要・詳細 |
 |---|---|---|
+| "ANA Pay" | Finance | ANAグループが提供するモバイル決済およびバーチャルプリペイドカードサービス。クレジットカードからのチャージ中継点として広く利用される。 |
+| "eKYC" | Security | electronic Know Your Customer の略。スマホと本人確認書類を用いてオンラインで完結する本人確認手続き。 |
+| "NFC" | Dev / Infra | Near Field Communication の略。近距離無線通信規格。非接触型決済やカード読み取りに利用される技術。 |
+| "プレミアム型" | Finance | 楽天キャッシュにおいて本人確認（eKYC）が完了した状態。Edyからのチャージや、一部の送金機能が解禁される。 |
 | "OpenClaw" | AI / Dev | ブラウザ操作、シェル実行、検索などを組み合わせてタスクを進めるAIエージェント実行環境。実務作業向けの操作レイヤーとして活用。 |
 | "AIエージェント" | AI | 文章を返すだけでなく、指示に応じてツールを使いながら自律的に作業を進行するAIモデル。 |
 | "生成AI" | AI | テキスト、コード、画像などを生成できるAIの総称。大規模言語モデルを中心に、業務自動化やソフトウェア開発への影響が急速に広がっている。 |
@@ -197,6 +201,7 @@ themes: ["other:glossary", "other:spec"]
 | "Google Drive Sync" | Infrastructure / Sync | Obsidianのコミュニティプラグインの一つ。Google Drive APIを介して、複数のデバイス間で保管庫（Vault）を同期するためのツール。 |
 
 ## 変更履歴 (Changelog)
+- **2026-04-14**: 用語の追加 (ANA Pay, eKYC, NFC, プレミアム型)。iPhone Edy変換解禁記事の統合に伴うアップデート。
 - **2026-04-13**: 用語の追加 (Obsidian, Vault, Google Drive Sync)。マルチプラットフォーム同期記事の統合に伴うアップデート。
 - **2026-04-10**: 用語の追加 (Rubrik関連: Atlas, SLA Domain, Retention Lock, Live Mount, Multi-AZ)。最新リサーチ記事の統合に伴うアップデート。
 - **2026-04-10**: リアルタイムフィルター機能の追加。ブラウザ上での瞬時の用語検索を可能にする動的スクリプトを統合。
