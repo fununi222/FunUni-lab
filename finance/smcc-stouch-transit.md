@@ -13,20 +13,22 @@ themes: ["finance:payments", "finance:cards", "finance:points"]
 ## 超要約
 
 <figure class="my-10 max-w-4xl mx-auto cyber-glow">
-  <img src="assets/img/smcc-stouch-transit.png" alt="Mitsui Sumitomo Card Smartphone Touch Payment at Transit Gate" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
+  <img src="assets/img/smcc-stouch-transit.png" alt="Mitsui Sumitomo Card Smartphone Touch Payment at Kanto Transit Gate" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
 </figure>
 
-日々の電車やバスの移動で、モバイルSuicaやPASMOを利用している方は多いと思います。現在、関東圏の交通インフラにおいて、新たな選択肢として「スマートフォンのタッチ決済」の導入が進んでいます。
+日々の電車やバスの移動で、モバイルSuicaやPASMOを利用している方は多いと思います。現在、**全国の交通インフラ**において、新たな選択肢として「スマートフォンのタッチ決済」の導入が急速に進んでいます。
 
-[三井住友カード](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="三井住友カード")が実施している「スマホのタッチ決済乗車で最大8%還元」は、日々の移動費に対して効率的に[Vポイント](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Vポイント")が付与される実用的な施策です。この記事では、関東圏での具体的な活用ルートと、実運用において知っておくべき注意点を整理して解説します。
+[三井住友カード](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="三井住友カード")が実施している「スマホのタッチ決済乗車で最大8%還元」は、対象路線の移動費に対して効率的に[Vポイント](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Vポイント")を貯めるための非常に実用的な施策です。
 
-1. **最大8%還元の適用条件**
+本稿では、この全国的な施策を**「関東圏での具体的な活用」に絞って**、JR東日本併用時などの運用上の注意点とともに解説します。
+
+1. **最大8%還元の適用条件（基本ルール）**
 2. **関東圏の対象路線と具体的な活用例**
-3. **利用前に知っておくべき3つの注意点**
+3. **JR東日本・東武鉄道利用時の注意点**
 
 ---
 
-### 1. 最大8%還元の適用条件
+### 1. 最大8%還元の適用条件（基本ルール）
 
 この還元を受けるには、対象のカードをスマートフォンのタッチ決済（Apple Pay / Google Pay）で利用することが必須条件となります。
 
@@ -46,7 +48,7 @@ themes: ["finance:payments", "finance:cards", "finance:points"]
 
 たとえば、休日に京急線で逗子周辺から都心へ出かけたり、みなとみらい線を利用してKアリーナ横浜でのライブへ向かったりする際も、事前のチャージなしで改札を通過でき、ポイント還元の対象となります。
 
-### 3. 利用前に知っておくべき3つの注意点
+### 3. JR東日本・東武鉄道利用時の注意点
 
 実際の移動で利用する際、いくつか気をつけるべき仕様があります。
 
