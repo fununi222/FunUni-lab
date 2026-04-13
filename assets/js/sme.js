@@ -52,19 +52,21 @@ async function loadMarkdown() {
         // 3. Parse Markdown
         const rawHtml = marked.parse(mdText);
 
-        // 3.5 Extract Scripts to bypass DOMPurify stripping their contents
-        const scripts = [];
+        // 3.5 Extract Scripts, Styles, and SVGs to bypass DOMPurify stripping their contents
+        const extractedElements = [];
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = rawHtml;
-        Array.from(tempDiv.querySelectorAll('script')).forEach(scriptEl => {
-            scripts.push({
-                content: scriptEl.innerHTML,
-                attributes: Array.from(scriptEl.attributes)
+        
+        Array.from(tempDiv.querySelectorAll('script, style, svg')).forEach(el => {
+            extractedElements.push({
+                tagName: el.tagName.toLowerCase(),
+                content: el.innerHTML,
+                attributes: Array.from(el.attributes)
             });
-            scriptEl.parentNode.removeChild(scriptEl);
+            el.parentNode.removeChild(el);
         });
 
-        // 4. Sanitize the HTML (scripts securely extracted)
+        // 4. Sanitize the HTML (scripts/styles securely extracted)
         const cleanHtml = DOMPurify.sanitize(tempDiv.innerHTML, { 
             ADD_TAGS: ['canvas', 'button', 'iframe'], 
             ADD_ATTR: ['target', 'data-dataset', 'data-metric', 'id', 'class', 'style', 'width', 'height', 'onclick'] 
@@ -73,12 +75,12 @@ async function loadMarkdown() {
         // 5. Inject Content
         contentArea.innerHTML = cleanHtml;
 
-        // 6. Re-inject and Execute Scripts
-        scripts.forEach(scriptObj => {
-            const newScript = document.createElement('script');
-            scriptObj.attributes.forEach(attr => newScript.setAttribute(attr.name, attr.value));
-            newScript.appendChild(document.createTextNode(scriptObj.content));
-            contentArea.appendChild(newScript);
+        // 6. Re-inject and Execute Scripts/Styles
+        extractedElements.forEach(item => {
+            const newEl = document.createElement(item.tagName);
+            item.attributes.forEach(attr => newEl.setAttribute(attr.name, attr.value));
+            newEl.appendChild(document.createTextNode(item.content));
+            contentArea.appendChild(newEl);
         });
 
         // Handle dynamic metadata (Title, Category, Date) from frontmatter
