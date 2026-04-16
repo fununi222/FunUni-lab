@@ -1,4 +1,4 @@
----
+﻿---
 title: "Infra | AWS：クラウドレジリエンスと AIOps を支える基盤設計 2026"
 date: "2026-04-10"
 category: "infra"

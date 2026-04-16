@@ -1,4 +1,4 @@
----
+﻿---
 title: "三井住友カード×Revolut 攻略ガイド"
 date: "2026-04-09"
 category: "finance"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Infra | Amazon RDS：マネージドデータベースの核心と AIOps 自動修復 2026"
 date: "2026-04-10"
 category: "infra"

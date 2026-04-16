@@ -75,6 +75,7 @@ async function loadMarkdown() {
         // 5. Inject Content
         contentArea.innerHTML = cleanHtml;
 
+
         // 6. Re-inject and Execute Scripts/Styles
         extractedElements.forEach(item => {
             const newEl = document.createElement(item.tagName);

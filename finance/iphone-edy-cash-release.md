@@ -1,4 +1,4 @@
----
+﻿---
 title: "iPhone 楽天Edy→楽天キャッシュ 変換解禁ガイド"
 date: "2026-04-14"
 category: "finance"

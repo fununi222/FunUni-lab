@@ -1,4 +1,4 @@
----
+﻿---
 title: "【セキュリティ編】外部パートナー向けマルチテナントRAGの構築と漏洩攻撃対策"
 date: "2026-04-16"
 category: "ai"
@@ -11,7 +11,7 @@ themes: ["ai:security", "rag:multi-tenant"]
 # 【セキュリティ編】外部パートナー向けマルチテナントRAGの構築と漏洩攻撃対策
 
 <figure class="my-10 max-w-4xl mx-auto cyber-glow">
-<img src="../assets/img/multi-tenant-rag-security.png" alt="Secure Multi-tenant Architecture" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
+<img src="../assets/img/ai/multi-tenant-rag-security.png" alt="Secure Multi-tenant Architecture" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
 </figure>
 
 大規模な外部連携プロジェクトのように、外部パートナー（BP）とAIを共有する際、最大の懸念は「情報の混ざり」です。A社の社員がB社の機密にアクセスできてしまう事故を防ぐための、堅牢なアーキテクチャを解説します。

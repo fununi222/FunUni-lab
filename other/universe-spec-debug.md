@@ -1,4 +1,4 @@
----
+﻿---
 title: "Other | 宇宙基盤システム 技術要件定義書 (Universal Infrastructure System TRD)"
 date: "2026-04-09"
 category: "other"

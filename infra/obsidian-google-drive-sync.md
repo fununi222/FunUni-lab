@@ -1,4 +1,4 @@
----
+﻿---
 title: "Obsidian | Google Drive Sync によるマルチプラットフォーム無料同期術 2026"
 date: "2026-04-13"
 category: "infra"

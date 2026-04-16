@@ -1,4 +1,4 @@
----
+﻿---
 title: "Enterprise AI Architecture | クラウドAI基盤 vs. 独自エージェントの選択肢と制約"
 date: "202X-04-XX"
 category: "ai"

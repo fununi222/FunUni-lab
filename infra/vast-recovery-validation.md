@@ -1,4 +1,4 @@
----
+﻿---
 title: "Scale-out Storage | 大規模データ削除後の「実効容量」回復と検証プロセス"
 date: "202X-04-XX"
 category: "infra"

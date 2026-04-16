@@ -1,4 +1,4 @@
----
+﻿---
 title: "AWS Minimalism | 小規模開発向け S3/WAF/IAM 構築の自動化パターン"
 date: "2026-04-15"
 category: "infra"

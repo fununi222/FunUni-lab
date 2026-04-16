@@ -1,4 +1,4 @@
----
+﻿---
 title: "【2026最新】生成AI実運用の壁「知識の陳腐化」を突破するEnterprise AI Ops完全ガイド"
 date: "2026-04-16"
 category: "ai"

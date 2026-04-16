@@ -263,8 +263,23 @@ themes: ["other:glossary", "other:spec"]
 | "FinOps" | Business / Cloud | Financial Operationsの略。クラウドやAIインフラのコストを可視化し、エンジニアリングと財務が連携して継続的に投資対効果（ROI）を最適化する実践手法。 |
 | "PTU" | AI / FinOps | Provisioned Throughput Units。Azure OpenAI等で提供される、一定の処理能力（スループット）を期間予約で買い取り、安定したパフォーマンスとコストの予見性を確保する契約モデル。 |
 | "Batch API" | AI / FinOps | 即時性を求められない大量のタスクを非同期にまとめて処理するAPI。標準APIの半額程度のコストで実行できるため、FinOpsの強力な手段となる。 |
+| "Devcontainer" | Dev | 開発環境をコンテナ（Docker等）上に構築し、設定ファイル（devcontainer.json）で一元管理してチーム内で一貫した環境を提供する仕組み。 |
+| "Harbor" | Infra / Security | CNCF Graduatedプロジェクトのコンテナレジストリ。脆弱性スキャンやRBAC、プロキシキャッシュ機能を備えエンタープライズで広く利用される。 |
+| "Docker Hub" | Dev / Infra | Docker社が運営する世界最大のパブリックコンテナレジストリ。APIへのPull制限（レートリミット）が存在するなど運用上の注意点がある。 |
+| "プロキシキャッシュ" | Infra | 外部から取得したイメージデータを自社内に一時保存（キャッシュ）し、次に同じ要求があった際に高速・低コストで提供する仕組み。 |
+| "Trivy" | Security | コンテナイメージやファイルシステム構成等の脆弱性を高速にスキャンするオープンソースのセキュリティツール。Harbor等に深く統合可能。 |
+| "SBOM" | Security | Software Bill of Materials。ソフトウェアを構成するコンポーネント（ライブラリや依存関係）の一覧表。サプライチェーンの透明性確保に不可欠。 |
+| "DevSecOps" | Process | 開発（Dev）と運用（Ops）に、セキュリティ（Sec）の要素をプロセスの最初から組み込み、自動化して安全とスピードを両立する手法。 |
+| "CockroachDB" | Infra / DB | 高い拡張性と耐障害性を持つ分散SQLデータベース。データ量に応じた無限のスケールアウトが可能。 |
+| "SOAR" | Security | Security Orchestration, Automation and Responseの略。インシデントへの対応プロセス全般を自動化し、SOC運用を効率化するプラットフォーム。 |
+| "GraphQL" | Dev / API | クライアントが必要なデータ（フィールド）だけを過不足なく指定して取得できるAPIアーキテクチャ。不要なデータの転送（オーバーフェッチ）を防ぐ。 |
+| "RSC" | Infra / Security | Rubrik Security Cloudの略。世界中に分散するRubrikクラスタを単一のSaaS画面から統合管理するためのプラットフォーム。 |
+| "XSOAR" | Security | Palo Alto Networks社が提供する強力なSOARソリューション（Cortex XSOAR）。自動化プレイブックを活用しSOCのMTTRを劇的に短縮する。 |
+| "SOC" | Security | Security Operation Centerの略。サイバー攻撃の検知、分析、対応を24時間365日体制で行う専門チームまたは拠点。 |
 
 ## 変更履歴 (Changelog)
+- **2026-04-16**: 用語の追加 (CockroachDB, SOAR, GraphQL, RSC, XSOAR, SOC)。Rubrikスケーリング戦略および運用自動化シリーズの公開に伴うアップデート。
+- **2026-04-16**: 用語の追加 (Devcontainer, Harbor, Docker Hub, プロキシキャッシュ, Trivy, SBOM, DevSecOps)。Devcontainer×Harbor連載記事の統合に伴うアップデート。
 - **2026-04-16**: 用語の追加 (インクリメンタル・インデクシング, FinOps, PTU, Batch API)。Enterprise AI Opsクラスター（技術・コスト編）の構築に伴うアップデート。
 - **2026-04-16**: 用語の追加 (SKY WALK, 雪洞, 石洞, 絵空事)。エスコンフィールド最新ガイドの更なる詳細化に伴うアップデート。
 - **2026-04-15**: 用語の追加 (男爵いも, 豪雪うどん, 五四〇, &cafe NISEKO)。倶知安の地元メシ探訪レポート刷新に伴うアップデート。

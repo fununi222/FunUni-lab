@@ -1,4 +1,4 @@
----
+﻿---
 title: "Enterprise AI Ops | 実運用で判明した『知識の陳腐化』と権限管理の勘所"
 date: "2026-04-16"
 category: "ai"

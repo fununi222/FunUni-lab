@@ -1,4 +1,4 @@
----
+﻿---
 title: "1ビットLLM | Bonsai-8Bがもたらす推論パラダイムシフト 2026"
 date: "2026-04-09"
 category: "ai"

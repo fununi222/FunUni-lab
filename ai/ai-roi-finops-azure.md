@@ -1,4 +1,4 @@
----
+﻿---
 title: "【コスト編】予算を勝ち取る生成AIのROI算定式とFinOps戦略"
 date: "2026-04-16"
 category: "ai"

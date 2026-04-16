@@ -1,4 +1,4 @@
----
+﻿---
 title: "Infra | Rubrik：次世代データ管理アーキテクチャの全容 2026"
 date: "2026-04-10"
 category: "infra"

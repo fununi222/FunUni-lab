@@ -1,4 +1,4 @@
----
+﻿---
 title: "DB Backup Modernization | 基幹システムのバックアップ刷新と『ノイズ除外』の判断基準"
 date: "2026-04-16"
 category: "infra"
