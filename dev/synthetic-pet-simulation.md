@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Development | Synthetic Pet Simulation：合成生命体の自律エージェント試論 2026"
 date: "2026-04-13"
 category: "dev"
@@ -31,7 +31,7 @@ themes: ["dev:webapp", "dev:ux", "ai:agents"]
 <span>SYNTH_OS v4.13-MINT</span>
 <span id="pet-battery">100%</span>
 </div>
-<div id="pet-screen" class="relative w-full h-56 bg-[#0a1a14] rounded-3xl border border-primary/20 overflow-hidden inner-glow flex items-center justify-center" style="background-image: url('./pet-bg-spring.png'); background-size: cover; background-position: center;">
+<div id="pet-screen" class="relative w-full h-56 bg-[#0a1a14] rounded-3xl border border-primary/20 overflow-hidden inner-glow flex items-center justify-center" style="background-image: url('../assets/img/dev/pet-bg-spring.png'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
 <div id="pet-container" class="relative z-10 w-32 h-32 flex items-center justify-center">
 <img id="pet-mascot" src="../assets/img/dev/mascot-v3-idle.png" class="w-24 h-24 object-contain pet-bobbing transition-all duration-300 chromakey-active" style="image-rendering: pixelated;">
@@ -121,10 +121,10 @@ filter: url(#chromakey);
 <script>
 const PET_STORAGE_KEY = 'fununi_synth_pet_v1';
 const SPRITES = {
-idle: './mascot-v3-idle.png',
-happy: './mascot-v3-happy.png',
-sad: './mascot-v3-sad.png',
-sleep: './mascot-v3-sleep.png'
+idle: '../assets/img/dev/mascot-v3-idle.png',
+happy: '../assets/img/dev/mascot-v3-happy.png',
+sad: '../assets/img/dev/mascot-v3-sad.png',
+sleep: '../assets/img/dev/mascot-v3-sleep.png'
 };
 let petState = {
 hunger: 100,

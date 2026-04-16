@@ -66,23 +66,34 @@ async function loadMarkdown() {
             el.parentNode.removeChild(el);
         });
 
-        // 4. Sanitize the HTML (scripts/styles securely extracted)
+        // 4. Resolve Relative Paths for Assets (Images, Links, Styles)
+        resolveRelativePaths(tempDiv, mdPath);
+
+        // 5. Sanitize the HTML (scripts/styles securely extracted)
         const cleanHtml = DOMPurify.sanitize(tempDiv.innerHTML, { 
             ADD_TAGS: ['canvas', 'button', 'iframe'], 
             ADD_ATTR: ['target', 'data-dataset', 'data-metric', 'id', 'class', 'style', 'width', 'height', 'onclick'] 
         });
 
-        // 5. Inject Content
+        // 6. Inject Content
         contentArea.innerHTML = cleanHtml;
 
 
-        // 6. Re-inject and Execute Scripts/Styles
+        // 7. Re-inject and Execute Scripts/Styles (Resolve paths inside scripts/styles too)
         extractedElements.forEach(item => {
             const newEl = document.createElement(item.tagName);
             item.attributes.forEach(attr => newEl.setAttribute(attr.name, attr.value));
-            newEl.appendChild(document.createTextNode(item.content));
+            
+            let content = item.content;
+            if (item.tagName === 'style' || item.tagName === 'script') {
+                content = resolveStringPaths(content, mdPath);
+            }
+            
+            newEl.appendChild(document.createTextNode(content));
             contentArea.appendChild(newEl);
         });
+
+
 
         // Handle dynamic metadata (Title, Category, Date) from frontmatter
         if (metadata.title) document.title = `${metadata.title} | FunUni-lab Synthetic Edition`;
@@ -263,3 +274,66 @@ function initLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', loadMarkdown);
+
+/**
+ * Resolves relative paths in the rendered HTML fragments against the Markdown source path.
+ */
+function resolveRelativePaths(container, mdPath) {
+    if (!mdPath) return;
+
+    // 1. Fix Images and Links
+    const elements = container.querySelectorAll('img[src], a[href], source[src], video[src]');
+    elements.forEach(el => {
+        const attr = el.tagName === 'A' ? 'href' : 'src';
+        const val = el.getAttribute(attr);
+        
+        // Only resolve internal relative paths
+        if (val && !val.startsWith('http') && !val.startsWith('/') && !val.startsWith('#') && !val.startsWith('mailto:') && !val.startsWith('tel:')) {
+            el.setAttribute(attr, resolvePath(val, mdPath));
+        }
+    });
+
+    // 2. Fix Inline Styles (background-image: url(...))
+    const styledElements = container.querySelectorAll('[style*="url("]');
+    styledElements.forEach(el => {
+        let style = el.getAttribute('style');
+        style = resolveStringPaths(style, mdPath);
+        el.setAttribute('style', style);
+    });
+}
+
+/**
+ * Resolves paths inside a string (CSS or JS) using the ResolvePath logic.
+ */
+function resolveStringPaths(str, mdPath) {
+    if (!str) return str;
+    // Matches url('./path') or url("../path") or url(path)
+    return str.replace(/url\(['"]?([^'"\)]+)['"]?\)/g, (match, path) => {
+        if (path.startsWith('http') || path.startsWith('/') || path.startsWith('data:')) return match;
+        return `url('${resolvePath(path, mdPath)}')`;
+    }).replace(/src=["']\.\/([^"']+)["']/g, (match, path) => {
+        // Matches src="./path" specifically for JS/HTML snippets
+        return `src="${resolvePath('./' + path, mdPath)}"`;
+    });
+}
+
+/**
+ * Core Path Resolution Logic (Pure Function)
+ */
+function resolvePath(relPath, mdPath) {
+    if (!relPath || relPath.startsWith('http') || relPath.startsWith('/') || relPath.startsWith('data:')) return relPath;
+    
+    // Normalize mdPath dir
+    const mdDirParts = mdPath.split('/').slice(0, -1).filter(p => p !== '');
+    const relParts = relPath.split('/');
+    const stack = [...mdDirParts];
+    
+    for (const part of relParts) {
+        if (part === '..') {
+            if (stack.length > 0) stack.pop();
+        } else if (part !== '.' && part !== '') {
+            stack.push(part);
+        }
+    }
+    return stack.join('/');
+}
