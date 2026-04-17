@@ -8,10 +8,6 @@ themes: ["infra:architecture", "infra:scaling", "infra:database"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.16</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/infra/rubrik-scaling-strategy-nodes.png" alt="Rubrikノードスケールアウト戦略" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # Rubrikのスケーリング戦略：クラスタ追加とノード追加のベストプラクティス
 
 データ量が増加し、[Rubrik](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Rubrik")インフラの拡張を検討する際、多くのインフラ管理者が直面する疑問があります。

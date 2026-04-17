@@ -10,10 +10,6 @@ themes: ["travel:gourmet", "niseko:food", "cospa"]
 
 # ニセコ価格を完全ハック！地元スーパー活用術と「驚異のコスパ」ランチ名店15選
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/other/niseko-gourmet-cospa.png" alt="Niseko Gourmet Cospa Guide" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 1杯3,000円のラーメンに驚くのはもう終わり。
 地元民が通う「1,000円台の絶品名店」と、高級和牛がスーパーで手に入る「自炊ハック」を駆使して、食の満足度を最大化しましょう。
 

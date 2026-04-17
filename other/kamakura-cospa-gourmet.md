@@ -8,10 +8,6 @@ themes: ["gourmet:kamakura", "other:local", "kamakura:lunch"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.15</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/other/kamakura-cospa-gourmet.png" alt="Kamakura Cospa Gourmet Guide" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # 鎌倉のコスパ飯 3選 | 行列必至の老舗カレーから本格麻婆豆腐まで
 
 鎌倉での食事は「高い・混む」というイメージがありますが、しっかりリサーチすれば1,000円台で驚くほどのクオリティに出会えます。今回は、地元民が「並んででも食べたい」と太鼓判を押すコスパ最強の3店を厳選しました。

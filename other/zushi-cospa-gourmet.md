@@ -8,10 +8,6 @@ themes: ["gourmet:seafood", "other:local", "zushi:lunch"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.15</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/other/zushi-cospa-gourmet.png" alt="Zushi Cospa Gourmet Guide" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # 逗子のコスパ飯 3選 | 地元民が愛する新鮮魚介とボリューム満点の定食
 
 [逗子](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="逗子")エリアで「安くて美味しい」を追求すると、必ず行き着くのが新鮮な魚料理です。今回は、観光客向けの派手な宣伝はないものの、地元民が日常的に利用する圧倒的コスパを誇る3店をリサーチしました。

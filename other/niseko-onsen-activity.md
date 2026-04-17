@@ -10,10 +10,6 @@ themes: ["travel:activity", "niseko:onsen", "cospa"]
 
 # 2026年ニセコ湯めぐりパス攻略｜神仙沼から1.7kmジップラインまで「無料＆感動」体験記
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/other/niseko-onsen-activity.png" alt="Niseko Onsen & Activity Guide" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 [ニセコ](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="ニセコ")の魅力は雪だけではありません。
 環境省指定の「国民保養温泉地」としての名湯巡りと、2026年最新のアクティビティを組み合わせて、心身ともにデトックスする究極のプランを提案します。
 

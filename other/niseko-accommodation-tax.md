@@ -10,10 +10,6 @@ themes: ["travel:accommodation", "niseko:tax", "cospa"]
 
 # 2026年版ニセコ宿泊税ガイド｜1泊7,900円の「最強拠点」と新税制の賢い歩き方
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/other/niseko-accommodation-tax.png" alt="Niseko Accommodation Tax Guide" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 「[ニセコ](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="ニセコ")に泊まる＝1泊数万円」はもう古い。
 2026年4月から始まった新しい[宿泊税](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="宿泊税")の仕組みと、1泊7,000円台で泊まれる「裏技拠点」を知ることで、宿泊費を劇的に浮かせる方法を伝授します。
 

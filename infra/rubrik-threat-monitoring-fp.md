@@ -8,10 +8,6 @@ themes: ["infra:security", "cloud:backup", "ops:noise-reduction"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.16</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/infra/rubrik-threat-monitoring-fp.png" alt="Rubrik脅威モニタリング" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # 【プロが解説】Rubrik脅威モニタリングは誤検知しやすい？精度とノイズ対策の全貌
 
 セキュリティ運用において、最も頭を悩ませる問題の一つが「誤検知（False Positive）」です。

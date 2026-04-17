@@ -8,10 +8,6 @@ themes: ["infra:api", "infra:automation", "infra:security"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.16</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/infra/rubrik-api-code-capture.png" alt="Rubrik API Code Capture" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # GUI画面のスクレイピングは時代遅れ？Rubrik API Code Captureの活用法
 
 前回の記事で、「[Rubrik](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Rubrik")のログ抽出にGUI画面のHTMLスクレイピングは不要」とお伝えしました。

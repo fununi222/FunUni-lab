@@ -8,10 +8,6 @@ themes: ["infra:storage", "capacity:audit", "backup:recovery"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v202X.XX.XX</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/infra/vast-recovery-validation.png" alt="VAST Recovery Validation" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # Scale-out Storage | 大規模データ削除後の「実効容量」回復と検証プロセス
 
 従来のストレージとは異なり、高度な類似データ削減機能を備える次世代ストレージ基盤において、旧バックアップ環境からの大量削除後の容量回復は、必ずしも直線的な推移を辿りません。

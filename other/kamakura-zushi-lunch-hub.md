@@ -8,10 +8,6 @@ themes: ["gourmet:kamakura", "gourmet:zushi", "strategy:cospa"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.16</div>
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-<img src="../assets/img/other/kamakura-cospa-gourmet.png" alt="Kamakura Zushi Lunch Hub" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 # 【2026最新】鎌倉・逗子のランチ革命｜プロが分析する「高コスパ」の名店と行列回避術
 
 「鎌倉のランチは高くて混んでいる」そう諦めてはいませんか？確かに、メイン通りには[ツーリスト・プレミアム](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="ツーリスト・プレミアム")の店が並びます。しかし、そのすぐ裏側には、**1,000円台で驚異的なクオリティを提供する「最強のコスパ店」**が隠れています。

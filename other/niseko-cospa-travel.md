@@ -10,10 +10,6 @@ themes: ["travel:niseko", "cospa", "strategy:hybrid"]
 
 # 【2026最新】ニセコを賢く遊び尽くす「ハイブリッド旅行」完全攻略ガイド｜インフレに負けないコスパ最大化術
 
-<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../assets/img/other/niseko-cospa-travel.png" alt="Niseko Hybrid Travel Strategy" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
-</figure>
-
 「[ニセコ](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="ニセコ")は世界一高いリゾートになった」
 そんなニュースを見て、旅行を諦めていませんか？
 
