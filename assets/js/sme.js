@@ -312,6 +312,18 @@ function resolveRelativePaths(container, mdPath) {
         style = resolveStringPaths(style, mdPath);
         el.setAttribute('style', style);
     });
+
+    // 3. Responsive Table Wrapping
+    const tables = container.querySelectorAll('table');
+    tables.forEach(table => {
+        // Skip if already wrapped
+        if (table.parentElement.classList.contains('table-wrap')) return;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrap';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    });
 }
 
 /**

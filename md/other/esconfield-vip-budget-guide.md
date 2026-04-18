@@ -9,7 +9,7 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.18</div>
 
 <figure class="mb-10 max-w-4xl mx-auto cyber-glow">
-  <img src="../../assets/img/other/esconfield-cospa-guide.png" alt="ES CON FIELD HOKKAIDO VIP Strategy" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
+  <img src="../../assets/img/other/esconfield-vip-budget-guide.png" alt="ES CON FIELD HOKKAIDO VIP Strategy" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
 </figure>
 
 # 【松竹梅】エスコンフィールド北海道の予算別楽しみ方！試合がない日のVIP体験ガイド
