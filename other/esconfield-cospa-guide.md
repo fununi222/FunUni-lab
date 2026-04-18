@@ -6,7 +6,7 @@ description: "「チケット代が高い」イメージを覆す攻略リサー
 themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kids:free"]
 ---
 
-<div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.16</div>
+<div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.18</div>
 
 <figure class="mb-10 max-w-4xl mx-auto cyber-glow">
 <img src="../assets/img/other/esconfield-cospa-guide.png" alt="Es Con Field Cospa Guide" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
@@ -16,7 +16,7 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ## 「球場＝高い」を覆す、2026年の最強エンタメ空間
 
-「エスコンフィールドって、チケット代やご飯が高そう…」そんなイメージを持っていませんか？実は、**「試合がない日（[Non-Gameday](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Non-Gameday")）」**を狙って賢く立ち回れば、驚くほど高いコストパフォーマンス（コスパ）で1日中遊び尽くせる最高の空間です。2026年最新情報を徹底解説します。
+「エスコンフィールドって、チケット代やご飯が高そう…」そんなイメージを持っていませんか？実は、**[エスコンフィールド北海道](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="エスコンフィールド北海道")**は、**「試合がない日（[Non-Gameday](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Non-Gameday")）」**を狙って賢く立ち回れば、驚くほど高いコストパフォーマンス（コスパ）で1日中遊び尽くせる最高の空間です。2026年最新情報を徹底解説します。
 
 ---
 
@@ -32,7 +32,7 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ## 2. アクセス編：時間と体力を節約する「移動の正解」
 
-### シャトルバスは「完全キャッシュレス」でスムーズに
+### シャトルバスは「[キャッシュレス決済](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="キャッシュレス決済")」でスムーズに
 北広島駅からは徒歩20分。体力温存のために250円でバスに乗るのが「正解」です。
 
 | 路線（片道） | 2026年改定運賃（大人） | 決済方法 | 特徴 |
@@ -74,7 +74,7 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ---
 
-## 6. まとめ：[Fマイル](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Fマイル")のループでさらにお得に！
+## 6. まとめ：[Fマイル](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Fマイル")のループでさらに[ポイ活](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="ポイ活")をお得に！
 
 公式アプリでキャッシュレス決済し、[Fマイル](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Fマイル")を貯めて次回のクーポン（300円引き等）に繋げるのが賢いループです。
 
@@ -86,6 +86,7 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 ---
 
 ## 変更履歴 (Changelog)
+- 2026-04-18: SKILL.mdに基づき、システム用語集へのリバインド（リンク最適化）を実施。
 - 2026-04-16: SKY WALK、洞サウナ詳細（雪洞・石洞）、絵空事、GWイベント情報を反映。
 - 2026-04-15: 2026年最新事情（バス運賃改定、Fマイル等）に基づく刷新。
 

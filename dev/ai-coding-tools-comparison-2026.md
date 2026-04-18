@@ -1,4 +1,14 @@
-# GitHub Copilot vs OpenAI Codex！2026年最強のAIコーディングツール比較
+---
+title: "Dev | AIコーディングツール徹底比較 2026｜GitHub Copilot vs OpenAI Codex"
+date: "2026-04-18"
+category: "dev"
+description: "ペアプログラミング型のGitHub Copilot、自律エージェント型のOpenAI Codex、そして統合環境のCursor。SWE-bench等のベンチマークと設計思想の違いから、最適な選択肢を導き出すエンジニア向け比較ガイド。"
+themes: ["dev:ai", "ai:llm", "ai:agents", "dev:codex", "dev:copilot"]
+---
+
+<div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.18</div>
+
+# AIコーディングツール徹底比較 2026｜GitHub Copilot vs OpenAI Codex
 
 ## はじめに
 
@@ -18,8 +28,8 @@
 
 結論から言うと、以下の使い分けが正解です。
 
-*   **GitHub Copilot**：あなたの隣でリアルタイムに助けてくれる「ペアプログラマー」
-*   **OpenAI Codex**：裏側で自律して大きなタスクをこなす「デジタル従業員」
+*   **[GitHub Copilot](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="GitHub Copilot")**：あなたの隣でリアルタイムに助けてくれる「ペアプログラマー」
+*   **[OpenAI Codex](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Codex")**：裏側で自律して大きなタスクをこなす「デジタル従業員」
 
 ## 主要AIコーディングツールの徹底比較
 
@@ -33,14 +43,14 @@
 *   **強み:** 24時間以上の長時間タスクや、大規模なシステム移行（リファクタリング）に圧倒的な力を発揮します。PR（プルリクエスト）の成功率は85.5%という驚異的な数値を叩き出しています。
 *   **向いている人:** 大きな機能開発や、テスト作成などの「作業」をAIに丸投げしたい人。
 
-### 3. Cursor
+### 3. [Cursor](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Cursor")
 *   **特徴:** AIが最初から組み込まれた専用の開発エディタ（IDE）です。
 *   **強み:** 複数のファイルにまたがる修正が得意で、視覚的なフィードバックに優れています。
 *   **向いている人:** エディタごとAIに最適化された最新環境に乗り換えたい人。
 
-### 4. Claude Code (Anthropic)
-*   **特徴:** ターミナル（黒い画面）上で動作するツールです。
-*   **強み:** ファイル間の関係性を深く理解し、業界ベンチマーク（SWE-bench）で80.9%というトップクラスの成績を出しています。
+### 4. [Claude Code](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Claude Code") (Anthropic)
+*   **特徴:** ターミナル上で動作するAIツールです。
+*   **強み:** ファイル間の関係性を深く理解し、業界ベンチマーク（[SWE-bench](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="SWE-bench")）で80.9%というトップクラスの成績を出しています。
 
 ## 具体例：現場での賢い使い分け
 

@@ -8,18 +8,21 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 
 <div class="text-[10px] text-emerald-500 opacity-60 text-right mb-6 tracking-widest font-mono">Research Log: v2026.04.18</div>
 
+<figure class="mb-10 max-w-4xl mx-auto cyber-glow">
+  <img src="../assets/img/other/esconfield-cospa-guide.png" alt="ES CON FIELD HOKKAIDO VIP Strategy" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
+</figure>
+
 # 【松竹梅】エスコンフィールド北海道の予算別楽しみ方！試合がない日のVIP体験ガイド
 
 
-
-「エスコンフィールド北海道って、無料で入れるみたいだけど、お金をかけたらどれくらい凄い体験ができるの？」
+「[エスコンフィールド北海道](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="エスコンフィールド北海道")って、無料で入れるみたいだけど、お金をかけたらどれくらい凄い体験ができるの？」
 「せっかくの北海道旅行だから、ケチケチせずに最高の思い出を作りたい！」
 
 そんなふうに考えていませんか？
 
-実は、エスコンフィールド北海道（Fビレッジ）は、**お金をかければかけるほど「並ばない」「絶景を独占できる」「極上の癒やしが得られる」というVIP体験が約束された、大人のためのエンタメ都市**です。
+実は、**[エスコンフィールド北海道](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="エスコンフィールド北海道")（Fビレッジ）**は、**お金をかければかけるほど「並ばない」「絶景を独占できる」「極上の癒やしが得られる」というVIP体験が約束された、大人のためのエンタメ都市**です。
 
-この記事では、試合がない日（Non-Gameday）をターゲットに、予算に合わせた**「松・竹・梅」の3つのプレミアムプラン**を大公開。
+この記事では、試合がない日（**[Non-Gameday](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Non-Gameday")**）をターゲットに、予算に合わせた**「松・竹・梅」の3つのプレミアムプラン**を大公開。
 友人家族とのグループ旅行で幹事を任されている方も、この記事を読めばメンバー全員が大満足する最高の投資先（課金ポイント）が分かります。
 
 ---
@@ -28,7 +31,7 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 
 **コンセプト：** 空間の無料価値（入場無料）をベースにしつつ、飲食に一点集中してプレミアム感を味わう、最もコスパと満足度のバランスが良い入門プラン。
 
-### ハイエンドな「えふめし」を堪能する
+### ハイエンドな「[えふめし](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="えふめし")」を堪能する
 通常のスタジアムグルメの枠を超えた、圧倒的なクオリティを誇るメニューに課金します。
 
 * **伊藤大海のわがまま丼（2,880円）**
@@ -77,11 +80,11 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 
 最後に、たくさんお金を使う幹事の方へ、プロならではのアドバイスです。
 
-Fビレッジ内は「完全キャッシュレス決済」が導入されています。「竹プラン」や「松プラン」など、グループ全員分の支払いを立て替える場合、決済額は数万円〜十数万円にのぼります。
+Fビレッジ内は「**[キャッシュレス決済](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="キャッシュレス決済")**」が全面導入されています。「竹プラン」や「松プラン」など、グループ全員分の支払いを立て替える場合、決済額は数万円〜十数万円にのぼります。
 
 ここで漫然と現金（は使えませんが）や普通のカードを切るのではなく、事前に**[Vポイント](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Vポイント")から[JAL Pay](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="JAL%20Pay")、そして[au PAY](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="au%20PAY")へと繋ぐような「高還元ルート」**をスマートフォンにセットしておきましょう。
 
-公式アプリの「[Fマイル](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="F%20マイル")」を蓄積させつつ、手元の決済ルートでポイントを二重・三重に大量獲得する。**高いお金を払ってVIP体験を得るほど、裏で獲得できる金融的リターンも最大化される**のが、スマートな消費者のボールパーク攻略法です。
+公式アプリで決済し、[Fマイル](https://fununi222.github.io/website/article.html?md=glossary/system-glossary.md#:~:text="Fマイル")を蓄積させつつ、手元の決済ルートでポイントを二重・三重に大量獲得する。**高いお金を払ってVIP体験を得るほど、裏で獲得できる金融的リターンも最大化される**のが、スマートな消費者のボールパーク攻略法です。
 
 ## まとめ：エスコンフィールドは投資対効果（コスパ）の塊
 
