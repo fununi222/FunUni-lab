@@ -237,7 +237,6 @@ function initLightbox() {
         lightbox = document.createElement('div');
         lightbox.className = 'sme-lightbox';
         lightbox.innerHTML = `
-            <a class="text-xl font-bold tracking-tighter text-primary" href="../index.html">FunUni-lab</a>
             <span class="sme-lightbox-close material-symbols-outlined">close</span>
             <img src="" alt="Lightbox Image">
         `;
