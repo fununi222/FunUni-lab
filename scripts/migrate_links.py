@@ -18,8 +18,13 @@ CLEANUP_RE = re.compile(r'html/html/')
 def get_target_files():
     targets = []
     for root, dirs, files in os.walk('.'):
+        path_parts = root.split(os.sep)
+        # Exclude source MD files (in md/) and generated HTML proxies (in html/)
+        if 'md' in path_parts or 'html' in path_parts:
+            continue
+            
         for file in files:
-            if file.endswith('.html') and not file.endswith('google63a1e682d08df09d.html') and 'md' not in root.split(os.sep):
+            if file.endswith('.html') and not file.endswith('google63a1e682d08df09d.html'):
                 targets.append(os.path.join(root, file))
     return targets
 
