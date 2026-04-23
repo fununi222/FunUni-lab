@@ -183,7 +183,7 @@ themes: ["other:glossary", "other:spec"]
 | "SLA Domain" | Infra / Security | バックアップの頻度、保持期間、レプリケーション先などを一括定義する Rubrik の宣言型ポリシーエンジン。ジョブベースではなく「あるべき状態」を定義する。 |
 | "Retention Lock" | Infra / Security | バックアップデータの保持期間内における、管理者を含むあらゆるユーザーによるデータ削除を不可能にする機能。ランサムウェアによる証跡抹消を防御する。 |
 | "Live Mount" | Infra / Security | バックアップデータをストレージから直接サーバーにマウントし、データのリストア（書き戻し）を待たずに数分でシステムを即時稼働させる機能。 |
-| "AWS RDS" | Infra | Amazon Relational Database Service (マネージド型リレーショナルデータベースサービス)。リソースタグ等に基づいた[SLA Domain](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="SLA%20Domain")の自動適用（オートプロテクション）が可能。 |
+| "AWS RDS" | Infra | Amazon Relational Database Service (マネージド型リレーショナルデータベースサービス)。リソースタグ等に基づいた[SLA Domain](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="SLA%20Domain")の自動適用（オートプロテクション）が可能。 |
 | "Amazon Aurora" | Infra | クラウド向けに構築された、Amazon RDS の MySQL および PostgreSQL と互換性のあるリレーショナルデータベース。クラスタ単位での保護に対応。 |
 | "PITR" | Infra | Point-in-Time Recovery。バックアップ時点だけでなく、トランザクションログを活用して過去の任意の時点までデータを復旧する機能。 |
 | "KMS" | Security / Infra | Key Management Service。AWS での暗号化キー管理サービス。クロスアカウント/リージョンでのリストア時に、移行先へキーの使用権限を付与する必要がある。 |
@@ -221,7 +221,7 @@ themes: ["other:glossary", "other:spec"]
 | "CloudFormation" | Infra / IaC | AWSリソースの構成をテンプレート（JSON/YAML）で記述し、自動的にプロビジョニング・管理するためのIaCサービス。 |
 | "JSONL" | Data / AI | JSON Linesの略。1つのJSONオブジェクトを1行で記述する形式。ストリーム処理や大規模データセットのLLMトレーニングに適している。 |
 | "Basic認証" | Security / Auth | HTTPプロトコル標準の認証方式。ユーザー名とパスワードをBase64エンコードして送信する。シンプルだが、暗号化（HTTPS）との併用が必須。 |
-| "Project-A" | AI / Project | 過去の問い合わせナレッジ（Redmine等）を[生成AI](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="生成AI")で武装させ、回答自動化を支援する社内PoCプロジェクトのコードネーム。 |
+| "Project-A" | AI / Project | 過去の問い合わせナレッジ（Redmine等）を[生成AI](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="生成AI")で武装させ、回答自動化を支援する社内PoCプロジェクトのコードネーム。 |
 | "旧バックアップ環境" | Infra / Security | データの仮想化技術を中心に展開していた旧製品群。新基盤へのリプレース対象。 |
 | "post-thaw-script" | VMware / Infra | スナップショット後、DBの静止化を解除するカスタムスクリプト。移行時には「既知の無害なエラー」を適切に除外する必要がある。 |
 | "統合監視ツール" | Infra / Obs | 国内で広く普及している統合運用管理ツール。ジョブスケジュール管理やバックアップ監視の中心となる。 |

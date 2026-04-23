@@ -1,7 +1,7 @@
 # Rubrikログ抽出を完全自動化！GraphQLとXSOAR連携による次世代SOC運用
 
 ## 導入
-（※ログ取得の基礎から振り返りたい方は、[こちらの記事①](https://fununi222.github.io/websi../../article.html?md=infra/rubrik-log-export-guide.md)をご覧ください。）
+（※ログ取得の基礎から振り返りたい方は、[こちらの記事①](https://fununi222.github.io/website/html/infra/rubrik-log-export-guide.html)をご覧ください。）
 
 これまでの記事で、APIを活用して確実なログを抽出する方法をご紹介しました。
 

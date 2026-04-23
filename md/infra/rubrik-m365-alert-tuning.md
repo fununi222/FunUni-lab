@@ -18,11 +18,11 @@ themes: ["infra:backup", "cloud:office", "ops:noise-reduction"]
 
 ## 1. M365バックアップにおける「Warning」の正体
 
-多くの運用現場を悩ませる警告の多くは、バックアップソフトウェア側の不具合ではなく、[Microsoft 365](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Microsoft%20365")側の制限やデータの状態に起因します。
+多くの運用現場を悩ませる警告の多くは、バックアップソフトウェア側の不具合ではなく、[Microsoft 365](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Microsoft%20365")側の制限やデータの状態に起因します。
 
 ### 代表的な警告パターン
 - **Mailbox Full**: ユーザーのメールボックス容量が上限に達し、バックアップ基盤がメタデータの書き込みや特定のアイテムの処理に失敗するケース。
-- **Sync Issues**: [API](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="API")のスロットリング（流量制限）や、一時的なサービス断による一部アイテムのスキップ。
+- **Sync Issues**: [API](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="API")のスロットリング（流量制限）や、一時的なサービス断による一部アイテムのスキップ。
 - **Recoverable Itemsの肥大化**: 削除済みアイテムの保持ポリシーにより、隠しフォルダが肥大化しクォータを圧迫しているケース。
 
 ## 2. 監視運用の最適化フロー
@@ -31,22 +31,22 @@ themes: ["infra:backup", "cloud:office", "ops:noise-reduction"]
 
 | ステップ | アクション | 目的 |
 |---|---|---|
-| **1. 分類** | [API](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="API")制約か、設定ミスか、実障害かを切り分ける | 判断基準の明確化 |
+| **1. 分類** | [API](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="API")制約か、設定ミスか、実障害かを切り分ける | 判断基準の明確化 |
 | **2. 抑止反映** | RSC（Rubrik Security Cloud）上で不要な通知を抑制、または監視台帳のステータスを更新 | ノイズの低減 |
 | **3. 根本対処** | M365管理者と連携し、クォータ拡張やアーカイブポリシーの適用を検討 | 警告の恒久排除 |
 
 ## 3. 実践的なチューニング手法
 
 ### 監視フィルタリングの導入
-[Rubrik](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Rubrik")から送信されるメールアラートを直接監視するのではなく、SIEMや監視基盤（PagerDuty等）を介して、特定の文字列（例: "mailbox full"）を含む警告を「低優先度」としてルーティングする構成を推奨します。
+[Rubrik](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Rubrik")から送信されるメールアラートを直接監視するのではなく、SIEMや監視基盤（PagerDuty等）を介して、特定の文字列（例: "mailbox full"）を含む警告を「低優先度」としてルーティングする構成を推奨します。
 
 ### SLAドメインの使い分け
-全ユーザーを一律の[SLA Domain](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="SLA%20Domain")で保護するのではなく、頻繁に警告が出るアカウントや重要度の低い共有メールボックスを別ポリシーに分離することで、監視対象の「健康状態」をクリアに保つことができます。
+全ユーザーを一律の[SLA Domain](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="SLA%20Domain")で保護するのではなく、頻繁に警告が出るアカウントや重要度の低い共有メールボックスを別ポリシーに分離することで、監視対象の「健康状態」をクリアに保つことができます。
 
 ---
 
 ## 結論：可視性と保守性の両立
-[Rubrik](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Rubrik")を導入した目的は「データの確実な保護」です。ノイズを抑制することは、逆に言えば**「本当に守れていないデータ」を即座に特定できる環境を作る**ことに他なりません。
+[Rubrik](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Rubrik")を導入した目的は「データの確実な保護」です。ノイズを抑制することは、逆に言えば**「本当に守れていないデータ」を即座に特定できる環境を作る**ことに他なりません。
 
 ## 変更履歴 (Changelog)
 - 202X-04: 新規作成。クラウドOffice基盤バックアップ運用におけるアラート最適化リサーチ。

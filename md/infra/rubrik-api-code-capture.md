@@ -10,7 +10,7 @@ themes: ["infra:api", "infra:automation", "infra:security"]
 
 # GUI画面のスクレイピングは時代遅れ？Rubrik API Code Captureの活用法
 
-前回の記事で、「[Rubrik](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Rubrik")のログ抽出にGUI画面のHTMLスクレイピングは不要」とお伝えしました。
+前回の記事で、「[Rubrik](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Rubrik")のログ抽出にGUI画面のHTMLスクレイピングは不要」とお伝えしました。
 （※ログ取得の基礎から振り返りたい方は[こちら](./rubrik-threat-log-extraction.md)）
 
 しかし、こんな不安を感じていませんか？

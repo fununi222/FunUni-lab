@@ -9,7 +9,7 @@ themes: ["dev:webapp", "other:retrospective"]
 # Development | Freeman プロジェクトのホームページ制作記録 2026
 
 ## 超要約
-本記事は、情報設計の原点となったホームページ「Freeman Project HP」の制作プロセスを振り返ったものです。派手な装飾よりも「情報の自然な流れ」と「可読性」を最優先し、[HTML](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="HTML") / [CSS](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="CSS") による構造化と、デバイスを選ばない[レスポンシブ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="レスポンシブ")対応の本質について、当時の学びを整理しています。
+本記事は、情報設計の原点となったホームページ「Freeman Project HP」の制作プロセスを振り返ったものです。派手な装飾よりも「情報の自然な流れ」と「可読性」を最優先し、[HTML](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="HTML") / [CSS](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="CSS") による構造化と、デバイスを選ばない[レスポンシブ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="レスポンシブ")対応の本質について、当時の学びを整理しています。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-09</div>
 
@@ -35,11 +35,11 @@ themes: ["dev:webapp", "other:retrospective"]
 
 ### 3. レスポンシブ対応
 
-PC だけでなくスマートフォンでも自然に見える「[レスポンシブ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="レスポンシブ")」対応を意識して調整しました。特に、画面幅が変わったときの余白や要素の並びは印象に直結するため、崩れないことだけでなく、**小さい画面でも読みやすいこと** を重視しました。
+PC だけでなくスマートフォンでも自然に見える「[レスポンシブ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="レスポンシブ")」対応を意識して調整しました。特に、画面幅が変わったときの余白や要素の並びは印象に直結するため、崩れないことだけでなく、**小さい画面でも読みやすいこと** を重視しました。
 
 ## 制作を通して学んだこと
 
-このホームページ制作を通して強く感じたのは、Web 制作では「作れること」と「伝わること」は別だという点です。[HTML](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="HTML") や [CSS](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="CSS") を使って形にするだけならある程度進められても、相手にとって見やすく、理解しやすい形に整えるには、もう一段深い視点が必要でした。
+このホームページ制作を通して強く感じたのは、Web 制作では「作れること」と「伝わること」は別だという点です。[HTML](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="HTML") や [CSS](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="CSS") を使って形にするだけならある程度進められても、相手にとって見やすく、理解しやすい形に整えるには、もう一段深い視点が必要でした。
 
 また、完成直後には気づけなかった改善点も、時間が経ってから見返すことで見えてきました。コードの整理、再利用しやすい構成、命名の統一など、今ならもっと保守しやすい形にできると思います。
 

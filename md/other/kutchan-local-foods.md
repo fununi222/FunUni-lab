@@ -12,9 +12,9 @@ themes: ["gourmet:hokkaido", "other:local", "kutchan:soba", "potato:男爵いも
 
 ## リゾート中心部の「インフレ」を避けて最高の北海道グルメへ
 
-「ニセコに旅行へ行くけど、ランチが数千円もして高すぎる…」そんな悩みを抱えていませんか？世界的なスノーリゾート・[ニセコ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="ニセコ")は物価高騰が続いています。
+「ニセコに旅行へ行くけど、ランチが数千円もして高すぎる…」そんな悩みを抱えていませんか？世界的なスノーリゾート・[ニセコ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="ニセコ")は物価高騰が続いています。
 
-しかし、**ニセコから車でわずか15分の「[倶知安](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="倶知安")（くっちゃん）町」**へ行けば、安くて最高の北海道グルメに出会えます。5月の連休やドライブ旅行に最適な、地元密着の名店を厳選しました。
+しかし、**ニセコから車でわずか15分の「[倶知安](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="倶知安")（くっちゃん）町」**へ行けば、安くて最高の北海道グルメに出会えます。5月の連休やドライブ旅行に最適な、地元密着の名店を厳選しました。
 
 ---
 
@@ -24,19 +24,19 @@ themes: ["gourmet:hokkaido", "other:local", "kutchan:soba", "potato:男爵いも
 
 - **行列必至の超人気店「手打蕎麦 いちむら」**: 
     - 豊かな香りの「十割」と喉越しの「二八」を選択可能。
-    - **倶知安スタイル**: 冷たい蕎麦に、地元産の「[男爵いも](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="男爵いも")」の天ぷらを合わせるのが地元流。
+    - **倶知安スタイル**: 冷たい蕎麦に、地元産の「[男爵いも](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="男爵いも")」の天ぷらを合わせるのが地元流。
 - **究極の「水そば」を味わう「農家のそばや羊蹄山」**: 
     - 地産地消の極み。裏メニューの**「羊蹄山の水そば（350円）」**は、湧き水に浸した蕎麦を少量の塩だけでいただく究極の体験。
 
 ---
 
-## 2. 倶知安の代名詞「[男爵いも](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="男爵いも")」の進化系グルメ
+## 2. 倶知安の代名詞「[男爵いも](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="男爵いも")」の進化系グルメ
 
 倶知安町は日本有数のジャガイモ産地。ここでは「寒さ」を味方に変える独自の技術が光ります。
 
 - **雪室熟成「じゃが太」のコロッケ**: 
     - 雪を再利用した「雪室（ゆきむろ）」で寝かせることで、デンプンが糖に変わり、強烈な甘みが生まれます。
-- **ツルモチ食感がクセになる！「[豪雪うどん](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="豪雪うどん")」**: 
+- **ツルモチ食感がクセになる！「[豪雪うどん](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="豪雪うどん")」**: 
     - 麺の80%がジャガイモのデンプン。半透明でモチモチ！
     - **裏技**: 「雪庭（ゆきてい）」では、粉チーズをかけて食べるのが推奨。ジャガイモとチーズの相性は最強です。
 
@@ -53,7 +53,7 @@ themes: ["gourmet:hokkaido", "other:local", "kutchan:soba", "potato:男爵いも
 
 ## 4. 女子旅にも！駅前エリアのおしゃれリノベカフェ
 
-- **「[&cafe NISEKO](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="&cafe NISEKO")」**: 
+- **「[&cafe NISEKO](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="&cafe NISEKO")」**: 
     - 2026年4月オープン。リサイクル会社が運営する究極のサステナブルカフェ。
     - おすすめは「ルスツローストポークバーガー（1,600円）」。
 - **多様性と健康のハブ「Harvest Cafe」**: 
@@ -66,8 +66,8 @@ themes: ["gourmet:hokkaido", "other:local", "kutchan:soba", "potato:男爵いも
 ニセコの華やかなリゾート感も素敵ですが、適正価格でお腹いっぱい食べたいなら**倶知安（くっちゃん）一択**です。
 
 **【倶知安グルメを楽しむ3箇条】**
-1. **[男爵いも](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="男爵いも")の天ぷら** と蕎麦を合わせる地元流を試す。
-2. **[五四〇](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="五四〇")** や **[豪雪うどん](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="豪雪うどん")** でジャガイモの底力に触れる。
+1. **[男爵いも](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="男爵いも")の天ぷら** と蕎麦を合わせる地元流を試す。
+2. **[五四〇](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="五四〇")** や **[豪雪うどん](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="豪雪うどん")** でジャガイモの底力に触れる。
 3. PayPay等のキャッシュレスも完備された駅前カフェで一休み。
 
 ---

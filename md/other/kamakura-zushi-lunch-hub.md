@@ -10,7 +10,7 @@ themes: ["gourmet:kamakura", "gourmet:zushi", "strategy:cospa"]
 
 # 【2026最新】鎌倉・逗子のランチ革命｜プロが分析する「高コスパ」の名店と行列回避術
 
-「鎌倉のランチは高くて混んでいる」そう諦めてはいませんか？確かに、メイン通りには[ツーリスト・プレミアム](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="ツーリスト・プレミアム")の店が並びます。しかし、そのすぐ裏側には、**1,000円台で驚異的なクオリティを提供する「最強のコスパ店」**が隠れています。
+「鎌倉のランチは高くて混んでいる」そう諦めてはいませんか？確かに、メイン通りには[ツーリスト・プレミアム](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="ツーリスト・プレミアム")の店が並びます。しかし、そのすぐ裏側には、**1,000円台で驚異的なクオリティを提供する「最強のコスパ店」**が隠れています。
 
 この記事では、SEOトップ1%の視点で鎌倉・逗子の外食産業を構造分析。地元民に愛され、リテラシーの高い観光客が「並んででも食べたい」と熱狂する名店の秘密を解き明かします。
 
@@ -37,7 +37,7 @@ themes: ["gourmet:kamakura", "gourmet:zushi", "strategy:cospa"]
 - **賢い利用法**: ネット予約を積極的に活用し、来店枠を確保するのが「勝ち組」の行動です。
 
 > **[詳細解説] 鎌倉ランチの聖地3選をさらに深堀り**
-> 詳細な特徴やアクセスは [記事②：鎌倉のコスパ飯 3選](https://fununi222.github.io/websi../../article.html?md=other/kamakura-cospa-gourmet.md) をご覧ください。
+> 詳細な特徴やアクセスは [記事②：鎌倉のコスパ飯 3選](https://fununi222.github.io/website/html/other/kamakura-cospa-gourmet.html) をご覧ください。
 
 ---
 
@@ -53,7 +53,7 @@ themes: ["gourmet:kamakura", "gourmet:zushi", "strategy:cospa"]
 
 ## 3. 「ズラし」の立地戦略：家賃の差が満足度に直結する
 
-鎌倉で賢く食べるコツは、メイン通りから**「一本入る」**こと。これを経済学では「[立地アービトラージ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="立地アービトラージ")（裁定取引）」と呼びます。メインストリートの法外な家賃を支払う代わりに、路地裏でその分を**「食材原価」や「ボリューム」に還元**している店こそが、私たちが目指すべきゴールです。
+鎌倉で賢く食べるコツは、メイン通りから**「一本入る」**こと。これを経済学では「[立地アービトラージ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="立地アービトラージ")（裁定取引）」と呼びます。メインストリートの法外な家賃を支払う代わりに、路地裏でその分を**「食材原価」や「ボリューム」に還元**している店こそが、私たちが目指すべきゴールです。
 
 ---
 
@@ -61,11 +61,11 @@ themes: ["gourmet:kamakura", "gourmet:zushi", "strategy:cospa"]
 
 鎌倉から一歩足を延ばした逗子エリアは、さらに「実質剛健」な食文化が広がっています。
 
-- **[つく志](https://fununi222.github.io/websi../../article.html?md=other/zushi-cospa-gourmet.md#:~:text=つく志)**（逗子）: 昭和26年創業。休憩なしの「通し営業」は、ランチ難民になった際の最強の味方です。1,100円前後で味わえる厚切り刺身定食は、鎌倉駅周辺では不可能なコスパを実現しています。
-- **[魚勝](https://fununi222.github.io/websi../../article.html?md=other/zushi-cospa-gourmet.md)**（逗子）: 昭和4年創業。老舗の安定感と、三浦半島の鮮魚を適正価格で提供するインフラ的な存在です。
+- **[つく志](https://fununi222.github.io/website/html/other/zushi-cospa-gourmet.html#:~:text=つく志)**（逗子）: 昭和26年創業。休憩なしの「通し営業」は、ランチ難民になった際の最強の味方です。1,100円前後で味わえる厚切り刺身定食は、鎌倉駅周辺では不可能なコスパを実現しています。
+- **[魚勝](https://fununi222.github.io/website/html/other/zushi-cospa-gourmet.html)**（逗子）: 昭和4年創業。老舗の安定感と、三浦半島の鮮魚を適正価格で提供するインフラ的な存在です。
 
 > **[詳細解説] 逗子・葉山の通し営業名店リスト**
-> 逗子エリアの詳しい魅力と穴場レストラン情報は [記事③：逗子の最高のコスパ飯 3選](https://fununi222.github.io/websi../../article.html?md=other/zushi-cospa-gourmet.md) をご覧ください。
+> 逗子エリアの詳しい魅力と穴場レストラン情報は [記事③：逗子の最高のコスパ飯 3選](https://fununi222.github.io/website/html/other/zushi-cospa-gourmet.html) をご覧ください。
 
 ---
 

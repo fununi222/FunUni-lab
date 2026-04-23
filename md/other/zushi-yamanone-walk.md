@@ -14,15 +14,15 @@ themes: ["travel:hiking", "other:local"]
   <img src="../../assets/img/other/zushi-yamanone-walk.png" alt="Zushi Yamanone Kumano Jinja Walk" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
 </figure>
 
-[逗子](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="逗子")といえば海のイメージが強いですが、駅のすぐ裏手に、驚くほど静かな散策路が存在します。山の根地区の鎮守「[熊野神社](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="熊野神社")」を起点に、中世の墓所である「[やぐら](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="やぐら")」や、鉄道ジオラマのような街の眺め、そして数百万年前の記憶を刻む[三浦層群](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="三浦層群")の地層を巡る、少し不思議な散歩道を紹介します。
+[逗子](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="逗子")といえば海のイメージが強いですが、駅のすぐ裏手に、驚くほど静かな散策路が存在します。山の根地区の鎮守「[熊野神社](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="熊野神社")」を起点に、中世の墓所である「[やぐら](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="やぐら")」や、鉄道ジオラマのような街の眺め、そして数百万年前の記憶を刻む[三浦層群](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="三浦層群")の地層を巡る、少し不思議な散歩道を紹介します。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-14</div>
 
 ---
 
-## 1. 住宅街の奥、静寂に包まれた[熊野神社](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="熊野神社")
+## 1. 住宅街の奥、静寂に包まれた[熊野神社](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="熊野神社")
 
-JR逗子駅から線路沿いを少し歩き、住宅街の突き当たりまで進むと、立派な石鳥居が現れます。ここが山の根地区の守護神、[熊野神社](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="熊野神社")です。
+JR逗子駅から線路沿いを少し歩き、住宅街の突き当たりまで進むと、立派な石鳥居が現れます。ここが山の根地区の守護神、[熊野神社](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="熊野神社")です。
 
 ![熊野神社 参道](../../assets/img/other/zushi-yamanone-torii.png)
 
@@ -42,15 +42,15 @@ JR逗子駅から線路沿いを少し歩き、住宅街の突き当たりまで
 
 ![線路と横須賀線のジオラマ](../../assets/img/other/zushi-yamanone-railway-zoom.png)
 
-## 3. [三浦層群](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="三浦層群")の記憶。歴史を刻む「横穴」
+## 3. [三浦層群](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="三浦層群")の記憶。歴史を刻む「横穴」
 
 このルートの最も興味深い見どころが、斜面に点在する「横穴」です。
 
 ![歴史の断片：やぐら（横穴）](../../assets/img/other/zushi-yamanone-yagura-cave.png)
 
-これらは中世の墓所である「[やぐら](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="やぐら")」や、戦時中の防空壕跡だと言われています。一説には、こうした鎌倉地方によく見られる「横穴」の形状そのものが、あのトトロの住処（楠の木の根元の穴）のモデルになったとも言われているそうです。場所こそ違えど、この穴の奥にトトロが眠っているのではないか……そんな想像を掻き立てられる、不思議な存在感があります。
+これらは中世の墓所である「[やぐら](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="やぐら")」や、戦時中の防空壕跡だと言われています。一説には、こうした鎌倉地方によく見られる「横穴」の形状そのものが、あのトトロの住処（楠の木の根元の穴）のモデルになったとも言われているそうです。場所こそ違えど、この穴の奥にトトロが眠っているのではないか……そんな想像を掻き立てられる、不思議な存在感があります。
 
-壁面には見事な地層の縞模様（[三浦層群](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="三浦層群")）が刻まれていました。
+壁面には見事な地層の縞模様（[三浦層群](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="三浦層群")）が刻まれていました。
 
 ![三浦層群の地層とノミの跡](../../assets/img/other/zushi-yamanone-strata-detail.png)
 
@@ -66,7 +66,7 @@ JR逗子駅から線路沿いを少し歩き、住宅街の突き当たりまで
 
 ## 散策を終えて
 
-[逗子](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="逗子")の日常のすぐ裏側に、これほど豊かな歴史と自然が隠れているとは驚きでした。少し足を伸ばすだけで出会える、懐かしい雰囲気の散歩道。有名な観光地も良いですが、こうした地元の息遣いを感じるルートこそ、本当の街の魅力を教えてくれる気がします。
+[逗子](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="逗子")の日常のすぐ裏側に、これほど豊かな歴史と自然が隠れているとは驚きでした。少し足を伸ばすだけで出会える、懐かしい雰囲気の散歩道。有名な観光地も良いですが、こうした地元の息遣いを感じるルートこそ、本当の街の魅力を教えてくれる気がします。
 
 山を降り、日常の街へと戻ります。清々しい風を感じる、素敵な休日でした。
 

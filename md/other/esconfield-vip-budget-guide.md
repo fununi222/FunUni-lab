@@ -15,14 +15,14 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 # 【松竹梅】エスコンフィールド北海道の予算別楽しみ方！試合がない日のVIP体験ガイド
 
 
-「[エスコンフィールド北海道](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="エスコンフィールド北海道")って、無料で入れるみたいだけど、お金をかけたらどれくらい凄い体験ができるの？」
+「[エスコンフィールド北海道](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="エスコンフィールド北海道")って、無料で入れるみたいだけど、お金をかけたらどれくらい凄い体験ができるの？」
 「せっかくの北海道旅行だから、ケチケチせずに最高の思い出を作りたい！」
 
 そんなふうに考えていませんか？
 
-実は、**[エスコンフィールド北海道](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="エスコンフィールド北海道")（Fビレッジ）**は、**お金をかければかけるほど「並ばない」「絶景を独占できる」「極上の癒やしが得られる」というVIP体験が約束された、大人のためのエンタメ都市**です。
+実は、**[エスコンフィールド北海道](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="エスコンフィールド北海道")（Fビレッジ）**は、**お金をかければかけるほど「並ばない」「絶景を独占できる」「極上の癒やしが得られる」というVIP体験が約束された、大人のためのエンタメ都市**です。
 
-この記事では、試合がない日（**[Non-Gameday](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Non-Gameday")**）をターゲットに、予算に合わせた**「松・竹・梅」の3つのプレミアムプラン**を大公開。
+この記事では、試合がない日（**[Non-Gameday](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Non-Gameday")**）をターゲットに、予算に合わせた**「松・竹・梅」の3つのプレミアムプラン**を大公開。
 友人家族とのグループ旅行で幹事を任されている方も、この記事を読めばメンバー全員が大満足する最高の投資先（課金ポイント）が分かります。
 
 ---
@@ -31,7 +31,7 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 
 **コンセプト：** 空間の無料価値（入場無料）をベースにしつつ、飲食に一点集中してプレミアム感を味わう、最もコスパと満足度のバランスが良い入門プラン。
 
-### ハイエンドな「[えふめし](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="えふめし")」を堪能する
+### ハイエンドな「[えふめし](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="えふめし")」を堪能する
 通常のスタジアムグルメの枠を超えた、圧倒的なクオリティを誇るメニューに課金します。
 
 * **伊藤大海のわがまま丼（2,880円）**
@@ -49,16 +49,16 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 
 **コンセプト：** 単なる「見学」を「一生の記憶に残るアクティビティ」へと昇華させるプラン。5月中旬など気候が良い時期に、身体を動かしてリフレッシュしたい方に最適です。
 
-### [ES CON FIELD SKY WALK](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="SKY%20WALK")（5,000円）
+### [ES CON FIELD SKY WALK](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="SKY%20WALK")（5,000円）
 巨大なガラスウォール上部のキャットウォークを、ハーネスを付けて歩行するスリル満点のアクティビティ。
 通常は決して立ち入れない数十メートルの高所から、スタジアムの全景と北海道の広大な景色を独占できます。「ただ見る」のではなく「全身でスタジアムのスケールを体感する」という、無形価値の極みです。
 
-### [洞サウナ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="洞サウナ")と[絵空事](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="絵空事")のリカバリー（約3,000円）
-アクティビティの後は、2026年に誕生したばかりの最新サウナ『[洞サウナ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="洞サウナ")』へ。
+### [洞サウナ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="洞サウナ")と[絵空事](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="絵空事")のリカバリー（約3,000円）
+アクティビティの後は、2026年に誕生したばかりの最新サウナ『[洞サウナ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="洞サウナ")』へ。
 * **一般温浴チケット（試合がない日限定）：2,500円**
-白のミストサウナ「[雪洞](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="雪洞")」と、黒のドライサウナ「[石洞](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="石洞")」で深い没入感を得られます。
+白のミストサウナ「[雪洞](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="雪洞")」と、黒のドライサウナ「[石洞](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="石洞")」で深い没入感を得られます。
 
-サウナ後は、併設の『[絵空事](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="絵空事")』で完全グルテンフリーの玄米うどん（きほんのうどん：550円）を流し込みます。身体のコンディショニングとしてこれ以上ない完璧な動線です。
+サウナ後は、併設の『[絵空事](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="絵空事")』で完全グルテンフリーの玄米うどん（きほんのうどん：550円）を流し込みます。身体のコンディショニングとしてこれ以上ない完璧な動線です。
 
 ---
 
@@ -80,11 +80,11 @@ themes: ["other:ballpark", "other:vip", "finance:cashless"]
 
 最後に、たくさんお金を使う幹事の方へ、プロならではのアドバイスです。
 
-Fビレッジ内は「**[キャッシュレス決済](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="キャッシュレス決済")**」が全面導入されています。「竹プラン」や「松プラン」など、グループ全員分の支払いを立て替える場合、決済額は数万円〜十数万円にのぼります。
+Fビレッジ内は「**[キャッシュレス決済](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="キャッシュレス決済")**」が全面導入されています。「竹プラン」や「松プラン」など、グループ全員分の支払いを立て替える場合、決済額は数万円〜十数万円にのぼります。
 
-ここで漫然と現金（は使えませんが）や普通のカードを切るのではなく、事前に**[Vポイント](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Vポイント")から[JAL Pay](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="JAL%20Pay")、そして[au PAY](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="au%20PAY")へと繋ぐような「高還元ルート」**をスマートフォンにセットしておきましょう。
+ここで漫然と現金（は使えませんが）や普通のカードを切るのではなく、事前に**[Vポイント](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Vポイント")から[JAL Pay](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="JAL%20Pay")、そして[au PAY](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="au%20PAY")へと繋ぐような「高還元ルート」**をスマートフォンにセットしておきましょう。
 
-公式アプリで決済し、[Fマイル](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Fマイル")を蓄積させつつ、手元の決済ルートでポイントを二重・三重に大量獲得する。**高いお金を払ってVIP体験を得るほど、裏で獲得できる金融的リターンも最大化される**のが、スマートな消費者のボールパーク攻略法です。
+公式アプリで決済し、[Fマイル](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Fマイル")を蓄積させつつ、手元の決済ルートでポイントを二重・三重に大量獲得する。**高いお金を払ってVIP体験を得るほど、裏で獲得できる金融的リターンも最大化される**のが、スマートな消費者のボールパーク攻略法です。
 
 ## まとめ：エスコンフィールドは投資対効果（コスパ）の塊
 

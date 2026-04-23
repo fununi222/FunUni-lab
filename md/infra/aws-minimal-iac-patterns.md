@@ -10,7 +10,7 @@ themes: ["infra:aws", "iac:minimalism", "security:waf"]
 
 # AWS Minimalism | 小規模開発向け S3/WAF/IAM 構築の自動化パターン
 
-新規サービス立ち上げやAPベンダー向けのアカウント構築において、過剰な共通基盤設計は逆にデリバリー速度を低下させます。本稿では、[S3](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="S3") / [WAF](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="WAF") / [IAM](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="IAM%20Role") をコアとした、シンプルかつ再利用性の高い[IaC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="IaC")の実装パターンを提案します。
+新規サービス立ち上げやAPベンダー向けのアカウント構築において、過剰な共通基盤設計は逆にデリバリー速度を低下させます。本稿では、[S3](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="S3") / [WAF](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="WAF") / [IAM](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="IAM%20Role") をコアとした、シンプルかつ再利用性の高い[IaC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="IaC")の実装パターンを提案します。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-15</div>
 
@@ -22,22 +22,22 @@ themes: ["infra:aws", "iac:minimalism", "security:waf"]
 
 ### 重点構成コンポーネント
 - **Network**: VPC/Subnet の払い出し（CIDRの重複回避を優先）。
-- **[IAM](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="IAM%20Role")**: 最小権限に基づいた開発者用ロールとサービスロールの定義。
-- **[S3](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="S3")**: パブリックアクセスブロック、デフォルト暗号化を有効化した標準バケット。
-- **[WAF](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="WAF")**: コストパフォーマンスを重視したマネージドルールの初期適用。
+- **[IAM](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="IAM%20Role")**: 最小権限に基づいた開発者用ロールとサービスロールの定義。
+- **[S3](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="S3")**: パブリックアクセスブロック、デフォルト暗号化を有効化した標準バケット。
+- **[WAF](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="WAF")**: コストパフォーマンスを重視したマネージドルールの初期適用。
 
 ## 2. 実装方式の選択肢
 
-[CloudFormation](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="CloudFormation") か [Ansible](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Ansible") かの論争よりも、「誰がメンテナンスを継続するか」を基準に選択します。
+[CloudFormation](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="CloudFormation") か [Ansible](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Ansible") かの論争よりも、「誰がメンテナンスを継続するか」を基準に選択します。
 
 | ツール | 適したユースケース | メリット |
 |---|---|---|
-| **[CloudFormation](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="CloudFormation")** | スタック管理が必要なリソース群 | AWS純正のステート管理、ドリフト検知 |
-| **[Ansible](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Ansible")** | OSレイヤーも含めた一貫構築 | 既存の自動化資産（Playbook）の再利用 |
+| **[CloudFormation](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="CloudFormation")** | スタック管理が必要なリソース群 | AWS純正のステート管理、ドリフト検知 |
+| **[Ansible](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Ansible")** | OSレイヤーも含めた一貫構築 | 既存の自動化資産（Playbook）の再利用 |
 
 ## 3. 「設計書自動化」を見据えた命名規則
 
-自動化の真の果実は、構築後のドキュメント作成工数の削減です。[IaC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="IaC") のコード内に以下の情報をタグとして埋め込むことで、構成情報のリバース生成を容易にします。
+自動化の真の果実は、構築後のドキュメント作成工数の削減です。[IaC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="IaC") のコード内に以下の情報をタグとして埋め込むことで、構成情報のリバース生成を容易にします。
 
 - `Environment`: dev / stg / prd
 - `ProjectID`: 案件管理番号

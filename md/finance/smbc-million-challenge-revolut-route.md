@@ -13,7 +13,7 @@ description: "「100万円修行」を効率的に達成するための最適解
 
 # 三井住友カード × Revolut 攻略ガイド
 
-[三井住友カード](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="三井住友カード")から[Revolut](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Revolut")へのチャージは、2024年6月の手数料改定により、**Mastercardブランドなら完全無料**、**VisaブランドでもOliveデビットモードなら無料**で修行（100万円利用）にカウント可能です。本記事では、ブランド別の手数料実態と、チャージ後の「高還元な出口戦略」を体系的にまとめます。
+[三井住友カード](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="三井住友カード")から[Revolut](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Revolut")へのチャージは、2024年6月の手数料改定により、**Mastercardブランドなら完全無料**、**VisaブランドでもOliveデビットモードなら無料**で修行（100万円利用）にカウント可能です。本記事では、ブランド別の手数料実態と、チャージ後の「高還元な出口戦略」を体系的にまとめます。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-14</div>
 
@@ -21,7 +21,7 @@ description: "「100万円修行」を効率的に達成するための最適解
 
 ## 1. カードブランド別 手数料比較
 
-お持ちのカードブランドによって、[Revolut](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Revolut")へのチャージにかかるコストが大きく異なります。
+お持ちのカードブランドによって、[Revolut](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Revolut")へのチャージにかかるコストが大きく異なります。
 
 | カード / モード | 手数料 | 推定コスト (10万円時) | 判定 |
 | :--- | :--- | :--- | :--- |
@@ -37,12 +37,12 @@ description: "「100万円修行」を効率的に達成するための最適解
 
 ## 2. 高還元な出口ルート（出口戦略）
 
-[Revolut](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Revolut")にチャージした残高をどのように消費するか。お使いの端末OSに合わせて2つの最適ルートが存在します。
+[Revolut](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Revolut")にチャージした残高をどのように消費するか。お使いの端末OSに合わせて2つの最適ルートが存在します。
 
 ### A. 高還元・投資ルート（iPhone / Android 対応）
-端末の[NFC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="NFC") / FeliCa機能を活用し、楽天エコシステムへ流し込むルートです。2026年2月よりiPhoneでも解禁されました。
+端末の[NFC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="NFC") / FeliCa機能を活用し、楽天エコシステムへ流し込むルートです。2026年2月よりiPhoneでも解禁されました。
 
-> **Revolut** ➡️ **ANA Pay** ➡️ **[楽天Edy](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="楽天Edy")** ➡️ **[楽天キャッシュ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="楽天キャッシュ")** ➡️ **楽天証券**
+> **Revolut** ➡️ **ANA Pay** ➡️ **[楽天Edy](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="楽天Edy")** ➡️ **[楽天キャッシュ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="楽天キャッシュ")** ➡️ **楽天証券**
 
 - **メリット**: 楽天証券での投信積立に充当できるため、ポイント還元を受けつつ確実に資産化できます。
 - **要件**: iPhone（v9.12.0以降・物理カード要）またはAndroid（おサイフケータイ対応）が必要です。

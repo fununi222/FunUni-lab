@@ -10,7 +10,7 @@ themes: ["infra:security", "infra:automation", "infra:operations"]
 
 # 【完全ガイド】Rubrik脅威監視で検体を特定！詳細ログの取得方法と仕組み
 
-[Rubrik](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Rubrik")の脅威監視ダッシュボード（シアターモニター）で、悪意のある検体を発見できた！
+[Rubrik](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Rubrik")の脅威監視ダッシュボード（シアターモニター）で、悪意のある検体を発見できた！
 これは素晴らしい成果です。
 
 しかし、次にこんな壁にぶつかっていませんか？
@@ -18,7 +18,7 @@ themes: ["infra:security", "infra:automation", "infra:operations"]
 「画面のデータをエクセルにまとめるために、GUIをHTML化してスクレイピングするしかないの？」
 
 結論から言えば、**GUI画面のスクレイピングは絶対に不要**です。
-この記事では、Rubrik Security Cloud（[RSC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="RSC")）におけるログ取得の仕組みと、なぜ画面のHTML化が不要なのかを初心者にも分かりやすく解説します。
+この記事では、Rubrik Security Cloud（[RSC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="RSC")）におけるログ取得の仕組みと、なぜ画面のHTML化が不要なのかを初心者にも分かりやすく解説します。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026年 4月16日</div>
 

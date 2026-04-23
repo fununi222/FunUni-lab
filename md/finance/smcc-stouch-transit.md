@@ -16,7 +16,7 @@ themes: ["finance:payments", "finance:cards", "finance:points"]
 
 日々の電車やバスの移動で、モバイルSuicaやPASMOを利用している方は多いと思います。現在、**全国の交通インフラ**において、新たな選択肢として「スマートフォンのタッチ決済」の導入が急速に進んでいます。
 
-[三井住友カード](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="三井住友カード")が実施している「スマホのタッチ決済乗車で最大8%還元」は、対象路線の移動費に対して効率的に[Vポイント](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Vポイント")を貯めるための非常に実用的な施策です。
+[三井住友カード](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="三井住友カード")が実施している「スマホのタッチ決済乗車で最大8%還元」は、対象路線の移動費に対して効率的に[Vポイント](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Vポイント")を貯めるための非常に実用的な施策です。
 
 本稿では、この全国的な施策を**「関東圏での具体的な活用」に絞って**、JR東日本併用時などの運用上の注意点とともに解説します。
 
@@ -26,8 +26,8 @@ themes: ["finance:payments", "finance:cards", "finance:points"]
 
 この還元を受けるには、対象のカードをスマートフォンのタッチ決済（Apple Pay / Google Pay）で利用することが必須条件となります。
 
-- **[Olive](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Olive")フレキシブルペイ（クレジットモード）**: 8%還元
-- **[三井住友カード](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="三井住友カード")（NL、ゴールドNLなど）**: 7%還元
+- **[Olive](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Olive")フレキシブルペイ（クレジットモード）**: 8%還元
+- **[三井住友カード](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="三井住友カード")（NL、ゴールドNLなど）**: 7%還元
 
 > [!IMPORTANT]
 > **重要な留意点**
@@ -53,13 +53,13 @@ themes: ["finance:payments", "finance:cards", "finance:points"]
 東武鉄道は改札でのタッチ決済には対応していますが、今回の「最大8%還元」の対象路線からは除外されています（通常のカード還元のみ）。
 
 #### 翌朝の決済処理と Olive のモード固定
-クレジットカードのタッチ決済による運賃計算は、多くの場合、翌朝に一括して処理されます。乗車してから翌朝の決済が完了するまでの間に、[Olive](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Olive")の支払いモード（クレジットモード等）を変更してしまうと、エラーが発生したり還元対象外になったりするリスクがあるため、乗車日はモードを固定しておくのが無難です。
+クレジットカードのタッチ決済による運賃計算は、多くの場合、翌朝に一括して処理されます。乗車してから翌朝の決済が完了するまでの間に、[Olive](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Olive")の支払いモード（クレジットモード等）を変更してしまうと、エラーが発生したり還元対象外になったりするリスクがあるため、乗車日はモードを固定しておくのが無難です。
 
 ---
 
 ## 結論：自分の生活圏に合わせた使い分けを
 
-改札を通過する際の処理スピードにおいては、依然としてSuicaが優位です。すべての移動手段を無理にタッチ決済へ切り替えるのではなく、自分の生活圏や休日の移動ルートと照らし合わせ、対象となる区間で部分的に取り入れるのが、堅実な[ポイ活](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="ポイ活")の活用方法と言えます。
+改札を通過する際の処理スピードにおいては、依然としてSuicaが優位です。すべての移動手段を無理にタッチ決済へ切り替えるのではなく、自分の生活圏や休日の移動ルートと照らし合わせ、対象となる区間で部分的に取り入れるのが、堅実な[ポイ活](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="ポイ活")の活用方法と言えます。
 
 ---
 

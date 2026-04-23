@@ -10,7 +10,7 @@ themes: ["infra:backup", "infra:tuning", "infra:architecture"]
 
 # Rubrikのバックアップ負荷分散ガイド！リソース制限ができない時の対策
 
-[Rubrik](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Rubrik")を導入してバックアップを自動化したものの、**「バックアップ中に本番ストレージの負荷が100%に張り付いてしまう」「Rubrik側でネットワークの帯域制限（スロットリング）が設定できずに困っている」**と悩んでいませんか？
+[Rubrik](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Rubrik")を導入してバックアップを自動化したものの、**「バックアップ中に本番ストレージの負荷が100%に張り付いてしまう」「Rubrik側でネットワークの帯域制限（スロットリング）が設定できずに困っている」**と悩んでいませんか？
 
 実は、Rubrikにはバックアップ取得時のトラフィックを直接制限するネイティブ機能がありません。これは仕様上の欠陥ではなく、Rubrikが「極限まで早くデータを保護する」という思想で作られているためです。
 

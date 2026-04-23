@@ -50,7 +50,7 @@ Microsoft 365 Copilot一択ではなく、用途に応じてDustやSana、Amazon
 AI導入は「技術投資」ではなく「経営投資」です。コストを管理し、価値を可視化すること。これが2026年のAI Opsに求められる最後のピースです。
 
 > **💡 次に読むべき記事**
-> - [記事①：全体のリサーチ手法から学びたい方はこちら](https://fununi222.github.io/websi../../article.html?md=ai/enterprise-ai-ops-rag.md)
-> - [記事②：精度の問題でお悩みの方はこちら](https://fununi222.github.io/websi../../article.html?md=ai/rag-incremental-indexing.md)
-> - [記事③：外部公開のセキュリティを知りたい方はこちら](https://fununi222.github.io/websi../../article.html?md=ai/multi-tenant-rag-security.md)
+> - [記事①：全体のリサーチ手法から学びたい方はこちら](https://fununi222.github.io/website/html/ai/enterprise-ai-ops-rag.html)
+> - [記事②：精度の問題でお悩みの方はこちら](https://fununi222.github.io/website/html/ai/rag-incremental-indexing.html)
+> - [記事③：外部公開のセキュリティを知りたい方はこちら](https://fununi222.github.io/website/html/ai/multi-tenant-rag-security.html)
 

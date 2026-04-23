@@ -16,7 +16,7 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ## 「球場＝高い」を覆す、2026年の最強エンタメ空間
 
-「エスコンフィールドって、チケット代やご飯が高そう…」そんなイメージを持っていませんか？実は、**[エスコンフィールド北海道](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="エスコンフィールド北海道")**は、**「試合がない日（[Non-Gameday](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Non-Gameday")）」**を狙って賢く立ち回れば、驚くほど高いコストパフォーマンス（コスパ）で1日中遊び尽くせる最高の空間です。2026年最新情報を徹底解説します。
+「エスコンフィールドって、チケット代やご飯が高そう…」そんなイメージを持っていませんか？実は、**[エスコンフィールド北海道](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="エスコンフィールド北海道")**は、**「試合がない日（[Non-Gameday](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Non-Gameday")）」**を狙って賢く立ち回れば、驚くほど高いコストパフォーマンス（コスパ）で1日中遊び尽くせる最高の空間です。2026年最新情報を徹底解説します。
 
 ---
 
@@ -26,13 +26,13 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 - **TOWER 11のウォールアート**: ダルビッシュ有投手と大谷翔平選手の巨大壁画。
 - **LEDビジョンの進化**: 2026年に増設されたLEDビジョンが、歩いているだけで大迫力の映像と音響を提供します。
-- **[ES CON FIELD SKY WALK](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="SKY WALK") (2026.05開業)**: 屋根近くの空中散歩（5,000円）という特別な体験も追加されました。
+- **[ES CON FIELD SKY WALK](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="SKY WALK") (2026.05開業)**: 屋根近くの空中散歩（5,000円）という特別な体験も追加されました。
 
 ---
 
 ## 2. アクセス編：時間と体力を節約する「移動の正解」
 
-### シャトルバスは「[キャッシュレス決済](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="キャッシュレス決済")」でスムーズに
+### シャトルバスは「[キャッシュレス決済](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="キャッシュレス決済")」でスムーズに
 北広島駅からは徒歩20分。体力温存のために250円でバスに乗るのが「正解」です。
 
 | 路線（片道） | 2026年改定運賃（大人） | 決済方法 | 特徴 |
@@ -48,7 +48,7 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ---
 
-## 3. グルメ（[えふめし](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="えふめし")）編：戦略的な選び方
+## 3. グルメ（[えふめし](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="えふめし")）編：戦略的な選び方
 
 - **ワゴン販売を狙え**: 通路の期間限定ポップアップストアなら1,000円〜2,000円台で「マルトマ食堂」や「中国菜エスサワダ」の味を楽しめます。
 - **選手プロデュースメニュー**: 万波中正選手の「スタミナ万点グリルステーキ丼（1,800円）」など、ボリューム満点で「ハズレ」がありません。
@@ -57,11 +57,11 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ## 4. 癒やし編：サウナとクラフトビール
 
-### 新施設！「[洞サウナ](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="洞サウナ") (DO SAUNA)」と[絵空事](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="絵空事")
+### 新施設！「[洞サウナ](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="洞サウナ") (DO SAUNA)」と[絵空事](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="絵空事")
 2026年5月オープン。
-- **[雪洞 (Shirayuki)](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="雪洞")（ミスト）**: オーロラのような光の没入感。
-- **[石洞 (Ishidou)](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="石洞")（ドライ）**: オートロウリュ完備。
-- **回復食「[絵空事 (Esoragoto)](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="絵空事")」**: 清宮克幸氏が手がけるグルテンフリーの玄米うどん（きほんのうどん 550円〜）がサウナ後の身体に沁みます。
+- **[雪洞 (Shirayuki)](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="雪洞")（ミスト）**: オーロラのような光の没入感。
+- **[石洞 (Ishidou)](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="石洞")（ドライ）**: オートロウリュ完備。
+- **回復食「[絵空事 (Esoragoto)](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="絵空事")」**: 清宮克幸氏が手がけるグルテンフリーの玄米うどん（きほんのうどん 550円〜）がサウナ後の身体に沁みます。
 
 ---
 
@@ -74,12 +74,12 @@ themes: ["travel:hokkaido", "baseball:fan", "stadium:gourmet", "spa:sauna", "kid
 
 ---
 
-## 6. まとめ：[Fマイル](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Fマイル")のループでさらに[ポイ活](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="ポイ活")をお得に！
+## 6. まとめ：[Fマイル](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Fマイル")のループでさらに[ポイ活](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="ポイ活")をお得に！
 
-公式アプリでキャッシュレス決済し、[Fマイル](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Fマイル")を貯めて次回のクーポン（300円引き等）に繋げるのが賢いループです。
+公式アプリでキャッシュレス決済し、[Fマイル](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Fマイル")を貯めて次回のクーポン（300円引き等）に繋げるのが賢いループです。
 
 **【エスコンフィールド攻略の3カ条】**
-1. **[Non-Gameday](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Non-Gameday")** を狙って駐車場と無料エリアを活用。
+1. **[Non-Gameday](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Non-Gameday")** を狙って駐車場と無料エリアを活用。
 2. 食事は**ワゴン販売**か**選手メニュー**で満足度最大化。
 3. **公式アプリ**でマイルを貯めて次もお得に。
 

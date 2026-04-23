@@ -14,7 +14,7 @@ themes: ["dev:environment", "infra:container"]
 「新しく入ったメンバーの環境構築に、毎回3日もかかっている…」
 開発現場で、こんな悩みを抱えていませんか？
 
-実は、これらを劇的に解決する組み合わせがあります。それが**「[Devcontainer](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Devcontainer")」**と**「[Harbor](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Harbor")」**です。
+実は、これらを劇的に解決する組み合わせがあります。それが**「[Devcontainer](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Devcontainer")」**と**「[Harbor](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Harbor")」**です。
 この記事では、開発環境をコード化するDevcontainerと、エンタープライズ向けの強力なコンテナレジストリであるHarborの基礎知識を、分かりやすく解説します。
 
 これを読めば、あなたのチームの開発スピードが圧倒的に上がります！
@@ -53,7 +53,7 @@ Harborは、VMwareが開発し、現在はCloud Native Computing Foundation (CNC
 
 ### なぜDocker HubではなくHarborなのか？
 
-「[Docker Hub](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Docker%20Hub")を使えばいいのでは？」と思うかもしれません。
+「[Docker Hub](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Docker%20Hub")を使えばいいのでは？」と思うかもしれません。
 しかし、Harborには企業で使うべき圧倒的なメリットがあります。
 
 1. **オンプレミスやプライベートクラウドに構築できる:** 機密データを外部に出す必要がありません。

@@ -14,7 +14,7 @@ themes: ["ai:architecture", "enterprise:agent", "cloud:ai"]
 
 # Enterprise AI Architecture | クラウドAI基盤 vs. 独自エージェントの選択肢と制約
 
-[生成AI](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="生成AI")を社内業務に統合する際、[AIエージェント開発基盤](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Copilot%20Studio")は迅速な開発を可能にしますが、ライセンス体系に起因する「外部ユーザー（BP）公開の制約」が普及の壁となる場合があります。本稿では、社外連携プロジェクトの知見をもとに、現実的な公開アーキテクチャを比較検討します。
+[生成AI](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="生成AI")を社内業務に統合する際、[AIエージェント開発基盤](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Copilot%20Studio")は迅速な開発を可能にしますが、ライセンス体系に起因する「外部ユーザー（BP）公開の制約」が普及の壁となる場合があります。本稿では、社外連携プロジェクトの知見をもとに、現実的な公開アーキテクチャを比較検討します。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 202X-04-XX</div>
 
@@ -25,7 +25,7 @@ themes: ["ai:architecture", "enterprise:agent", "cloud:ai"]
 社外連携PoCにおいて、最大の論点となったのはライセンス制約です。
 
 - **社内ユーザー**: 主要ライセンス等で利用可能。既存の組織内ナレッジ（SharePoint等）へのアクセスも容易。
-- **外部パートナー (BP)**: **[AIエージェント開発基盤](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Copilot%20Studio") のライセンス体系上、外部テナントのユーザーへの公開が原則不可。**
+- **外部パートナー (BP)**: **[AIエージェント開発基盤](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Copilot%20Studio") のライセンス体系上、外部テナントのユーザーへの公開が原則不可。**
 - **課題**: 運用保守をBPへ委託している環境では、最もナレッジを必要とする層にAIツールを届けられない。
 
 ## 2. アーキテクチャ比較：Agent vs. Platform
@@ -42,14 +42,14 @@ themes: ["ai:architecture", "enterprise:agent", "cloud:ai"]
 
 社外連携プロジェクトでは、以下のハイブリッド構成によるPoCを推進しています。
 
-1. **データソースの正規化**: [Redmine](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Redmine") APIや T-UP からチケットを抽出し、[JSONL](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="JSONL")形式で汎用性を確保。
-2. **先行PoC (Studio)**: まずは社内ユーザー向けに [AIエージェント開発基盤](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Copilot%20Studio") で「回答の精度」を検証。
+1. **データソースの正規化**: [Redmine](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Redmine") APIや T-UP からチケットを抽出し、[JSONL](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="JSONL")形式で汎用性を確保。
+2. **先行PoC (Studio)**: まずは社内ユーザー向けに [AIエージェント開発基盤](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Copilot%20Studio") で「回答の精度」を検証。
 3. **拡張フェーズ (Custom)**: 精度が確認された後、BP向けの公開が必要な範囲に絞り、APIベースの独自フロントエンド（カスタムエージェント）へ移行。
 
 ---
 
 ## 結論：プラットフォームに依存しない「データ資産」の重要性
-アーキテクチャの選択肢は今後も変化し続けますが、不変なのは「質の高いナレッジデータ」です。[LLM](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="LLM")の種類やライセンス形態に左右されないよう、データを疎結合に保ち、いつでも別の「器（エージェント）」へ移し替えられる設計がエンタープライズAIには不可欠です。
+アーキテクチャの選択肢は今後も変化し続けますが、不変なのは「質の高いナレッジデータ」です。[LLM](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="LLM")の種類やライセンス形態に左右されないよう、データを疎結合に保ち、いつでも別の「器（エージェント）」へ移し替えられる設計がエンタープライズAIには不可欠です。
 
 ## 変更履歴 (Changelog)
 - 2026-04-15: 新規作成。Copilot Studio の公開制約とカスタムエージェント戦略のリサーチ結果を統合。

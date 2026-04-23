@@ -12,7 +12,7 @@ themes: ["dev:webapp", "dev:ux", "ai:agents"]
 <img src="../../assets/img/dev/synthetic-pet-simulation.png" alt="Synthetic Pet Handheld Device" class="w-full rounded-2xl shadow-xl border border-white/10 object-cover hover:border-primary/50 transition-colors duration-300">
 </figure>
 
-本プロジェクトは、[フロントエンド](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="フロントエンド")技術のみで完結する「たまごっち風」の自律型エージェント・シミュレーターです。単なるゲーム制作にとどまらず、**「時間経過による状態（State）の減衰」**と**「localStorage による永続化」**の実装を通じて、デジタル環境における自律生命体の[UI](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="UI")/[UX](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="UX")設計を検証します。
+本プロジェクトは、[フロントエンド](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="フロントエンド")技術のみで完結する「たまごっち風」の自律型エージェント・シミュレーターです。単なるゲーム制作にとどまらず、**「時間経過による状態（State）の減衰」**と**「localStorage による永続化」**の実装を通じて、デジタル環境における自律生命体の[UI](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="UI")/[UX](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="UX")設計を検証します。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-13</div>
 
@@ -249,7 +249,7 @@ setTimeout(initSimulation, 500);
 キャラクターの変更に伴い、ハードウェア（UIフレーム）の配色もミントグリーン（#b2f2bb）ベースへと変更しました。これにより、春の背景とマスコットが視覚的にシームレスに統合されています。従来のクロマキー技術によるリアルタイム透過処理も継続して適用されています。
 
 ## 今後の展望
-今後は[LLM](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="LLM")と連携し、特定条件下でマスコットのボディカラーが変化する動的な色彩変化システムや、ユーザーの入力に応じたプロトコル反応の実装を予定しています。
+今後は[LLM](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="LLM")と連携し、特定条件下でマスコットのボディカラーが変化する動的な色彩変化システムや、ユーザーの入力に応じたプロトコル反応の実装を予定しています。
 
 ---
 

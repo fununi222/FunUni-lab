@@ -10,7 +10,7 @@ themes: ["gourmet:yakitori", "other:local", "yokohama:kannai"]
 
 # 横浜・関内のコスパ最高焼き鳥屋 6選 | 満足度重視のリサーチログ 2026
 
-[横浜](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="横浜")・[関内](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="関内")エリアは、日本屈指の焼き鳥激戦区です。高級店も多い中、今回は「価格以上の満足度（コスパ）」を軸に、平日でも満席必至の人気店をピックアップしました。炭火の香りに包まれながら、至福の時間を過ごせる厳選6店を紹介します。
+[横浜](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="横浜")・[関内](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="関内")エリアは、日本屈指の焼き鳥激戦区です。高級店も多い中、今回は「価格以上の満足度（コスパ）」を軸に、平日でも満席必至の人気店をピックアップしました。炭火の香りに包まれながら、至福の時間を過ごせる厳選6店を紹介します。
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Last Updated: 2026-04-15</div>
 
@@ -66,7 +66,7 @@ themes: ["gourmet:yakitori", "other:local", "yokohama:kannai"]
 
 ## リサーチを終えて
 
-今回の調査で改めて感じたのは、[横浜](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="横浜")・[関内](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="関内")の焼き鳥文化の深さです。どのお店も独自のこだわりを持ちつつ、利用しやすい価格設定を維持しているのは驚きです。
+今回の調査で改めて感じたのは、[横浜](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="横浜")・[関内](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="関内")の焼き鳥文化の深さです。どのお店も独自のこだわりを持ちつつ、利用しやすい価格設定を維持しているのは驚きです。
 
 最新の営業状況や予約については、事前にお店へ確認することをお勧めします。それでは、良い「焼き鳥ライフ」を！
 

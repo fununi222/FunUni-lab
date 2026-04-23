@@ -14,7 +14,7 @@ themes: ["ai:prompt-engineering", "infra:automation", "dev:ops"]
 
 <div class="text-[10px] text-on-surface-variant opacity-60 text-right mb-6 tracking-widest font-mono">Standard Edition: v2026.04.10</div>
 
-本ナレッジベースは、[AIOps](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="AIOps") エンジニアの業務ライフサイクルを「企画・稟議」「要件定義・設計」「構築・標準化」「障害対応・自律修復」の4つのパイプラインとして定義し、各フェーズで[生成AI](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="生成AI")を [AIエージェント](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="AIエージェント") 同様の知的ワークフォースとして機能させるためのプロンプト集である。
+本ナレッジベースは、[AIOps](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="AIOps") エンジニアの業務ライフサイクルを「企画・稟議」「要件定義・設計」「構築・標準化」「障害対応・自律修復」の4つのパイプラインとして定義し、各フェーズで[生成AI](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="生成AI")を [AIエージェント](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="AIエージェント") 同様の知的ワークフォースとして機能させるためのプロンプト集である。
 
 ---
 

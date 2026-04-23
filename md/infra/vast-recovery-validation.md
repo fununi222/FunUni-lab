@@ -36,7 +36,7 @@ themes: ["infra:storage", "capacity:audit", "backup:recovery"]
 ---
 
 ## 結論：監視から「評価」への転換
-ストレージの運用は「何％空いているか」を監視するだけでは不十分です。特に[VAST Data](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="VAST%20Data")のような高度なシステムでは、削除イベント後の回復ロジックを理解し、「将来のバックアップを許容できるか」を評価する視点が不可欠です。
+ストレージの運用は「何％空いているか」を監視するだけでは不十分です。特に[VAST Data](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="VAST%20Data")のような高度なシステムでは、削除イベント後の回復ロジックを理解し、「将来のバックアップを許容できるか」を評価する視点が不可欠です。
 
 ## 変更履歴 (Changelog)
 - 202X-04: 新規作成。次世代ストレージ容量推移と削除イベント後の実効評価リサーチ。

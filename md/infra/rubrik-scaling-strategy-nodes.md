@@ -10,7 +10,7 @@ themes: ["infra:architecture", "infra:scaling", "infra:database"]
 
 # Rubrikのスケーリング戦略：クラスタ追加とノード追加のベストプラクティス
 
-データ量が増加し、[Rubrik](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Rubrik")インフラの拡張を検討する際、多くのインフラ管理者が直面する疑問があります。
+データ量が増加し、[Rubrik](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Rubrik")インフラの拡張を検討する際、多くのインフラ管理者が直面する疑問があります。
 
 **「リソース制限が細かくできないなら、負荷を分散させるために新しいクラスタを都度追加していくべきか？」**
 それとも、**「既存のクラスタにノードを追加して巨大化させるべきか？」**
@@ -35,7 +35,7 @@ themes: ["infra:architecture", "infra:scaling", "infra:database"]
 「でも、1つのクラスタを大きくしすぎると、検索やメタデータの処理が遅くなるのでは？」という心配があるかもしれません。
 
 実は、初期のRubrikはメタデータ管理に「Apache Cassandra」というデータベースを使っており、大規模になるとデータが偏ったり、検索が遅延する問題がありました。
-しかし現在のRubrikは、金融機関などでも使われる先進的な分散データベース**「[CockroachDB](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="CockroachDB")」**へアーキテクチャを刷新しています。これにより、ノードをどれだけ追加しても、パフォーマンスが劣化することなくリニアに性能が向上する「無限のスケールアウト」が可能になりました。
+しかし現在のRubrikは、金融機関などでも使われる先進的な分散データベース**「[CockroachDB](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="CockroachDB")」**へアーキテクチャを刷新しています。これにより、ノードをどれだけ追加しても、パフォーマンスが劣化することなくリニアに性能が向上する「無限のスケールアウト」が可能になりました。
 
 システムが巨大化して不安定になるトラウマは、もはや過去のものです。Rubrikは、ノードを追加すればするほど、障害への耐性も並列処理のスピードも向上する設計になっています。
 
@@ -55,7 +55,7 @@ themes: ["infra:architecture", "infra:scaling", "infra:database"]
 
 ## 複数クラスタになってしまった場合の救世主：Rubrik Security Cloud (RSC)
 
-どうしても複数のクラスタを運用しなければならない場合、管理の煩雑さを解決するのが**「[RSC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="RSC") (Rubrik Security Cloud)」**です。
+どうしても複数のクラスタを運用しなければならない場合、管理の煩雑さを解決するのが**「[RSC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="RSC") (Rubrik Security Cloud)」**です。
 
 RSCは、世界中にあるRubrikクラスタを、SaaS型の1つの画面で統合管理できるプラットフォームです。今後はオンプレミスの個別画面ではなく、RSCによる統合管理がRubrikの標準となります。
 

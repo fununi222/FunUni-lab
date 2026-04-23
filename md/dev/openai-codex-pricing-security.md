@@ -36,8 +36,8 @@ AIコーディングツールの導入を検討する企業担当者様から、
 
 自社のシステムにAIを組み込んだり、チーム全体で大規模に利用したい場合（ChatGPT Business等）は、利用したデータ量（トークン）に応じた課金となります。
 
-*   **[GPT-5](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="GPT-5").3-Codex:** 100万入力[トークン](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Token")あたり $1.75
-*   **GPT-5.1-Codex-Mini:** 100万入力[トークン](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Token")あたり $0.25（コスパ重視の小規模タスク向け）
+*   **[GPT-5](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="GPT-5").3-Codex:** 100万入力[トークン](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Token")あたり $1.75
+*   **GPT-5.1-Codex-Mini:** 100万入力[トークン](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Token")あたり $0.25（コスパ重視の小規模タスク向け）
 *   **コンテナ（隔離環境）:** 1GBあたり $0.03（20分のセッションごと）
 
 用途に合わせてモデルを切り替えることで、コストを劇的に抑えることが可能です。
@@ -52,12 +52,12 @@ AIコーディングツールの導入を検討する企業担当者様から、
 AIがコードを書く際に脆弱性を作り出してしまうのではなく、逆に**AIがセキュリティ専門家としてシステムを守ってくれます**。
 
 1.  **自動で脅威を分析:** プロジェクト全体を読み込み、どこが攻撃されやすいかを自動でリストアップします。
-2.  **実証と修正:** 単なる警告ではなく、隔離された環境で実際に攻撃のテスト（[PoC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="PoC")）を行い、安全な修正パッチまで提案してくれます。
-3.  **確かな実績:** わずか30日間のベータテストで、有名なオープンソースプロジェクトから792件のクリティカルな脆弱性（[CVE](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="CVE")）を発見しました。
+2.  **実証と修正:** 単なる警告ではなく、隔離された環境で実際に攻撃のテスト（[PoC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="PoC")）を行い、安全な修正パッチまで提案してくれます。
+3.  **確かな実績:** わずか30日間のベータテストで、有名なオープンソースプロジェクトから792件のクリティカルな脆弱性（[CVE](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="CVE")）を発見しました。
 
 ### 情報漏洩の防止策
 
-Codexは「[サンドボックス](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="Sandbox")」と呼ばれる、インターネットから完全に隔離された安全なコンテナ環境で動作します。
+Codexは「[サンドボックス](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="Sandbox")」と呼ばれる、インターネットから完全に隔離された安全なコンテナ環境で動作します。
 また、OpenAIの厳格なプライバシーポリシーにより、法人のAPI利用データがAIの再学習に使われることはありません。
 
 ## FAQ（よくある質問）

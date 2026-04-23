@@ -37,8 +37,8 @@ themes: ["infra:backup", "modernization:db", "migration:strategy"]
 
 移行時に最も警戒すべきは、**「以前から存在していた無害なエラー」を移行起因の障害と誤認すること**です。
 
-### [post-thaw-script](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="post-thaw-script") エラーの分類
-- **事象**: [vSphere](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="vSphere")連携時にスクリプト実行結果がエラー（1）を返すが、データ自体は整合性が保たれているケース。
+### [post-thaw-script](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="post-thaw-script") エラーの分類
+- **事象**: [vSphere](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="vSphere")連携時にスクリプト実行結果がエラー（1）を返すが、データ自体は整合性が保たれているケース。
 - **判断**: 旧環境利用時からの既知事象である場合、今回の切替可否の一次判定からは除外。
 - **効果**: 監視のノイズを低減し、移行によって「新たに発生した事象」にフォーカスできる体制を構築。
 
@@ -52,7 +52,7 @@ themes: ["infra:backup", "modernization:db", "migration:strategy"]
 ---
 
 ## 結論：運用まで含めた「完成」の定義
-[IaC](https://fununi222.github.io/websi../../article.html?md=glossary/system-glossary.md#:~:text="IaC")による構築自動化が進む現代においても、エンタープライズ領域の移行では「人間がどう判断し、どう連絡するか」という運用プロセスの設計が最終的な品質を左右します。
+[IaC](https://fununi222.github.io/website/html/glossary/system-glossary.html#:~:text="IaC")による構築自動化が進む現代においても、エンタープライズ領域の移行では「人間がどう判断し、どう連絡するか」という運用プロセスの設計が最終的な品質を左右します。
 
 ## 変更履歴 (Changelog)
 - 2026-04-16: 新規作成。基幹DBのバックアップ刷新判定フローとノイズ管理戦略を統合。
