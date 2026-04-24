@@ -133,6 +133,9 @@ async function loadMarkdown() {
             });
         }
         
+        // 7. Handle Breadcrumbs
+        updateBreadcrumbs(mdPath, metadata.title);
+
         // Emit Custom Event for and-hoc scripts
         const event = new CustomEvent('sme-loaded', { 
             detail: { metadata, element: contentArea } 
@@ -157,28 +160,46 @@ async function loadMarkdown() {
 // Helper to dynamically decorate Sidebar and Navbar based on Category
 function decorateActiveUI(mdPath) {
     if (!mdPath) return;
-    const category = mdPath.split('/')[0];
-    if (!category || category === mdPath) return; // e.g. root items
+    
+    // Support paths like "md/infra/backup/article.md" or "infra/article.md"
+    const parts = mdPath.split('/').filter(p => p !== '');
+    let category = parts[0];
+    if (category === 'md' && parts.length > 1) {
+        category = parts[1];
+    }
+    
+    if (!category || category === mdPath) return; 
 
     // Classes
     const activeNavClass = 'text-secondary border-b-2 border-secondary pb-1'.split(' ');
     const inactiveNavClass = 'text-on-surface-variant hover:text-secondary transition-colors'.split(' ');
 
-    // Patch Nav
-    document.querySelectorAll('nav:first-of-type a').forEach(a => {
+    // Patch Nav (Navbar & Sidebar)
+    const links = document.querySelectorAll('nav a, aside a');
+    links.forEach(a => {
         if (!a.href) return;
-        const hrefSplit = a.href.split('/');
-        const hrefCat = hrefSplit[hrefSplit.length - 2]; // either folder or filename
+        
+        // Match either category/index.html or the category directory exactly
+        const isMatch = a.href.includes(category + '/index.html');
         
         // Ensure "FunUni-lab" absolute root doesn't get swept
         if (a.textContent.includes('FunUni-lab')) return;
 
-        if (a.href.includes(category + '/index.html')) {
+        if (isMatch) {
             a.classList.remove(...inactiveNavClass);
             a.classList.add(...activeNavClass);
+            // If it's a sidebar link, also ensure active state
+            if (a.closest('aside')) {
+                a.classList.add('bg-surface-container', 'text-secondary', 'border-r-2');
+                a.classList.remove('text-slate-500');
+            }
         } else {
             a.classList.remove(...activeNavClass);
             a.classList.add(...inactiveNavClass);
+            if (a.closest('aside')) {
+                a.classList.remove('bg-surface-container', 'text-secondary', 'border-r-2');
+                a.classList.add('text-slate-500');
+            }
         }
     });
 }
@@ -370,4 +391,51 @@ function resolvePath(relPath, mdPath) {
     }
     
     return result;
+}
+
+/**
+ * Updates the breadcrumb navigation based on the article path.
+ */
+function updateBreadcrumbs(mdPath, title) {
+    const breadcrumbArea = document.getElementById('sme-breadcrumbs');
+    if (!breadcrumbArea) return;
+
+    const parts = mdPath.split('/').filter(p => p !== '');
+    let currentPath = '';
+    const breadcrumbs = [];
+
+    // Home
+    breadcrumbs.push(`<a href="index.html" class="hover:text-primary transition-colors">Home</a>`);
+
+    // Category / Subcategory
+    let mdFound = false;
+    parts.forEach((part, index) => {
+        if (part === 'md') {
+            mdFound = true;
+            return;
+        }
+        if (index === parts.length - 1) return; // Last part is the filename
+
+        currentPath += (currentPath ? '/' : '') + part;
+        
+        // Humanize category names
+        const label = part.charAt(0).toUpperCase() + part.slice(1);
+        
+        // Link to the index page of the category (e.g. infra/index.html)
+        const isCategory = (mdFound && index === 1) || (!mdFound && index === 0);
+        const link = isCategory ? `${part}/index.html` : '#';
+        
+        breadcrumbs.push(`<span class="text-slate-700">/</span>`);
+        if (link !== '#') {
+            breadcrumbs.push(`<a href="${link}" class="hover:text-primary transition-colors">${label}</a>`);
+        } else {
+            breadcrumbs.push(`<span>${label}</span>`);
+        }
+    });
+
+    // Current Article
+    breadcrumbs.push(`<span class="text-slate-700">/</span>`);
+    breadcrumbs.push(`<span class="text-primary truncate max-w-[200px]">${title || 'Article'}</span>`);
+
+    breadcrumbArea.innerHTML = breadcrumbs.join(' ');
 }

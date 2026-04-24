@@ -19,7 +19,7 @@ themes: ["other:glossary", "other:spec"]
     <input type="text" id="glossarySearch" placeholder="用語・技術名またはカテゴリでフィルター..." 
       class="bg-transparent border-none text-on-surface text-sm w-full focus:ring-0 placeholder:text-slate-500 placeholder:text-[10px] placeholder:uppercase placeholder:tracking-widest">
     <div id="searchCounter" class="text-[9px] font-bold text-slate-500 uppercase tracking-widest whitespace-nowrap ml-4 border-l border-white/5 pl-4">
-      Total: 181 Definitions
+      Total: 251 Definitions
     </div>
   </div>
 </div>
@@ -252,6 +252,11 @@ themes: ["other:glossary", "other:spec"]
 | "五四〇" | Travel / Local | ゴーヨンマル。本間松蔵商店が生み出した、専用の貯蔵庫で540日間熟成させた究極のジャガイモ。強烈な甘みとコクを持つ。 |
 | "水そば" | Travel / Gourmet | 羊蹄山の湧き水に蕎麦を浸し、塩だけでいただく究極の食べ方。倶知安の「農家のそばや羊蹄山」の名物。 |
 | "&cafe NISEKO" | Travel / Local | 2026年4月に倶知安町にオープンした循環型カフェ。リサイクル会社の堆肥で育てた野菜を提供し、旧社屋をリノベーションした空間。 |
+| "オンデマンド" | Infra / Ops | あらかじめスケジュールされた自動実行ではなく、ユーザーが必要な時にその都度実行すること。バックアップでは手動取得を指す。 |
+| "パージ (Purge)" | Infra / Data | 不要になったデータやスナップショットを完全に削除し、ストレージ容量を解放すること。 |
+| "接待" | Other / Business | 取引先をもてなし、親睦を深めるための会食。赤坂エリアはこの需要が非常に高い。 |
+| "鉄板焼き" | Other / Gourmet | 目の前の鉄板でシェフが食材を焼き上げる料理スタイル。接待や記念日の定番。 |
+| "すき焼き" | Other / Gourmet | 薄切り肉を醤油・砂糖などで煮焼きする日本の代表的な肉料理。老舗「ざくろ」などの名物。 |
 
 | "SKY WALK" | Travel / Activity | ES CON FIELD SKY WALK。2026年5月開業の空中散歩アクティビティ。地上約50mの球場屋根付近を歩く体験。 |
 | "雪洞" | Travel / Spa | Shirayuki。洞サウナ内にあるホワイトミストサウナ。オーロラのような光演出による没入体験が特徴。 |
@@ -282,8 +287,86 @@ themes: ["other:glossary", "other:spec"]
 | "RSC" | Infra / Security | Rubrik Security Cloudの略。世界中に分散するRubrikクラスタを単一のSaaS画面から統合管理するためのプラットフォーム。 |
 | "JAL Pay" | Finance | 日本航空（JAL）が提供する、JALマイレージバンク（JMB）アプリ一体型のスマホ決済サービス。Mastercard/Visaのバーチャルカード機能も持ち、高還元ルートの中継点として重用される。 |
 | "au PAY" | Finance | KDDIが提供するコード決済・プリペイドカード決済サービス。Pontaポイント経済圏の中核であり、他決済サービスへのチャージハブとしても機能する。 |
+| "プロンプト" | AI | AI（大規模言語モデル）に対して出す指示や質問のテキスト。良い回答を得るための工夫は「プロンプトエンジニアリング」と呼ばれる。 |
+| "トークン" | AI | AIが文章を処理する際の最小単位。英語では単語、日本語では1文字〜数文字に相当する。API利用料の計算基準となる。 |
+| "CVE" | Security | Common Vulnerabilities and Exposures。公開されている情報セキュリティの脆弱性や欠陥に付与される共通の識別番号。 |
+| "サンドボックス" | Security / Dev | プログラムを外部から隔離された保護領域で実行する仕組み。不審なコードの検証や、セキュリティが重要なタスクの実行に用いられる。 |
+| "IAM" | Security / Infra | Identity and Access Management。AWS等のクラウドサービスにおいて、ユーザーやリソースに対する「誰が」「何に」アクセスできるかの権限を集中管理する仕組み。 |
+| "エグレス料金" | Finance / Infra | Egress Fee。クラウド環境から外部（インターネットやオンプレミス）へデータを転送する際に発生するデータ転送料金。大量のデータ持ち出し時にコスト増の要因となる。 |
+| "RBAC" | Security / Dev | Role-Based Access Control。職務や役割（ロール）に基づいて、リソースやシステムへのアクセス権限を制御する手法。最小権限の原則を実現するために用いられる。 |
+| "webMethods" | Dev / Infra | Software AG社が提供する、企業内の異なるシステムやSaaSを統合・連携させるためのエンタープライズ統合プラットフォーム（iPaaS）。 |
+| "Integration Server" | Dev / Infra | webMethodsスイートの中核をなす実行エンジン。フローサービス等を用いてデータの変換や通信、ルーティングを行う。 |
+| "API Gateway" | Security / Infra | 外部からのAPIリクエストを一括で受け取り、認証、流量制御、ルーティング、ログ記録などを行う管理レイヤー。 |
+| "502 Bad Gateway" | Network / Infra | HTTPステータスコードの一つ。ゲートウェイやプロキシが、バックエンドサーバーから無効な応答を受け取った際に返される。 |
+| "指数バックオフ" | Dev / Ops | Exponential Backoff。リトライの間隔を試行回数に応じて指数関数的に増やしていく手法。サーバーへの負荷集中（Thundering Herd）を回避するために用いられる。 |
+| "リトライストーム" | Security / Ops | システムの各層で設定されたリトライが連鎖的に増殖し、異常な数のリクエストが発生してシステム全体がダウンする現象。 |
+| "べき等性" | Dev / Ops | Idempotency。ある操作を何度繰り返しても結果が同じである性質。決済等のリトライ処理において、二重登録を防ぐための必須要件。 |
+| "LVM" | Infra / Linux | Logical Volume Manager。Linuxにおいて物理ディスク容量を論理的なボリュームとして柔軟に管理する仕組み。スナップショットや容量拡張が容易。 |
+| "FLR" | Backup / Ops | File Level Restore。バックアップデータから特定のファイルやディレクトリのみを選択して復元する機能。 |
+| "UUID" | System / Infra | Universally Unique Identifier。ディスクやボリュームを一意に識別するための識別番号。重複するとOSが正常にマウントできない原因となる。 |
+| "Live Mount" | Backup / Rubrik | Rubrikの技術。データを移動させずRubrik自体をデータストアとして直接VMを起動する機能。大規模データの即時復旧に有効。 |
+| "Helper VM" | Backup / Ops | 復旧作業やデータ抽出のために一時的に用意する中継用の仮想マシン。LVMのUUID競合回避などに用いられる。 |
+| "BMR" | Backup / Ops | Bare Metal Recovery。OSからデータまでシステム全体を一括でまっさらなハードウェア上に復元する手法。 |
+| "ReaR" | Linux / DR | Relax-and-Recover。Linux用のディザスタリカバリツール。Rubrikと連携してベアメタル復旧を実現する。 |
+| "CDM" | Backup / Rubrik | Cloud Data Management。Rubrikのデータ保護プラットフォームの名称。 |
+| "RBS" | Backup / Rubrik | Rubrik Backup Service。バックアップ対象のホストにインストールするRubrik専用のエージェントソフトウェア。 |
+| "GraphQL" | Dev / API | APIのためのクエリ言語。クライアントが必要なデータ構造を明示的に指定でき、効率的なデータ取得が可能。 |
+| "RSC" | Backup / Rubrik | Rubrik Security Cloud。Rubrikが提供する、データ保護、脅威検知、復旧を統合管理するSaaSプラットフォーム。 |
+| "宣言的フェッチ" | Dev / API | Declarative Fetching。クライアントが必要なフィールドを明示してリクエストする手法。通信量の削減とパフォーマンス向上に寄与する。 |
+| "ページネーション" | Dev / API | Pagination。大量のデータを分割して取得する仕組み。サーバー負荷の軽減とクライアントのレスポンス向上に繋がる。 |
+| "Webhook" | Dev / Web | 特定のイベント発生時に、サーバー側から外部システムへリアルタイムにプッシュ通知を行う仕組み。 |
+| "ジッター" | Dev / Ops | Jitter。リトライ間隔にランダムな揺らぎを加える手法。リクエストの同時集中を回避するために用いられる。 |
+| "Thundering Herd" | System / Ops | 群衆の暴走。サーバーの復旧直後などに、大量のリクエストが同時に殺到して再びシステムをダウンさせる現象。 |
+| "ポーリング" | Dev / Ops | Polling。一定間隔でサーバーの状態を繰り返し確認する手法。負荷増大の原因になりやすく、Webhookへの移行が推奨される場合が多い。 |
+| "CoT" | AI | Chain-of-Thought（思考の連鎖）。AIに思考の過程を段階的に出力させることで、複雑な推論の精度を向上させる手法。 |
+| "MCP" | AI / Dev | Model Context Protocol。AIモデルが外部のリポジトリやデータベース、ツールにセキュアかつ自律的にアクセスするための標準プロトコル。 |
+| "RAG" | AI | Retrieval-Augmented Generation（検索拡張生成）。外部知識ベースから関連情報を検索し、生成AIの回答に組み込むことで情報の鮮度と正確性を高める仕組み。 |
+| "Memory Bank" | AI / Dev | プロジェクトの文脈や規約をAIに「長期記憶」として保持させる設計パターン。大規模リポジトリの継続的な理解に不可欠。 |
+| "Linter" | Dev | ソースコードを静的に解析し、バグやスタイル違反、潜在的な問題を検出するツール。 |
+| "CWE" | Security | Common Weakness Enumeration。ソフトウェアの脆弱性や弱点を体系的に分類・整理した共通の辞書。 |
+| "SPA" | Web / Dev | Single Page Application。ページ全体を再読み込みせず、JavaScriptでコンテンツを動的に更新するWebアプリケーションの形態。 |
+| "AIコードレビュー" | AI / Dev | 生成AIを用いてコードのバグ検知、リファクタリング案提示、規約チェック等を自動化する手法。開発サイクルの高速化に寄与する。 |
+| "GitLab CI" | Dev / Ops | GitLabに統合されたCI/CDツール。パイプラインの自動実行、テスト、ビルド、デプロイ、およびMRへの自動コメント投稿などに用いられる。 |
+| "LSP" | Dev / IDE | Language Server Protocol。エディタとプログラム言語サポートツール間の通信標準。型定義の参照や定義元へのジャンプ、補完機能をAIに提供するために重要。 |
+| "Tree-sitter" | Dev / Compilers | 多くのプログラミング言語を高速に解析できるパーサージェネレータ。コードを構造的に理解し、「リポジトリマップ」を作成してAIに渡す文脈を最適化するために用いられる。 |
+| "MR" | Dev / Git | Merge Request。GitLabにおいて、コードの変更を本番ブランチ等へ反映させるための承認依頼。GitHubにおけるPull Request（PR）に相当。 |
+| "ハルシネーション" | AI | AIがもっともらしい嘘をつく現象。コードレビューにおいては、存在しない型やライブラリの仕様を前提とした誤った指摘を指す。 |
+| "リポジトリマップ" | AI / Dev | リポジトリ全体の構造や主要な定義、依存関係を要約したデータ。AIがリポジトリ全体の「文脈」を理解するための地図として機能する。 |
+| "REPEAT-TRY-CATCH" | Dev / webMethods | webMethods Flowサービスにおけるエラーハンドリングの標準的な構造。リトライループ、主処理、例外処理を階層的に管理する。 |
+| "Fail-Safe" | System / Ops | フェイルセーフ。システムの一部に故障やエラーが発生しても、被害を最小限に抑え、安全な状態（ジョブのスキップ等）で動作を継続させる設計思想。 |
+| "インスタントリカバリ" | Backup / Rubrik | Rubrikの機能。バックアップデータを移動させず、Rubrik自体をデータストアとして直接VMを起動する技術。数TBのデータでも数分でアクセス可能にする。 |
+| "RTO" | System / Ops | Recovery Time Objective（目標復旧時間）。障害発生からサービスを復旧させるまでに許容される目標時間。 |
+| "RPO" | System / Ops | Recovery Point Objective（目標復旧時点）。障害発生時に、どの時点のデータまで復旧させるかという目標。バックアップの頻度に依存する。 |
+| "BCP" | Business / Ops | Business Continuity Plan（事業継続計画）。災害やシステム障害などの緊急事態において、事業を継続するための計画や体制。 |
+| "安全弁" | System / Dev | Safety Valve。AI自動レビュー等の自動化プロセスにおいて、誤判定やデグレードを防ぐために設ける多層的な検証・承認ステップ。 |
+| "自動原因切り分け" | Ops / AI | AIエージェント等が、CI/CDパイプラインのエラーログとコード変更差分を分析し、障害原因が「コード不備」か「インフラ故障」かを自動で特定する手法。 |
+| "Object Lock" | Cloud / AWS | S3の機能。一度書き込んだデータを一定期間または無期限に削除・上書き不能にする「WORM」モデルを実現する不変ストレージ機能。 |
+| "Vault Lock" | Cloud / AWS | AWS Backupの機能。バックアップを保持する「ボルト」に対して強力な保護ポリシーを適用し、不変なバックアップを保証する。ランサムウェア対策に有効。 |
+| "不変バックアップ" | Backup / Ops | Immutable Backup。一度作成されたら削除や改ざんが一切不可能なバックアップデータ。ランサムウェア攻撃からデータを確実に守るための最後の砦。 |
+| "IaC" | Dev / Ops | Infrastructure as Code。コードによってインフラの構築や管理を自動化する手法。TerraformやAWS CDKなどが代表的なツール。 |
+| "Glacier" | Cloud / AWS | Amazon S3のストレージクラス。長期間のアーカイブデータを極めて低コストで保存できる。復旧には数分から数時間の時間がかかる。 |
+| "CDK" | Cloud / AWS | Cloud Development Kit。プログラミング言語（TypeScript, Python等）を使用してクラウドインフラを定義・構築できるツール。 |
+| "Terraform" | Dev / Ops | HashiCorp社が提供する、インフラをコードで宣言的に管理するためのオープンソースツール。マルチクラウド環境でのIaC標準として広く普及。 |
+| "ゾンビバックアップ" | Backup / Ops | Zombie Backups。サーバ本体は削除・廃棄されているのに、バックアップ設定だけが残り続け、不要な課金やストレージ消費が発生している状態。 |
+| "T-UP" | Business / Ops | 国内で広く利用されているIT資産管理ツールの名称。ハードウェア、ソフトウェア、ライセンスのライフサイクル管理を行う。 |
+| "真実のソース" | System / Arch | Source of Truth (SoT)。システム全体において、ある特定のデータ項目に対して唯一の信頼できる情報源（マスタ）として定義された場所。 |
+| "名寄せ" | Data / Ops | 複数の異なるデータベースや台帳から、同一の対象（サーバ等）を特定し、情報を統合・突合する作業。UUIDなどの一意識別子が重要となる。 |
 
 ## 変更履歴 (Changelog)
+- **2026-04-24**: ゾンビバックアップ解消と資産管理連携シリーズの追加に伴う用語追加 (ゾンビバックアップ, T-UP, 真実のソース, 名寄せ)。
+- **2026-04-24**: AWS運用自動化および不変バックアップ連載の追加に伴う用語追加 (Object Lock, Vault Lock, 不変バックアップ, IaC, Glacier, CDK, Terraform)。
+- **2026-04-24**: GitLab MR × AI自動レビュー「安全弁」設計シリーズの追加に伴う用語追加 (安全弁, 自動原因切り分け)。
+- **2026-04-24**: Rubrik × Linux LVMリストア戦略連載の追加に伴う用語追加 (インスタントリカバリ, RTO, RPO, BCP)。
+- **2026-04-24**: webMethods × Rubrik 502エラー対策マスターガイドの追加に伴う用語追加 (REPEAT-TRY-CATCH, Fail-Safe)。
+- **2026-04-24**: GitLab CI × DevContainer連携ガイドの追加に伴う用語追加 (GitLab CI, LSP, Tree-sitter, MR, ハルシネーション, リポジトリマップ)。
+- **2026-04-24**: AIコードレビュー高度化シリーズの追加に伴う用語追加 (CoT, MCP, RAG, Memory Bank, Linter, CWE, SPA, AIコードレビュー)。
+- **2026-04-24**: Rubrik APIタイムアウト対策ガイドの追加に伴う用語追加 (GraphQL, RSC, 宣言的フェッチ, ページネーション, Webhook, ジッター, Thundering Herd, ポーリング)。
+- **2026-04-24**: Rubrik Linux LVMリストア解説記事の追加に伴う用語追加 (LVM, FLR, UUID, Live Mount, Helper VM, BMR, ReaR, CDM, RBS)。
+- **2026-04-24**: webMethods連携およびエラーハンドリング関連記事の追加に伴う用語追加 (webMethods, Integration Server, API Gateway, 502 Bad Gateway, 指数バックオフ, リトライストーム, べき等性)。
+- **2026-04-24**: 開発・環境構築関連記事の更新に伴う用語追加 (RBAC)。
+- **2026-04-24**: インフラ関連記事の更新に伴う用語追加 (IAM, エグレス料金)。
+- **2026-04-24**: AIコーディングツール連載記事の更新に伴う用語追加 (プロンプト, トークン, CVE, サンドボックス)。
+- **2026-04-24**: 赤坂肉料理ガイドおよびRubrik SLA解説記事の公開に伴う用語の追加 (オンデマンド, パージ, 接待, 鉄板焼き, すき焼き)。
 - **2026-04-18**: ニセコ・神仙沼コンテンツの刷新に伴う用語の大量追加 (神仙沼, パノラマライン, 五色温泉, 雪秩父, 泥パック, ヒグマ, 三島さんの芝ざくら)。
 - **2026-04-18**: 用語の追加 (JAL Pay, au PAY)。エスコンフィールド予算別VIPガイドの公開に伴う金融（ポイ活）用語の補完。
 - **2026-04-16**: 用語の追加 (CockroachDB, SOAR, GraphQL, RSC, XSOAR, SOC)。Rubrikスケーリング戦略および運用自動化シリーズの公開に伴うアップデート。

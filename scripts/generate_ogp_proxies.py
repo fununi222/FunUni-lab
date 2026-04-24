@@ -3,7 +3,6 @@ import re
 import sys
 
 # Configuration
-CONTENT_DIRS = ['infra', 'dev', 'ai', 'finance', 'lpo', 'other', 'glossary']
 ROOT_DIR = '.'
 SOURCE_DIR = 'md'  # Markdown sources
 OUTPUT_DIR = 'html' # Dedicated folder for HTML articles
@@ -27,7 +26,7 @@ TEMPLATE = """<!DOCTYPE html>
 
     <!-- Redirect to the dynamic viewer -->
     <script>
-        window.location.href = '../../article.html?md=md/{md_path}';
+        window.location.href = '{rel_root}article.html?md=md/{md_path}';
     </script>
     
     <style>
@@ -60,52 +59,61 @@ def parse_frontmatter(content):
     return data
 
 def main():
-    print(f"Generating OGP Proxy Files in {OUTPUT_DIR}/ folders...")
+    print(f"Generating OGP Proxy Files in {OUTPUT_DIR}/ recursively...")
     count = 0
     
-    for category in CONTENT_DIRS:
-        # Markdown sources are in md/{category}
-        src_cat_path = os.path.join(ROOT_DIR, SOURCE_DIR, category)
-        # HTML output will be in html/{category}/
-        out_cat_path = os.path.join(ROOT_DIR, OUTPUT_DIR, category)
-        
-        if not os.path.exists(src_cat_path):
-            continue
-            
-        if not os.path.exists(out_cat_path):
-            os.makedirs(out_cat_path)
-            
-        for filename in os.listdir(src_cat_path):
+    src_root = os.path.join(ROOT_DIR, SOURCE_DIR)
+    
+    if not os.path.exists(src_root):
+        print(f"Error: {SOURCE_DIR} directory not found.")
+        return
+
+    for root, dirs, files in os.walk(src_root):
+        for filename in files:
             if filename.endswith('.md'):
-                # Base relative markers
-                cat_md_rel = f"{category}/{filename}"
-                cat_html_rel = f"{category}/{filename.replace('.md', '.html')}"
+                # Full path to source file
+                src_path = os.path.join(root, filename)
                 
-                with open(os.path.join(src_cat_path, filename), 'r', encoding='utf-8') as f:
+                # Relative path from 'md/' directory (e.g. 'infra/backup/article.md')
+                rel_path = os.path.relpath(src_path, src_root).replace('\\', '/')
+                
+                # Metadata extraction
+                with open(src_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    
+                
                 metadata = parse_frontmatter(content)
                 title = metadata.get('title', 'Technical Archive')
                 description = metadata.get('description', 'FunUni-lab Research Log')
                 
-                # HTML filename
-                html_name = filename.replace('.md', '.html')
-                html_path = os.path.join(out_cat_path, html_name)
+                # Determine output path in 'html/'
+                # e.g. html/infra/backup/article.html
+                html_rel_path = rel_path.replace('.md', '.html')
+                out_path = os.path.join(ROOT_DIR, OUTPUT_DIR, html_rel_path)
+                
+                # Ensure output directory exists
+                out_dir = os.path.dirname(out_path)
+                if not os.path.exists(out_dir):
+                    os.makedirs(out_dir)
+                
+                # Calculate relative path to root for 'article.html' redirect
+                # Depth is the number of slashes in html_rel_path
+                # e.g. 'infra/backup/article.html' -> depth 2 -> '../../'
+                depth = html_rel_path.count('/')
+                rel_root = '../' * (depth + 1)
                 
                 # Render template
-                # og:url needs 'html/' + cat_html_rel
-                # redirect needs 'md/' + cat_md_rel
                 output = TEMPLATE.format(
                     title=title,
                     description=description,
-                    md_path=cat_md_rel,
-                    md_path_html=cat_html_rel
+                    md_path=rel_path,
+                    md_path_html=html_rel_path,
+                    rel_root=rel_root
                 )
                 
-                with open(html_path, 'w', encoding='utf-8') as f:
+                with open(out_path, 'w', encoding='utf-8') as f:
                     f.write(output)
                 
-                print(f"  [CREATED] {OUTPUT_DIR}/{cat_html_rel}")
+                print(f"  [CREATED] {OUTPUT_DIR}/{html_rel_path}")
                 count += 1
 
     print(f"\nDone! Generated {count} proxy files.")
