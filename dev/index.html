@@ -1,203 +1,243 @@
 <!DOCTYPE html>
 <html class="dark" lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Development | FunUni-lab Technical Archive</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development & Architecture | FunUni-lab</title>
+  
   <!-- SEO & OGP -->
   <meta name="description" content="Development Cluster: モダン開発手法、CI/CD、AIプログラミングツール、システム設計のリサーチログ。" />
-  <meta property="og:title" content="Development | FunUni-lab" />
+  <meta property="og:title" content="Development & Architecture | FunUni-lab" />
   <meta property="og:description" content="Development Cluster: モダン開発手法、CI/CD、AIプログラミングツール、システム設計のリサーチログ。" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="FunUni-lab" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Development | FunUni-lab" />
-  <meta name="twitter:description" content="Development Cluster: モダン開発手法、CI/CD、AIプログラミングツール、システム設計のリサーチログ。" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <!-- Synthetic Shared Assets -->
-    <script src="../assets/js/tw-config.js"></script>
-    <link rel="stylesheet" href="../assets/css/synthetic.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../assets/css/synthetic.css">
+  <style>
+    :root {
+      --obsidian: #0a0c14;
+      --surface-glass: rgba(255, 255, 255, 0.03);
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --accent-primary: #aaa4ff;
+      --accent-secondary: #00d2ff;
+      --accent-tertiary: #00ffca;
+    }
+    
+    body { background-color: var(--obsidian); color: #e2e8f0; }
+    .glass-card { background: var(--surface-glass); backdrop-filter: blur(20px); border: 1px solid var(--border-glass); border-radius: 24px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-card:hover { border-color: rgba(0, 210, 255, 0.3); background: rgba(255, 255, 255, 0.05); transform: translateY(-4px); box-shadow: 0 10px 40px -10px rgba(0, 210, 255, 0.1); }
+    
+    .bg-mesh { position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 80% 20%, rgba(0, 210, 255, 0.05) 0%, transparent 60%); }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--obsidian); }
+    ::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(0, 210, 255, 0.2); }
+  </style>
 </head>
-<body class="bg-background text-on-surface font-body min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary overflow-x-hidden mesh-gradient">
-    <!-- Top Nav -->
-    <nav class="fixed top-0 z-50 flex justify-between items-center px-8 h-16 w-full bg-surface/60 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ease-out font-headline tracking-tight shadow-lg">
-        <div class="flex items-center gap-8">
-            <a class="text-xl font-bold tracking-tighter text-primary" href="../index.html">FunUni-lab</a>
-            <div class="hidden md:flex items-center gap-6 text-[10px] uppercase tracking-widest font-bold">
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../infra/index.html">Infrastructure</a>
-        <a class="text-secondary border-b-2 border-secondary pb-1" href="../dev/index.html">Development</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../ai/index.html">AI & Agents</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../finance/index.html">Finance</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../lpo/index.html">LPO</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../other/index.html">Other</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://fununi222.github.io/website/html/glossary/system-glossary.html">Glossary</a>
+<body class="font-body selection:bg-secondary/30 overflow-x-hidden">
+  <div class="bg-mesh"></div>
+  
+  <!-- Global Navigation -->
+  <nav class="fixed top-0 z-[100] w-full h-20 border-b border-white/5 bg-obsidian/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto h-full px-8 flex justify-between items-center">
+      <div class="flex items-center gap-12">
+        <a href="../index.html" class="text-2xl font-bold font-headline tracking-tighter text-white">FunUni-lab<span class="text-secondary text-sm ml-1 opacity-50">.v2</span></a>
+        <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <a href="../infra/index.html" class="hover:text-primary transition-colors">Infrastructure</a>
+          <a href="../dev/index.html" class="text-secondary border-b-2 border-secondary pb-1">Development</a>
+          <a href="../ai/index.html" class="hover:text-tertiary transition-colors">AI Research</a>
+          <a href="../finance/index.html" class="hover:text-amber-400 transition-colors">Finance</a>
+          <a href="../other/index.html" class="hover:text-emerald-400 transition-colors">Lifestyle</a>
+          <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-white transition-colors">Glossary</a>
+        </div>
       </div>
+      <div class="flex items-center gap-6">
+        <div class="hidden md:flex flex-col items-end">
+          <span class="text-[9px] font-bold text-secondary tracking-[0.2em] uppercase">Domain_Dev_Active</span>
+          <span class="text-[10px] text-slate-500 font-mono tracking-tighter">Code_Core_Online</span>
         </div>
-        <div class="flex items-center gap-4">
-            <span class="text-xs font-bold text-secondary uppercase tracking-widest hidden sm:block">Secure Archive</span>
-            <span class="material-symbols-outlined text-secondary">database</span>
+        <div class="w-10 h-10 rounded-full bg-surface-container border border-secondary/20 flex items-center justify-center text-secondary cyber-glow">
+          <span class="material-symbols-outlined">code</span>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Sidebar -->
-    <aside class="h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col py-20 px-4 space-y-2 bg-surface z-40 border-r border-white/5">
-        <div class="mb-8 px-4">
-            <div class="text-primary font-bold text-xs uppercase tracking-widest font-headline">DEV_RESEARCH_LOG</div>
-            <div class="text-slate-500 text-[10px] uppercase tracking-widest font-body mt-1">v2026.04.10</div>
+  <main class="pt-32 pb-20 max-w-7xl mx-auto px-8">
+    
+    <!-- Hero / Status Panel -->
+    <header class="mb-24 relative">
+      <div class="flex flex-col md:flex-row items-end justify-between gap-8">
+        <div class="space-y-4 max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 text-[10px] font-bold tracking-[0.3em] uppercase">
+            Development_Cluster
+          </div>
+          <h1 class="text-6xl md:text-8xl font-bold font-headline tracking-tighter text-white leading-[0.9]">
+            Development <br/><span class="text-slate-600">& Architecture</span>
+          </h1>
+          <p class="text-lg text-slate-400 leading-relaxed max-w-2xl pt-4">
+            フロントエンド・バックエンドの実装設計から、コンテナ化・AIプログラミングツールまで。モダン開発手法の最前線を切り拓くリサーチログ。
+          </p>
         </div>
-        <nav class="flex-1 space-y-1">
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../index.html#latest-logs">
-        <span class="material-symbols-outlined text-lg">history</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Latest Logs</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../infra/index.html">
-        <span class="material-symbols-outlined text-lg">settings</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Infrastructure</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-primary bg-surface-container border-r-2 border-primary transition-all hover:translate-x-1 duration-200" href="../dev/index.html">
-        <span class="material-symbols-outlined text-lg">code</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Development</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../ai/index.html">
-        <span class="material-symbols-outlined text-lg">biotech</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">AI Research</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../finance/index.html">
-        <span class="material-symbols-outlined text-lg">diamond</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Finance</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../lpo/index.html">
-        <span class="material-symbols-outlined text-lg">rocket_launch</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Optimization</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../other/index.html">
-        <span class="material-symbols-outlined text-lg">folder_open</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Other / Misc</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="https://fununi222.github.io/website/html/glossary/system-glossary.html">
-        <span class="material-symbols-outlined text-lg">menu_book</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Glossary</span>
-      </a>
-    </nav>
-    </aside>
+      </div>
+    </header>
 
-    <main class="lg:pl-64 pt-20 flex-grow">
-        <section class="max-w-7xl mx-auto px-8 py-12">
-            <div class="mb-12 border-l-4 border-secondary pl-6 py-2">
-                <h2 class="text-4xl font-bold font-headline tracking-tighter text-on-surface mb-2">Development & Architecture</h2>
-                <p class="text-on-surface-variant font-body text-sm tracking-wide leading-relaxed max-w-2xl text-slate-400">
-                    フロントエンド・バックエンドの実装設計、推薦システム等のアーキテクチャ。
-                </p>
+    <!-- Section: AI Coding & Automation -->
+    <section class="mb-24">
+      <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+        <div class="w-1 h-8 bg-secondary rounded-full"></div>
+        <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">AI Coding & Automation</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-code-review-gitlab-devcontainer.html" class="glass-card p-8 group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🤖</span>
+              <span class="text-[9px] font-bold text-secondary uppercase tracking-[0.2em] border border-secondary/20 px-2 py-1 rounded bg-secondary/5">GitLab_AI</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-secondary transition-colors">
+              GitLab × DevContainer × AIレビュー完全連携
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              静的解析を超えた次世代コードレビュー基盤のアーキテクチャ解説。
+            </p>
+          </div>
+        </a>
 
-            <!-- Section: AI Coding & Automation -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-secondary">psychology</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">AI Coding & Automation</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-code-review-gitlab-devcontainer.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🤖</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">GitLab_AI</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">GitLab × DevContainer × AIレビュー完全連携</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">静的解析を超えた次世代コードレビュー基盤のアーキテクチャ解説。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-code-review-senior-guide.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🧠</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">CoT_Review</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">シニアエンジニア超えのAIコードレビュー術</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">思考の連鎖（CoT）とMCPを活用し、論理バグを見逃さないプロンプト戦略。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-coding-tools-comparison-2026.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">📊</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Tool_Bench</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">AI Coding Tools 徹底比較 2026</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">Cursor, Windsurf, Copilot, Cline... 最適なエディタの選び方。</p>
-                    </a>
-                </div>
+        <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-code-review-senior-guide.html" class="glass-card p-8 group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🧠</span>
+              <span class="text-[9px] font-bold text-secondary uppercase tracking-[0.2em] border border-secondary/20 px-2 py-1 rounded bg-secondary/5">CoT_Review</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-secondary transition-colors">
+              シニアエンジニア超えのAIコードレビュー術
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              思考の連鎖（CoT）とMCPを活用し、論理バグを見逃さないプロンプト戦略。
+            </p>
+          </div>
+        </a>
 
-            <!-- Section: Container & Dev Environment -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-primary">box</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">Container & Dev Environment</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/dev/container/devcontainer-harbor-intro.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-primary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-primary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">⚓</span>
-                            <span class="text-[10px] font-bold text-primary uppercase tracking-widest">Harbor_Basic</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">Harbor：エンタープライズ向けレジストリ入門</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">プライベート環境でのコンテナイメージ管理とセキュリティスキャンの基礎。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/dev/container/devcontainer-harbor-security.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-primary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-primary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🛡️</span>
-                            <span class="text-[10px] font-bold text-primary uppercase tracking-widest">Supply_Chain</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">DevContainerサプライチェーン・セキュリティ</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">イメージ署名（Cosign）とTrivyスキャンによる安全な開発環境の構築。</p>
-                    </a>
-                </div>
+        <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-coding-tools-comparison-2026.html" class="glass-card p-8 group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">📊</span>
+              <span class="text-[9px] font-bold text-secondary uppercase tracking-[0.2em] border border-secondary/20 px-2 py-1 rounded bg-secondary/5">Tool_Bench</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-secondary transition-colors">
+              AI Coding Tools 徹底比較 2026
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              Cursor, Windsurf, Copilot, Cline... 最適なエディタの選び方。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
 
-            <!-- Section: Modern JS & Web Apps -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-tertiary">javascript</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">Modern JS & Web Apps</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/dev/modern-js/altra-recommender-retrospective.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-tertiary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-tertiary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🎨</span>
-                            <span class="text-[10px] font-bold text-tertiary uppercase tracking-widest">React_App</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-tertiary transition-colors">Altra Recommender 開発記</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">React × Framer Motionで実現する、直感的でプレミアムなUI体験。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/dev/modern-js/synthetic-pet-simulation.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-tertiary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-tertiary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🐾</span>
-                            <span class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Simulation</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-tertiary transition-colors">Synthetic Pet Simulation：自律エージェントの試作</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">Canvas APIと簡易的な意思決定ロジックを用いた、ブラウザ内ペットシムの構築。</p>
-                    </a>
-                </div>
+    <!-- Section: Container & Dev Environment -->
+    <section class="mb-24">
+      <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+        <div class="w-1 h-8 bg-primary rounded-full"></div>
+        <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">Container & Environment</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://fununi222.github.io/website/html/dev/container/devcontainer-harbor-intro.html" class="glass-card p-8 group flex flex-col justify-between hover:border-primary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">⚓</span>
+              <span class="text-[9px] font-bold text-primary uppercase tracking-[0.2em] border border-primary/20 px-2 py-1 rounded bg-primary/5">Harbor_Basic</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-primary transition-colors">
+              Harbor：エンタープライズ向けレジストリ入門
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              プライベート環境でのコンテナイメージ管理とセキュリティスキャンの基礎。
+            </p>
+          </div>
+        </a>
 
+        <a href="https://fununi222.github.io/website/html/dev/container/devcontainer-harbor-security.html" class="glass-card p-8 group flex flex-col justify-between hover:border-primary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🛡️</span>
+              <span class="text-[9px] font-bold text-primary uppercase tracking-[0.2em] border border-primary/20 px-2 py-1 rounded bg-primary/5">Supply_Chain</span>
             </div>
-        </section>
-    </main>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-primary transition-colors">
+              DevContainerサプライチェーン・セキュリティ
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              イメージ署名（Cosign）とTrivyスキャンによる安全な開発環境の構築。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Section: Modern JS & Web Apps -->
+    <section class="mb-24">
+      <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+        <div class="w-1 h-8 bg-tertiary rounded-full"></div>
+        <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">Modern JS & Web Apps</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://fununi222.github.io/website/html/dev/modern-js/altra-recommender-retrospective.html" class="glass-card p-8 group flex flex-col justify-between hover:border-tertiary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🎨</span>
+              <span class="text-[9px] font-bold text-tertiary uppercase tracking-[0.2em] border border-tertiary/20 px-2 py-1 rounded bg-tertiary/5">React_App</span>
+            </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-tertiary transition-colors">
+              Altra Recommender 開発記
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              React × Framer Motionで実現する、直感的でプレミアムなUI体験。
+            </p>
+          </div>
+        </a>
 
-    <footer class="lg:pl-64 w-full py-12 px-8 mt-auto bg-background/50 backdrop-blur-sm font-body text-xs border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-60 hover:opacity-100 transition-opacity">
-            <div class="flex flex-col gap-2">
-                <span class="text-slate-400">© 2026 FunUni-lab Technical Archive. Development Systems Division.</span>
+        <a href="https://fununi222.github.io/website/html/dev/modern-js/synthetic-pet-simulation.html" class="glass-card p-8 group flex flex-col justify-between hover:border-tertiary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🐾</span>
+              <span class="text-[9px] font-bold text-tertiary uppercase tracking-[0.2em] border border-tertiary/20 px-2 py-1 rounded bg-tertiary/5">Simulation</span>
             </div>
-            <div class="flex gap-6">
-                <a href="../index.html" class="hover:text-primary transition-colors uppercase tracking-[0.2em]">Portal_Home</a>
-                <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-primary transition-colors uppercase tracking-[0.2em]">System_Glossary</a>
-            </div>
-        </div>
-    </footer>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-tertiary transition-colors">
+              Synthetic Pet Simulation：自律エージェントの試作
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              Canvas APIと簡易的な意思決定ロジックを用いた、ブラウザ内ペットシムの構築。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-20 border-t border-white/5 bg-obsidian/50 mt-auto">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
+      <div class="flex flex-col gap-2">
+        <span>© 2026 FunUni-lab Strategic Archive</span>
+        <span class="opacity-40">Development Systems Division.</span>
+      </div>
+      <div class="flex gap-8">
+        <a href="../index.html" class="hover:text-white">Dashboard</a>
+        <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-white">Glossary</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
-

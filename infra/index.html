@@ -1,254 +1,272 @@
 <!DOCTYPE html>
 <html class="dark" lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infrastructure | FunUni-lab Technical Archive</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonomous Infrastructure | FunUni-lab</title>
+  
   <!-- SEO & OGP -->
   <meta name="description" content="Infrastructure & Cloud: AWS、VMware、バックアップ、ネットワーク、オブザーバビリティの技術詳解。" />
-  <meta property="og:title" content="Infrastructure | FunUni-lab" />
+  <meta property="og:title" content="Autonomous Infrastructure | FunUni-lab" />
   <meta property="og:description" content="Infrastructure & Cloud: AWS、VMware、バックアップ、ネットワーク、オブザーバビリティの技術詳解。" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="FunUni-lab" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Infrastructure | FunUni-lab" />
-  <meta name="twitter:description" content="Infrastructure & Cloud: AWS、VMware、バックアップ、ネットワーク、オブザーバビリティの技術詳解。" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <!-- Synthetic Shared Assets -->
-    <script src="../assets/js/tw-config.js"></script>
-    <link rel="stylesheet" href="../assets/css/synthetic.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../assets/css/synthetic.css">
+  <style>
+    :root {
+      --obsidian: #0a0c14;
+      --surface-glass: rgba(255, 255, 255, 0.03);
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --accent-primary: #aaa4ff;
+      --accent-secondary: #00d2ff;
+      --accent-tertiary: #00ffca;
+    }
+    
+    body { background-color: var(--obsidian); color: #e2e8f0; }
+    .glass-card { background: var(--surface-glass); backdrop-filter: blur(20px); border: 1px solid var(--border-glass); border-radius: 24px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-card:hover { border-color: rgba(170, 164, 255, 0.3); background: rgba(255, 255, 255, 0.05); transform: translateY(-4px); box-shadow: 0 10px 40px -10px rgba(170, 164, 255, 0.1); }
+    
+    .bg-mesh { position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 80% 20%, rgba(170, 164, 255, 0.05) 0%, transparent 60%); }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--obsidian); }
+    ::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(170, 164, 255, 0.2); }
+  </style>
 </head>
-<body class="bg-background text-on-surface font-body min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary overflow-x-hidden mesh-gradient">
-    <!-- Top Nav -->
-    <nav class="fixed top-0 z-50 flex justify-between items-center px-8 h-16 w-full bg-surface/60 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ease-out font-headline tracking-tight shadow-lg">
-        <div class="flex items-center gap-8">
-            <a class="text-xl font-bold tracking-tighter text-primary" href="../index.html">FunUni-lab</a>
-            <div class="hidden md:flex items-center gap-6 text-[10px] uppercase tracking-widest font-bold">
-        <a class="text-secondary border-b-2 border-secondary pb-1" href="../infra/index.html">Infrastructure</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../dev/index.html">Development</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../ai/index.html">AI & Agents</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../finance/index.html">Finance</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../lpo/index.html">LPO</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="../other/index.html">Other</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://fununi222.github.io/website/html/glossary/system-glossary.html">Glossary</a>
+<body class="font-body selection:bg-primary/30 overflow-x-hidden">
+  <div class="bg-mesh"></div>
+  
+  <!-- Global Navigation -->
+  <nav class="fixed top-0 z-[100] w-full h-20 border-b border-white/5 bg-obsidian/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto h-full px-8 flex justify-between items-center">
+      <div class="flex items-center gap-12">
+        <a href="../index.html" class="text-2xl font-bold font-headline tracking-tighter text-white">FunUni-lab<span class="text-secondary text-sm ml-1 opacity-50">.v2</span></a>
+        <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <a href="../infra/index.html" class="text-primary border-b-2 border-primary pb-1">Infrastructure</a>
+          <a href="../ai/index.html" class="hover:text-tertiary transition-colors">AI Research</a>
+          <a href="../finance/index.html" class="hover:text-amber-400 transition-colors">Finance</a>
+          <a href="../other/index.html" class="hover:text-secondary transition-colors">Lifestyle</a>
+          <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-white transition-colors">Glossary</a>
+        </div>
       </div>
+      <div class="flex items-center gap-6">
+        <div class="hidden md:flex flex-col items-end">
+          <span class="text-[9px] font-bold text-primary tracking-[0.2em] uppercase">Domain_01_Active</span>
+          <span class="text-[10px] text-slate-500 font-mono tracking-tighter">Infra_Core_Online</span>
         </div>
-        <div class="flex items-center gap-4">
-            <span class="text-xs font-bold text-secondary uppercase tracking-widest hidden sm:block">Secure Archive</span>
-            <span class="material-symbols-outlined text-secondary">database</span>
+        <div class="w-10 h-10 rounded-full bg-surface-container border border-primary/20 flex items-center justify-center text-primary cyber-glow">
+          <span class="material-symbols-outlined">database</span>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Sidebar -->
-    <aside class="h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col py-20 px-4 space-y-2 bg-surface z-40 border-r border-white/5">
-        <div class="mb-8 px-4">
-            <div class="text-primary font-bold text-xs uppercase tracking-widest font-headline">INFRA_SYSTEM_LOG</div>
-            <div class="text-slate-500 text-[10px] uppercase tracking-widest font-body mt-1">v2026.04.10</div>
+  <main class="pt-32 pb-20 max-w-7xl mx-auto px-8">
+    
+    <!-- Hero / Status Panel -->
+    <header class="mb-24 relative">
+      <div class="flex flex-col md:flex-row items-end justify-between gap-8">
+        <div class="space-y-4 max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold tracking-[0.3em] uppercase">
+            Strategic_Domain_01
+          </div>
+          <h1 class="text-6xl md:text-8xl font-bold font-headline tracking-tighter text-white leading-[0.9]">
+            Autonomous <br/><span class="text-slate-600">Infrastructure</span>
+          </h1>
+          <p class="text-lg text-slate-400 leading-relaxed max-w-2xl pt-4">
+            クラウドとオンプレミスの境界を越える自律型基盤。AWS、Rubrik、PagerDuty、AIOpsを統合し、無人運用を目指すエンジニアリング・マニフェスト。
+          </p>
         </div>
-        <nav class="flex-1 space-y-1">
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../index.html#latest-logs">
-        <span class="material-symbols-outlined text-lg">history</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Latest Logs</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-secondary bg-surface-container border-r-2 border-secondary transition-all hover:translate-x-1 duration-200" href="../infra/index.html">
-        <span class="material-symbols-outlined text-lg">settings</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Infrastructure</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../dev/index.html">
-        <span class="material-symbols-outlined text-lg">code</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Development</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../ai/index.html">
-        <span class="material-symbols-outlined text-lg">biotech</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">AI Research</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../finance/index.html">
-        <span class="material-symbols-outlined text-lg">diamond</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Finance</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../lpo/index.html">
-        <span class="material-symbols-outlined text-lg">rocket_launch</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Optimization</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="../other/index.html">
-        <span class="material-symbols-outlined text-lg">folder_open</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Other / Misc</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="https://fununi222.github.io/website/html/glossary/system-glossary.html">
-        <span class="material-symbols-outlined text-lg">menu_book</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Glossary</span>
-      </a>
-    </nav>
-    </aside>
+      </div>
+    </header>
 
-    <main class="lg:pl-64 pt-20 flex-grow">
-        <section class="max-w-7xl mx-auto px-8 py-12">
-            <div class="mb-12 border-l-4 border-secondary pl-6 py-2">
-                <h2 class="text-4xl font-bold font-headline tracking-tighter text-on-surface mb-2">IT & Infrastructure</h2>
-                <p class="text-on-surface-variant font-body text-sm tracking-wide leading-relaxed max-w-2xl text-slate-400">
-                    インフラ運用・ネットワーク・監視システムに関するノート。
-                </p>
+    <!-- Section: Backup & Data Protection -->
+    <section class="mb-24">
+      <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+        <div class="w-1 h-8 bg-primary rounded-full"></div>
+        <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">Data Protection & Resilience</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://fununi222.github.io/website/html/infra/backup/aws-rds-rubrik-complete-guide.html" class="glass-card p-8 group flex flex-col justify-between border-primary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">☁️</span>
+              <span class="text-[9px] font-bold text-primary uppercase tracking-[0.2em] border border-primary/20 px-2 py-1 rounded bg-primary/5">Cloud_DB</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-primary transition-colors">
+              AWS RDS × Rubrik データ保護完全ガイド
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              ネイティブスナップショットとRubrik SLAを組み合わせたハイブリッド保護設計。
+            </p>
+          </div>
+        </a>
 
-            <!-- Section: Backup & Data Protection -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-secondary">security</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">バックアップ・データ保護戦略</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-ondemand-sla-retention.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🛡️</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">SLA_Retention</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">【Rubrik】オンデマンド保持の仕様と解決策</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">SLAドメイン仕様（最大保持期間の強制適用）と、ストレージ圧迫を防ぐ解決策。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-graphql-xsoar-automation.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🤖</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">SOAR_Auto</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">Rubrikログ抽出を完全自動化！GraphQL×XSOAR</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">SOAR（Cortex XSOAR）連携によるRubrik脅威監視のインシデント対応自動化。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-api-502-timeout-guide.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">⚡</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">API_Stability</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">Rubrik API 502/タイムアウト対策ガイド</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">GraphQLクエリの最適化とページネーションによる、API実行の安定化手法。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-linux-lvm-flr-cause-guide.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🐧</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Linux_Restore</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">Linux LVMのリストア失敗原因と解決策</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">メタデータの競合を回避し、確実にファイル単位リストア（FLR）を行う手順。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/backup/aws-rds-rubrik-complete-guide.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-secondary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-secondary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">☁️</span>
-                            <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Cloud_DB_Backup</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-secondary transition-colors">AWS RDS × Rubrik データ保護完全ガイド</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">ネイティブスナップショットとRubrik SLAを組み合わせたハイブリッド保護設計。</p>
-                    </a>
-                </div>
+        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-graphql-xsoar-automation.html" class="glass-card p-8 group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🤖</span>
+              <span class="text-[9px] font-bold text-primary uppercase tracking-[0.2em] border border-primary/20 px-2 py-1 rounded bg-primary/5">SOAR_Auto</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-primary transition-colors">
+              Rubrikログ抽出を完全自動化！GraphQL×XSOAR
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              SOAR（Cortex XSOAR）連携によるRubrik脅威監視のインシデント対応自動化。
+            </p>
+          </div>
+        </a>
 
-            <!-- Section: Cloud Design & AWS -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-primary">cloud</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">クラウド設計・AWS基盤</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/infra/cloud/aws-minimal-iac-patterns.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-primary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-primary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🌩️</span>
-                            <span class="text-[10px] font-bold text-primary uppercase tracking-widest">Minimal_IaC</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">AWS Minimalism：小規模向け自動化パターン</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">やりすぎない自動化。CloudFormationを活用した高速デリバリー設計。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/cloud/aws-tech-analysis-2026.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-primary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-primary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">⚙️</span>
-                            <span class="text-[10px] font-bold text-primary uppercase tracking-widest">AWS_AIOps</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">AWS：クラウドレジリエンスとAIOps基盤 2026</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">Nitro System、コントロールプレーン分離、EventBridge自律修復ワークフロー。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/cloud/aws-rds-tech-deep-dive.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-primary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-primary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">📊</span>
-                            <span class="text-[10px] font-bold text-primary uppercase tracking-widest">DB_Architecture</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">Amazon RDS：マネージドDBの核心と修復設計</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">マルチAZ可用性設計とRDS Proxy（コネクションプーリング）の技術的意義。</p>
-                    </a>
-                </div>
+        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-ondemand-sla-retention.html" class="glass-card p-8 group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🛡️</span>
+              <span class="text-[9px] font-bold text-primary uppercase tracking-[0.2em] border border-primary/20 px-2 py-1 rounded bg-primary/5">SLA_Policy</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-primary transition-colors">
+              【Rubrik】オンデマンド保持の仕様と解決策
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              SLAドメイン仕様（最大保持期間の強制適用）と、ストレージ圧迫を防ぐ解決策。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
 
-            <!-- Section: Network & API -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-tertiary">hub</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">ネットワーク・API Gateway連携</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/infra/network/webmethods-rubrik-502-master-guide.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-tertiary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-tertiary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🔗</span>
-                            <span class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Integration</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-tertiary transition-colors">webMethods × Rubrik 502エラー完全攻略</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">指数バックオフとREPEAT-TRY-CATCHによる、API連携の強靭化設計。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/network/pagerduty-architecture.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-tertiary/30 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl shadow-tertiary/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🛎️</span>
-                            <span class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Ops_DX</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-tertiary transition-colors">PagerDutyアーキテクチャと自律型運用への道</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">AIOps、生成AIによるインシデント対応完全自動化プロセスの全貌。</p>
-                    </a>
-                </div>
+    <!-- Section: Cloud Design & AWS -->
+    <section class="mb-24">
+      <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+        <div class="w-1 h-8 bg-secondary rounded-full"></div>
+        <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">Cloud Architecture & AWS</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-minimal-iac-patterns.html" class="glass-card p-8 group flex flex-col justify-between hover:border-secondary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🌩️</span>
+              <span class="text-[9px] font-bold text-secondary uppercase tracking-[0.2em] border border-secondary/20 px-2 py-1 rounded bg-secondary/5">Minimal_IaC</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-secondary transition-colors">
+              AWS Minimalism：小規模向け自動化パターン
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              やりすぎない自動化。CloudFormationを活用した高速デリバリー設計。
+            </p>
+          </div>
+        </a>
 
-            <!-- Section: Governance & Ops -->
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-slate-400">inventory</span>
-                    <h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">運用ガバナンス・資産管理</h3>
-                    <div class="h-px flex-grow bg-white/5 ml-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://fununi222.github.io/website/html/infra/ops/zombie-backup-asset-management-strategy.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-white/5 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🧟</span>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Cost_Optimize</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">ゾンビバックアップ根絶！資産管理自動化戦略</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">T-UP×Rubrik API連携で実現する、不整合ゼロのIT資産管理。</p>
-                    </a>
-                    <a href="https://fununi222.github.io/website/html/infra/ops/next-gen-cmdb-strategy.html" class="group block bg-surface-container/30 backdrop-blur rounded-2xl p-6 border border-white/5 transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl">🏛️</span>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Digital_Twin</span>
-                        </div>
-                        <h4 class="text-xl font-bold font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">次世代CMDB戦略 2026 | 自律型デジタルツイン</h4>
-                        <p class="text-sm text-on-surface-variant line-clamp-2 opacity-80">ServiceNowが示す最新ロードマップと、動く意思決定エンジンへの進化。</p>
-                    </a>
-                </div>
+        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-tech-analysis-2026.html" class="glass-card p-8 group flex flex-col justify-between hover:border-secondary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">⚙️</span>
+              <span class="text-[9px] font-bold text-secondary uppercase tracking-[0.2em] border border-secondary/20 px-2 py-1 rounded bg-secondary/5">AWS_AIOps</span>
             </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-secondary transition-colors">
+              AWS：クラウドレジリエンスとAIOps基盤 2026
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              Nitro System、コントロールプレーン分離、EventBridge自律修復ワークフロー。
+            </p>
+          </div>
+        </a>
 
+        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-rds-tech-deep-dive.html" class="glass-card p-8 group flex flex-col justify-between hover:border-secondary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">📊</span>
+              <span class="text-[9px] font-bold text-secondary uppercase tracking-[0.2em] border border-secondary/20 px-2 py-1 rounded bg-secondary/5">DB_Arch</span>
             </div>
-        </section>
-    </main>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-secondary transition-colors">
+              Amazon RDS：マネージドDBの核心と修復設計
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              マルチAZ可用性設計とRDS Proxy（コネクションプーリング）の技術的意義。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Section: Network & Ops -->
+    <section class="mb-24">
+      <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+        <div class="w-1 h-8 bg-tertiary rounded-full"></div>
+        <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">Network & Governance</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://fununi222.github.io/website/html/infra/ops/zombie-backup-asset-management-strategy.html" class="glass-card p-8 group flex flex-col justify-between hover:border-tertiary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🧟</span>
+              <span class="text-[9px] font-bold text-tertiary uppercase tracking-[0.2em] border border-tertiary/20 px-2 py-1 rounded bg-tertiary/5">Cost_Optimize</span>
+            </div>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-tertiary transition-colors">
+              ゾンビバックアップ根絶！資産管理自動化戦略
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              Jira×Rubrik API連携で実現する、不整合ゼロのIT資産管理。
+            </p>
+          </div>
+        </a>
 
-    <footer class="lg:pl-64 w-full py-12 px-8 mt-auto bg-background/50 backdrop-blur-sm font-body text-xs border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-60 hover:opacity-100 transition-opacity">
-            <div class="flex flex-col gap-2">
-                <span class="text-slate-400">© 2026 FunUni-lab Technical Archive. IT & Infrastructure Division.</span>
+        <a href="https://fununi222.github.io/website/html/infra/network/pagerduty-architecture.html" class="glass-card p-8 group flex flex-col justify-between hover:border-tertiary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🛎️</span>
+              <span class="text-[9px] font-bold text-tertiary uppercase tracking-[0.2em] border border-tertiary/20 px-2 py-1 rounded bg-tertiary/5">Ops_DX</span>
             </div>
-            <div class="flex gap-6">
-                <a href="../index.html" class="hover:text-primary transition-colors uppercase tracking-[0.2em]">Portal_Home</a>
-                <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-primary transition-colors uppercase tracking-[0.2em]">System_Glossary</a>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-tertiary transition-colors">
+              PagerDutyアーキテクチャと自律型運用への道
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              AIOps、生成AIによるインシデント対応完全自動化プロセスの全貌。
+            </p>
+          </div>
+        </a>
+
+        <a href="https://fununi222.github.io/website/html/infra/ops/next-gen-cmdb-strategy.html" class="glass-card p-8 group flex flex-col justify-between hover:border-tertiary/30">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl">🏛️</span>
+              <span class="text-[9px] font-bold text-tertiary uppercase tracking-[0.2em] border border-tertiary/20 px-2 py-1 rounded bg-tertiary/5">Digital_Twin</span>
             </div>
-        </div>
-    </footer>
+            <h3 class="text-xl font-bold font-headline leading-tight text-white group-hover:text-tertiary transition-colors">
+              次世代CMDB戦略 2026 | 自律型デジタルツイン
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+              ServiceNowが示す最新ロードマップと、動く意思決定エンジンへの進化。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-20 border-t border-white/5 bg-obsidian/50 mt-auto">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
+      <div class="flex flex-col gap-2">
+        <span>© 2026 FunUni-lab Strategic Archive</span>
+        <span class="opacity-40">Infrastructure Division. Highly Available.</span>
+      </div>
+      <div class="flex gap-8">
+        <a href="../index.html" class="hover:text-white">Dashboard</a>
+        <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-white">Glossary</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
-

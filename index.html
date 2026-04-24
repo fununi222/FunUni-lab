@@ -3,777 +3,210 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FunUni-lab Technical Archive</title>
+  <title>FunUni-lab | Strategic Technical Archive</title>
   
   <!-- SEO & OGP -->
-  <meta name="description" content="2026年最新のITインフラ・AI・旅行術を凝縮したテクニカルアーカイブ。" />
-  <meta property="og:title" content="FunUni-lab Technical Archive" />
-  <meta property="og:description" content="2026年最新のITインフラ・AI・旅行術を凝縮したテクニカルアーカイブ。" />
+  <meta name="description" content="Top 1%のSEO戦略とシニアアーキテクトの視点を凝縮。2026年最新のITインフラ・AI・資産戦略を統括するテクニカルアーカイブ。" />
+  <meta property="og:title" content="FunUni-lab | Strategic Technical Archive" />
+  <meta property="og:description" content="実務検証に基づく技術アーカイブ。インフラ自動化からAIエージェント、資産戦略まで。" />
   <meta property="og:url" content="https://fununi222.github.io/website/index.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="FunUni-lab" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="FunUni-lab Technical Archive" />
-  <meta name="twitter:description" content="2026年最新のITインフラ・AI・旅行術を凝縮したテクニカルアーカイブ。" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <!-- Synthetic Shared Assets -->
-  <script src="assets/js/tw-config.js"></script>
+  
   <link rel="stylesheet" href="assets/css/synthetic.css">
   <style>
-    .skill-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: #a3aac4; }
-    .progress-bg { height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; }
-    .progress-fill { height: 100%; background: #aaa4ff; transition: width 1s ease-out; }
+    :root {
+      --obsidian: #0a0c14;
+      --surface-glass: rgba(255, 255, 255, 0.03);
+      --border-glass: rgba(255, 255, 255, 0.08);
+    }
+    
+    body { background-color: var(--obsidian); color: #e2e8f0; }
+    .glass-card { background: var(--surface-glass); backdrop-filter: blur(20px); border: 1px solid var(--border-glass); border-radius: 24px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-card:hover { border-color: rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); transform: translateY(-4px); }
+    
+    .bg-mesh { position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 50% 50%, rgba(108, 92, 231, 0.05) 0%, transparent 70%); }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--obsidian); }
+    ::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
   </style>
 </head>
-<body class="bg-background text-on-surface font-body min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary overflow-x-hidden mesh-gradient">
+<body class="font-body selection:bg-primary/30 overflow-x-hidden">
+  <div class="bg-mesh"></div>
   
-  <!-- Top Nav Unified -->
-  <nav class="fixed top-0 z-50 flex justify-between items-center px-8 h-16 w-full bg-surface/60 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ease-out font-headline tracking-tight shadow-lg">
-    <div class="flex items-center gap-8">
-      <a class="text-xl font-bold tracking-tighter text-primary" href="index.html">FunUni-lab</a>
-      <div class="hidden md:flex items-center gap-6 text-[10px] uppercase tracking-widest font-bold">
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="infra/index.html">Infrastructure</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="dev/index.html">Development</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="ai/index.html">AI & Agents</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="finance/index.html">Finance</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="lpo/index.html">LPO</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="other/index.html">Other</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="https://fununi222.github.io/website/html/glossary/system-glossary.html">Glossary</a>
+  <!-- Global Navigation -->
+  <nav class="fixed top-0 z-[100] w-full h-20 border-b border-white/5 bg-obsidian/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto h-full px-8 flex justify-between items-center">
+      <div class="flex items-center gap-12">
+        <a href="index.html" class="text-2xl font-bold font-headline tracking-tighter text-white">FunUni-lab<span class="text-secondary text-sm ml-1 opacity-50">.v2</span></a>
+        <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <a href="infra/index.html" class="hover:text-primary transition-colors">Infrastructure</a>
+          <a href="dev/index.html" class="hover:text-secondary transition-colors">Development</a>
+          <a href="ai/index.html" class="hover:text-tertiary transition-colors">AI Research</a>
+          <a href="finance/index.html" class="hover:text-amber-400 transition-colors">Finance</a>
+          <a href="other/index.html" class="hover:text-emerald-400 transition-colors">Lifestyle</a>
+        </div>
       </div>
-    </div>
-    <div class="flex items-center gap-4">
-      <span class="text-xs font-bold text-secondary uppercase tracking-widest hidden sm:block">Secure Archive</span>
-      <span class="material-symbols-outlined text-secondary">database</span>
+      <div class="flex items-center gap-6">
+        <div class="w-10 h-10 rounded-full bg-surface-container border border-white/10 flex items-center justify-center text-secondary">
+          <span class="material-symbols-outlined">terminal</span>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <!-- Sidebar Unified -->
-  <aside class="h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col py-20 px-4 space-y-2 bg-surface z-40 border-r border-white/5">
-    <div class="mb-8 px-4">
-      <div class="text-secondary font-bold text-xs uppercase tracking-widest font-headline">RESEARCH_ARCHIVE_SME</div>
-      <div class="text-slate-500 text-[10px] uppercase tracking-widest font-body mt-1">v2026.04.23</div>
-    </div>
-    <div class="flex items-center gap-3 py-2 px-4 bg-surface-container rounded-full border border-white/5 mb-6">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-      <span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Latest Research Log: 2026-04-18.2</span>
-    </div>
-    <nav class="flex-1 space-y-1">
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="#latest-logs">
-        <span class="material-symbols-outlined text-lg">history</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Latest Logs</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="infra/index.html">
-        <span class="material-symbols-outlined text-lg">settings</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Infrastructure</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="dev/index.html">
-        <span class="material-symbols-outlined text-lg">code</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Development</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="ai/index.html">
-        <span class="material-symbols-outlined text-lg">biotech</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">AI Research</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="finance/index.html">
-        <span class="material-symbols-outlined text-lg">diamond</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Finance</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="lpo/index.html">
-        <span class="material-symbols-outlined text-lg">rocket_launch</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Optimization</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="other/index.html">
-        <span class="material-symbols-outlined text-lg">folder_open</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Other / Misc</span>
-      </a>
-      <a class="flex items-center gap-3 py-2.5 px-4 text-slate-500 hover:bg-surface-container hover:text-primary transition-all hover:translate-x-1 duration-200" href="https://fununi222.github.io/website/html/glossary/system-glossary.html">
-        <span class="material-symbols-outlined text-lg">menu_book</span>
-        <span class="font-headline text-[10px] uppercase tracking-widest">Glossary</span>
-      </a>
-    </nav>
-  </aside>
-
-  <main class="lg:pl-64 pt-20 flex-grow">
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-8 py-20 text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-headline tracking-widest mb-8 uppercase">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-        </span>
-        Active Laboratory Environment
-      </div>
-      <h1 class="text-6xl md:text-8xl font-bold font-headline tracking-tighter text-on-surface mb-6">FunUni-lab</h1>
-      <div class="max-w-2xl mx-auto space-y-2">
-        <p class="text-secondary font-headline text-lg tracking-widest opacity-90">// 実務検証に基づく技術アーカイブ基盤</p>
-        <p class="text-on-surface-variant font-body text-sm tracking-wide leading-relaxed">A professional engineering archive for cross-platform infrastructure research and technical validation.</p>
-      </div>
-      <div class="mt-12 flex justify-center gap-4">
-        <a href="#featured-clusters" class="px-8 py-3 bg-gradient-to-r from-primary to-primary-dim text-background font-bold rounded-lg transition-transform active:scale-95 shadow-lg shadow-primary/20">Explore Domains</a>
-        <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="px-8 py-3 bg-surface-container-highest border border-secondary/20 text-secondary font-bold rounded-lg hover:bg-surface-container-high transition-all">Glossary</a>
-      </div>
-    </section>
-
-    <!-- Featured Topic Clusters Section (Strategic Core Domains) -->
-    <section id="featured-clusters" class="max-w-7xl mx-auto px-8 pb-20 scroll-mt-24">
-      <div class="flex items-center gap-4 mb-10">
-        <div class="h-px flex-grow bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        <h2 class="text-xs font-bold font-headline tracking-[0.5em] text-slate-500 uppercase">Strategic Core Domains</h2>
-        <div class="h-px flex-grow bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Cluster 1: Autonomous Infrastructure -->
-        <div class="lg:col-span-6 group relative overflow-hidden rounded-[2rem] bg-surface-container border border-white/5 p-1 hover:bg-surface-container-high transition-all cyber-glow">
-          <div class="absolute top-0 left-0 p-8 text-primary/5 group-hover:text-primary/10 transition-colors pointer-events-none">
-            <span class="material-symbols-outlined text-[10rem] -rotate-12">database</span>
-          </div>
-          <div class="relative z-10 p-8 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-[10px] font-headline tracking-widest uppercase">
-              Core_Domain_01
-            </div>
-            <h3 class="text-3xl font-bold font-headline leading-tight text-on-surface">Autonomous Infrastructure</h3>
-            <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
-              自立型インフラの完成形。AWS、Rubrik、PagerDutyを高度に連携させ、AIOpsによる自己治癒システムを構築するエンジニアリング・マニフェスト。
-            </p>
-            <div class="grid grid-cols-1 gap-2 pt-2">
-              <a href="https://fununi222.github.io/website/html/infra/cloud/enterprise-it-paradigm-shift-2026.html" class="flex items-center gap-2 text-[10px] font-bold text-primary uppercase hover:translate-x-1 transition-transform">
-                <span class="material-symbols-outlined text-sm">terminal</span> Strategic Hub <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-              <a href="https://fununi222.github.io/website/html/infra/backup/aws-rds-rubrik-complete-guide.html" class="text-[10px] text-on-surface-variant hover:text-primary transition-colors italic"># AWS RDS Backup Master Guide</a>
-              <a href="https://fununi222.github.io/website/html/infra/network/pagerduty-architecture.html" class="text-[10px] text-on-surface-variant hover:text-primary transition-colors italic"># PagerDuty AIOps Strategy</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cluster 2: AI Engineering & Agents -->
-        <div class="lg:col-span-6 group relative overflow-hidden rounded-[2rem] bg-surface-container border border-white/5 p-1 hover:bg-surface-container-high transition-all cyber-glow">
-          <div class="absolute top-0 right-0 p-8 text-tertiary/5 group-hover:text-tertiary/10 transition-colors pointer-events-none">
-            <span class="material-symbols-outlined text-[10rem] rotate-12">smart_toy</span>
-          </div>
-          <div class="relative z-10 p-8 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary/10 text-tertiary border border-tertiary/20 text-[10px] font-headline tracking-widest uppercase">
-              Core_Domain_02
-            </div>
-            <h3 class="text-3xl font-bold font-headline leading-tight text-on-surface">AI Engineering & Agents</h3>
-            <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
-              OpenAI CodexやOSSツールを活用した次世代開発フロー。自律型エージェントと人間が共生する、新しいソフトウェアエンジニアリングの地平。
-            </p>
-            <div class="grid grid-cols-1 gap-2 pt-2">
-              <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-coding-tools-comparison-2026.html" class="flex items-center gap-2 text-[10px] font-bold text-tertiary uppercase hover:translate-x-1 transition-transform">
-                <span class="material-symbols-outlined text-sm">bolt</span> Tech Comparison <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-              <a href="https://fununi222.github.io/website/html/dev/ai-coding/openai-codex-guide-2026.html" class="text-[10px] text-on-surface-variant hover:text-tertiary transition-colors italic"># OpenAI Codex Deep Dive</a>
-              <a href="https://fununi222.github.io/website/html/ai/automation/oss-automation-tools.html" class="text-[10px] text-on-surface-variant hover:text-tertiary transition-colors italic"># Sovereign Automation Stack</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cluster 3: Finance & Asset Strategy -->
-        <div class="lg:col-span-6 group relative overflow-hidden rounded-[2rem] bg-surface-container border border-white/5 p-1 hover:bg-surface-container-high transition-all cyber-glow">
-          <div class="absolute bottom-0 right-0 p-8 text-amber-500/5 group-hover:text-amber-500/10 transition-colors pointer-events-none">
-            <span class="material-symbols-outlined text-[10rem] -rotate-6">payments</span>
-          </div>
-          <div class="relative z-10 p-8 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20 text-[10px] font-headline tracking-widest uppercase">
-              Core_Domain_03
-            </div>
-            <h3 class="text-3xl font-bold font-headline leading-tight text-on-surface">Finance & Asset Strategy</h3>
-            <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
-              「インフレ下の資産防衛」。高還元決済ルートの構築から、ポイ活投資、マクロ経済に基づいた資産形成まで、エンジニアリング思考で読み解く。
-            </p>
-            <div class="grid grid-cols-1 gap-2 pt-2">
-              <a href="https://fununi222.github.io/website/html/finance/iphone-edy-cash-release.html" class="flex items-center gap-2 text-[10px] font-bold text-amber-500 uppercase hover:translate-x-1 transition-transform">
-                <span class="material-symbols-outlined text-sm">account_balance_wallet</span> Wealth Design <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-              <a href="https://fununi222.github.io/website/html/finance/smcc-stouch-transit.html" class="text-[10px] text-on-surface-variant hover:text-amber-500 transition-colors italic"># SMCC 8% Transit Strategy</a>
-              <a href="https://fununi222.github.io/website/html/finance/smbc-million-challenge-revolut-route.html" class="text-[10px] text-on-surface-variant hover:text-amber-500 transition-colors italic"># Million Point Challenge</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cluster 4: Strategic Travel & Life -->
-        <div class="lg:col-span-6 group relative overflow-hidden rounded-[2rem] bg-surface-container border border-white/5 p-1 hover:bg-surface-container-high transition-all cyber-glow">
-          <div class="absolute bottom-0 left-0 p-8 text-emerald-500/5 group-hover:text-emerald-500/10 transition-colors pointer-events-none">
-            <span class="material-symbols-outlined text-[10rem] rotate-6">landscape</span>
-          </div>
-          <div class="relative z-10 p-8 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] font-headline tracking-widest uppercase">
-              Core_Domain_04
-            </div>
-            <h3 class="text-3xl font-bold font-headline leading-tight text-on-surface">Strategic Travel & Life</h3>
-            <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
-              ニセコ・ハイブリッド旅行術から、KISS原則に基づく設計哲学まで。人生のROIを最大化するための、技術とライフスタイルの融合。
-            </p>
-            <div class="grid grid-cols-1 gap-2 pt-2">
-              <a href="https://fununi222.github.io/website/html/other/travel/niseko-cospa-travel.html" class="flex items-center gap-2 text-[10px] font-bold text-emerald-500 uppercase hover:translate-x-1 transition-transform">
-                <span class="material-symbols-outlined text-sm">hiking</span> Adventure Hub <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-              <a href="https://fununi222.github.io/website/html/other/travel/esconfield-vip-budget-guide.html" class="text-[10px] text-on-surface-variant hover:text-emerald-500 transition-colors italic"># Es Con Field ROI Strategy</a>
-              <a href="https://fununi222.github.io/website/html/other/tech-life/kiss-principle-cognitive-limits.html" class="text-[10px] text-on-surface-variant hover:text-emerald-500 transition-colors italic"># The Art of Simplicity</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Latest Laboratory Logs Section -->
-    <section id="latest-logs" class="max-w-7xl mx-auto px-8 pb-32 scroll-mt-24">
-      <div class="flex items-end justify-between mb-12 border-b border-white/5 pb-8">
-        <div class="space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-[10px] font-headline tracking-widest uppercase">
-            Latest_Research_Feed
-          </div>
-          <h2 class="text-4xl font-bold font-headline tracking-tighter text-on-surface uppercase">Latest Research Logs</h2>
-          <p class="text-on-surface-variant max-w-lg opacity-80 text-xs">各ラボラトリーから抽出された直近の主要研究成果。システムの進化、セキュリティ、AIエージェントの深層分析。</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Definitive Pillar Article -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/aws-rds-rubrik-complete-guide.html" class="group relative overflow-hidden rounded-3xl bg-surface-container border-2 border-primary/40 p-8 hover:bg-surface-container-high transition-all hover:-translate-y-1 cyber-glow lg:col-span-4 mb-4">
-          <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-3">
-              <span class="text-3xl">🏛️</span>
-              <span class="text-[11px] font-bold text-primary uppercase tracking-[0.2em] px-3 py-1 rounded-full bg-primary/10 border border-primary/20">Definitive_Guide_2026</span>
-            </div>
-            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2 py-0.5 rounded bg-slate-500/10 border border-slate-500/20">Featured_Research</span>
-          </div>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 class="text-2xl md:text-3xl font-bold font-headline leading-tight text-on-surface group-hover:text-primary transition-colors">Infra | 【決定版】AWS RDSバックアップ完全ガイド！Rubrikで通信費と脅威を防ぐ設計術</h3>
-              <p class="text-sm text-on-surface-variant mt-6 line-clamp-3 opacity-80 leading-relaxed">
-                エグレスコスト（通信費）の罠、KMS暗号化の技術的盲点、そしてAPIによる論理バックアップ自動化。200TB規模の運用で培った一次情報をすべて統合した、インフラエンジニア必携の完全ガイド。
-              </p>
-              <div class="flex items-center gap-6 mt-8">
-                <div class="flex items-center gap-2">
-                  <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">FE</div>
-                  <span class="text-[10px] font-bold text-on-surface uppercase tracking-widest">Lead_Architect</span>
-                </div>
-                <div class="h-4 w-px bg-outline-variant"></div>
-                <div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">15_min_read</div>
-              </div>
-            </div>
-            <div class="hidden lg:block relative p-4 bg-surface-container-highest/30 rounded-2xl border border-outline-variant/50">
-                <pre class="text-[9px] font-mono text-primary/70 overflow-hidden select-none">
-def create_temp_rds_for_dump(snapshot_id):
-    # Logic to bypass egress trap
-    # and automate logical dumps...
-    url = f"https://{RUBRIK_NODE_IP}/api/..."
-    # ゼロトラスト基盤による隔離保護
-                </pre>
-                <div class="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-surface-container to-transparent pointer-events-none"></div>
-            </div>
-          </div>
-        </a>
-        <!-- Rubrik SLA Retention -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-ondemand-sla-retention.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🛡️</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">SLA_Policy_Spec</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Infra | 【Rubrik】オンデマンドバックアップが21日保持になる理由と解決策</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">「最大保持期間」が強制適用される仕様の解剖と、ストレージ圧迫を回避するメーカー推奨の運用フローについて。</p>
-        </a>
-        <!-- Akasaka Meat Gourmet Hub -->
-        <a href="https://fununi222.github.io/website/html/other/gourmet/akasaka-meat-gourmet-hub.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🥩</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Akasaka_Strategy</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Other | 【完全ガイド】赤坂の肉料理・焼肉おすすめ厳選！接待からデートまで</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">激戦区・赤坂をハックする。接待向けの高級店から、デート・女子会で使えるコスパ最強の肉バルまでを網羅。</p>
-        </a>
-        <a href="https://fununi222.github.io/website/html/other/travel/esconfield-vip-budget-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-tertiary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🏛️</span>
-            <span class="text-[9px] font-bold text-tertiary uppercase tracking-widest px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/20">VIP_Investment_ROI</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-tertiary transition-colors">Other | 【松竹梅】エスコンフィールド北海道の予算別楽しみ方！試合がない日のVIP体験ガイド</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">「投資対効果」から選ぶ。高級えふめし、スリル満点のスカイウォーク、そして一晩貸し切るグランピング滞在まで。</p>
-        </a>
-        <!-- OpenAI Codex 2026 Cluster -->
-        <a href="https://fununi222.github.io/website/html/dev/ai-coding/openai-codex-guide-2026.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🤖</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">AI_Software_Eng</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Development | 【2026年最新】OpenAI Codexとは？プログラミングを完全自動化するAIの衝撃</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">単なるコード補完から「自律型エージェント」へ。25時間連続稼働を達成したGPT-5.3ベースの最新Codexがもたらす開発革命の全貌。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/dev/ai-coding/ai-coding-tools-comparison-2026.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">⚔️</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Tool_Showdown</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Development | GitHub Copilot vs OpenAI Codex！2026年最新AIツール比較</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">Copilot, Cursor, Claude Code。群雄割拠のAIコーディングツール市場における設計思想の違いを比較。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/dev/ai-coding/openai-codex-pricing-security.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-amber-200/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">💳</span>
-            <span class="text-[9px] font-bold text-amber-200 uppercase tracking-widest px-2 py-0.5 rounded bg-amber-200/10 border border-amber-200/20">Enterprise_Ready</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-amber-200 transition-colors">Development | OpenAI Codex最新料金プランと「Codex Security」導入ガイド</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">GPT-5.3時代のトークン単価と脆弱性自動検知。企業導入におけるコストと安全性の最適解。</p>
-        </a>
-
-        <!-- AWS RDS / Rubrik B2B Hub Cluster -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/aws-rds-backup-best-practices.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🏆</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Executive_Guide</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Infra | 完全版：RubrikでAWS RDSをバックアップする構成ベストプラクティス</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">大規模バックアップ設計で「正解」とされる3つの鉄則。失敗しないための完全アーキテクチャガイド。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-egress-cost-aurora-benefits.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📉</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">ROI_Optimization</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Infra | 200TBで通信費270万!? AWSバックアップをオンプレに引く罠</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">Egressコストの衝撃と、Aurora移行によるコスト5分の1化への戦略的転換。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-kms-cost-envelope-encryption.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-amber-200/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🛡️</span>
-            <span class="text-[9px] font-bold text-amber-200 uppercase tracking-widest px-2 py-0.5 rounded bg-amber-200/10 border border-amber-200/20">Security_ROI</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-amber-200 transition-colors">Infra | AWS KMSのAPI課金回避術！暗号化コストを下げる設計</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">API課金トラップを回避する「エンベロープ暗号化」と3つのVaultの使い分け。</p>
-        </a>
-
-        <!-- Rubrik Scaling & Automation Cluster -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-load-balancing-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-emerald-400/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">⚖️</span>
-            <span class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest px-2 py-0.5 rounded bg-emerald-400/10 border border-emerald-400/20">Scale_Out_Design</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-emerald-400 transition-colors">Infra | Rubrik負荷分散ガイド！リソース制限ができない時の回避策と設計術</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">「帯域制限不可」の仕様を攻略。OS/スイッチ側QoSで本格ストレージを守るプロの設計。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-log-export-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-blue-400/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📜</span>
-            <span class="text-[9px] font-bold text-blue-400 uppercase tracking-widest px-2 py-0.5 rounded bg-blue-400/10 border border-blue-400/20">SecOps_Automation</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-blue-400 transition-colors">Infra | 【完全ガイド】脅威監視ログ取得！HTMLスクレイピングからの脱却</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">API Code CaptureとXSOAR/Syslog連携によるインシデント対応の完全自動化。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-false-positive-analysis-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-purple-400/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🎯</span>
-            <span class="text-[9px] font-bold text-purple-400 uppercase tracking-widest px-2 py-0.5 rounded bg-purple-400/10 border border-purple-400/20">AI_Precision</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-purple-400 transition-colors">Infra | Rubrik脅威分析は誤検知しやすい？精度とノイズ対策の全貌</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">アンサンブルスコアリングとGenAI分析による「アラート疲労」回避戦略。</p>
-        </a>
-
-        <!-- Scaling & Logs Sub-Article Grid -->
-        <div class="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
-            <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-scaling-strategy-clusters-vs-nodes.html" class="group bg-surface-container/20 border border-outline-variant/30 p-4 rounded-xl hover:bg-surface-container transition-all flex items-center gap-4">
-                <div class="text-2xl opacity-70">🏗️</div>
-                <h4 class="text-[10px] font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">クラスタ追加 vs ノード追加のベストプラクティス</h4>
-            </a>
-            <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-max-object-counts-sizing.html" class="group bg-surface-container/20 border border-outline-variant/30 p-4 rounded-xl hover:bg-surface-container transition-all flex items-center gap-4">
-                <div class="text-2xl opacity-70">📊</div>
-                <h4 class="text-[10px] font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">Rubrikの最大オブジェクト数は？VMカウント基準と限界値</h4>
-            </a>
-            <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-api-code-capture-guide.html" class="group bg-surface-container/20 border border-outline-variant/30 p-4 rounded-xl hover:bg-surface-container transition-all flex items-center gap-4">
-                <div class="text-2xl opacity-70">📸</div>
-                <h4 class="text-[10px] font-bold text-on-surface group-hover:text-blue-400 transition-colors leading-tight">API Code Capture活用術：GUIからAPIを自動生成</h4>
-            </a>
-            <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-soar-automation-graphql.html" class="group bg-surface-container/20 border border-outline-variant/30 p-4 rounded-xl hover:bg-surface-container transition-all flex items-center gap-4">
-                <div class="text-2xl opacity-70">🤖</div>
-                <h4 class="text-[10px] font-bold text-on-surface group-hover:text-blue-400 transition-colors leading-tight">GraphQLとXSOAR連携による次世代SOC運用</h4>
-            </a>
-        </div>
-
-        <!-- Kamakura Zushi Hub Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/kamakura-zushi-lunch-hub.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🌊</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Kamakura_Zushi_Hub</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Other | 【2026最新】鎌倉・逗子のランチ革命｜プロが分析する「高コスパ」の名店と行列回避術</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">「観光地価格」を回避する経営構造の秘密。行列をスキップするデジタル順番待ちや、通し営業の穴場など、最強のランチ攻略ガイド。</p>
-        </a>
-
-        <!-- Es Con Field Modernized Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/esconfield-cospa-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🏟️</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Ballpark_2026</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Other | 【2026最新】エスコンフィールド北海道のコスパ最強ガイド！試合がない日も120%楽しむ裏技</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">進化し続けるFビレッジ。250円シャトルバス、格安駐車場、最新『洞サウナ』、小学生以下無料など、賢く楽しむための最新リサーチログ。</p>
-        </a>
-
-        <!-- Shinsenmarsh Trekking Card (Primary) -->
-        <a href="https://fununi222.github.io/website/html/other/travel/shinsenmarsh-trekking-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-emerald-500/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🥾</span>
-            <span class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">Trekking_Safety</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-emerald-400 transition-colors">Other | 【2026年最新】神仙沼トレッキング完全ガイド！初心者の服装とヒグマ対策</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">標高750mの高層湿原を安全に楽しむための装備、にこっとバス予約術、実録遭遇例に基づくヒグマ対策まで網羅。</p>
-        </a>
-
-        <!-- Niseko Model Course Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/niseko-1night2day-course.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🗺️</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Itinerary_Design</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Other | 【2026最新】ニセコ1泊2日モデルコース | コスパ最高な大人の週末旅行術</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">移動の最適化と、体験価値の最大化。五色温泉、絶品ランチ、そして2026年最新の宿泊税情報を含めた完全プラン。</p>
-        </a>
-
-        <!-- Niseko Cospa Hybrid Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/niseko-cospa-travel.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-emerald-500/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🏔️</span>
-            <span class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">Hybrid_Strategy</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-emerald-400 transition-colors">Other | 【2026最新】ニセコ「ハイブリッド旅行」完全攻略ガイド｜コスパ最大化術</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">「高い」ニュースに惑わされない。プレミアム体験とローカルコスパ（倶知安、にこっとBUS）を使い分け、インフレをハックする戦略ログ。</p>
-        </a>
-        <!-- Redmine API Card (Updated) -->
-        <a href="https://fununi222.github.io/website/html/dev/modern-js/redmine-api-usage.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🚀</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Data_Ops_v2</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Development | チケット管理 API 高度活用術：Bulk抽出とAI活用データ整形 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">query_idベースのバルク取得、認証対応、JSONL形式への整形など、社内AIプロジェクト「AI Knowledge Concierge」を支えるデータ基盤の構築術。</p>
-        </a>
-
-        <!-- Enterprise AI Ops & RAG Card -->
-        <a href="https://fununi222.github.io/website/html/ai/llm-research/enterprise-ai-ops-rag.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-tertiary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🚀</span>
-            <span class="text-[9px] font-bold text-tertiary uppercase tracking-widest px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/20">AI_Ops_Hub</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-tertiary transition-colors">AI | 【2026最新】生成AI実運用の壁「知識の陳腐化」を突破するEnterprise AI Ops完全ガイド</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">エンタープライズAI Opsの全体像と「知識の陳腐化」への警鐘。ライセンスコストとセキュリティの壁を突破する戦略ロードマップ。</p>
-        </a>
-
-        <!-- Integrated Backup Card -->
-        <!-- Shinsenmarsh Trekking Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/shinsenmarsh-trekking-guide.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-emerald-500/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🥾</span>
-            <span class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">Feature_Guide</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-emerald-400 transition-colors">Other | 【2026最新】神仙沼トレッキング完全ガイド | 初心者の服装とヒグマ対策</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">ニセコ最高峰の高層湿原を安全に攻略。最新道路開通情報、にこっとバスWeb予約、実録遭遇例に基づくヒグマ対策を網羅。</p>
-        </a>
-
-        <!-- Storage Recovery Card -->
-        <a href="https://fununi222.github.io/website/html/infra/cloud/vast-recovery-validation.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🗄️</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Capacity_Audit</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Infra | 高速ストレージ基盤：大規模削除後の実効容量回復と検証プロセス 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">旧環境の撤去に伴う大規模なデータ削除イベント後、ストレージ容量はどう空くのか？DASEアーキテクチャ特有の挙動と、回復を証明する検証フロー。 </p>
-        </a>
-
-        <!-- AWS Minimalist card -->
-        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-minimal-iac-patterns.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🌩️</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Minimal_IaC</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Infra | AWS Minimalism：小規模案件向け S3/WAF/IAM 構築の自動化パターン 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">「やりすぎない自動化」の最適解。CloudFormationを活用し、最小構成でセキュアな基盤を高速デリバリーするためのテンプレート設計。</p>
-        </a>
-
-        <!-- Backup Modernization Card -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/db-backup-transition-strategy.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🗄️</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Migration_Strategy</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Infra | Backup Modernization：基幹システムの基盤刷新とノイズ管理戦略</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">旧環境から新バックアップ基盤への移行。二段階の切替判定フローと、既知エラーを『ノイズ』として除外する判断基準。</p>
-        </a>
-
-        <!-- AI Ops Card -->
-        <a href="https://fununi222.github.io/website/html/ai/automation/copilot-operation-deep-dive.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-tertiary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🧠</span>
-            <span class="text-[9px] font-bold text-tertiary uppercase tracking-widest px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/20">AI_Ops</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-tertiary transition-colors">AI | Enterprise AI Ops：実運用で判明した『知識の陳腐化』と権限管理の勘所</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">コラボレーションツールでの実務活用例。自動リサーチの利便性と、AIエージェントにおける「情報の陳腐化」による精度低下課題。</p>
-        </a>
-
-        <!-- Redmine Basics Card -->
-        <a href="https://fununi222.github.io/website/html/infra/ops/redmine-basic-knowledge.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📊</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">IT_Management</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Infra | Redmineの基本知識：チケット管理によるプロジェクト可視化 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">OSSの定番・Redmine。チケット管理、ガントチャート、Wikiによる情報一元化など、プロジェクト管理の土台を再定義。</p>
-        </a>
-
-        <!-- Zushi Gourmet Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/zushi-cospa-gourmet.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🐟</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Zushi_Gourmet</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Other | 逗子のコスパ飯 3選 | 地元民が愛する新鮮魚介ランチ 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">ゆうき食堂、めしやっちゃんなど、圧倒的な鮮度とボリューム。観光地・逗子の「裏」にある最強コスパ店を徹底リサーチ。</p>
-        </a>
-
-        <!-- Kamakura Gourmet Card -->
-        <a href="https://fununi222.github.io/website/html/other/travel/kamakura-cospa-gourmet.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🍛</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Kamakura_Food</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Other | 鎌倉のコスパ飯 3選 | 行列必至の老舗カレーと本格麻婆豆腐 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">キャラウェイ、かかん、碧海。古都・鎌倉で見つける、価格以上の満足感。絶対に外さない厳選の3店。</p>
-        </a>
-        <!-- Yokohama/Kannai Yakitori Cospa Guide -->
-        <a href="https://fununi222.github.io/website/html/other/gourmet/yakitori-cospa-yokohama-kannai.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🍢</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Research_Log</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Other | 横浜・関内のコスパ最高焼き鳥屋 6選 | 満足度重視のリサーチログ 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">横浜駅・関内駅周辺で『本当にコスパが良い』焼き鳥屋を厳選。伝兵衛、鳥清、田など、地元民に愛される名店を仕事帰りの視点で比較解析。</p>
-        </a>
-
-        <!-- iPhone Edy to Cash Conversion Guide -->
-        <a href="https://fununi222.github.io/website/html/finance/iphone-edy-cash-release.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-primary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📱</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Finance_Impact</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Finance | 【iPhone待望】楽天Edy→楽天キャッシュ変換 解禁ガイド 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">ついに解禁されたiPhoneでの楽天Edy→キャッシュ変換。ANA Payを経由した高還元ルートの完結と、ポイ活投資を加速させる活用術、eKYC等の必須条件を徹底解説。</p>
-        </a>
-
-        <!-- SMCC Transit Reward Card -->
-        <a href="https://fununi222.github.io/website/html/finance/smcc-stouch-transit.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:translate-x-1 cyber-glow lg:col-span-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">💳</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Finance_Research</span>
-          </div>
-          <h3 class="text-lg font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Finance | 【関東圏】三井住友カード「スマホタッチ決済」最大8%還元活用ガイド 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-2 opacity-60">東京メトロや私鉄各線で拡大するタッチ決済乗車。Oliveの8%還元を最大化し、通勤・通学以外の移動費を最適化する。JR未対応等の注意点も網羅。</p>
-        </a>
-
-        <a href="https://fununi222.github.io/website/html/other/travel/zushi-yamanone-walk.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-secondary/30 p-6 hover:bg-surface-container transition-all hover:-translate-y-1 cyber-glow">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🌿</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Travel_Log</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Other | 逗子の奥座敷「山の根」散策記 | 歴史と絶景の裏山 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">JR逗子駅裏の秘境「山の根」。鎮守・熊野神社から中世の「やぐら」、標高から見下ろす鉄道ジオラマまで、地熱を感じる散歩道。</p>
-        </a>
-
-        <!-- Synthetic Pet Simulation Card -->
-        <a href="https://fununi222.github.io/website/html/dev/modern-js/synthetic-pet-simulation.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">💎</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Synth_Pet</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Development | Synthetic Pet Simulation：合成生命体の自律エージェント試論 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">localStorage とステート管理による、デジタル生命体の空腹・幸福・エネルギーのシミュレーション。</p>
-        </a>
-
-        <!-- Obsidian Sync Card -->
-        <a href="https://fununi222.github.io/website/html/infra/ops/obsidian-google-drive-sync.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">💎</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">PKM_Sync</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Infra | Obsidian：Google Drive Sync によるマルチプラットフォーム無料同期術 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">Obsidianの同期をGoogle Drive Syncプラグインで無料化。Windows/Android/iOS間での構築手順と運用ルールを詳解。</p>
-        </a>
-
-        <!-- Hybrid Cloud Backup Research Card -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/rds-onprem-backup-solutions.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1" id="card-rds-onprem-backup">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🔄</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">AIOps_Archive</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Infra | Hybrid Cloud Backup：バックアップ・アーカイブ統合調査 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">クラウドからオンプレミス高速ストレージへの転送。ハイブリッド環境でのデータ保護と AIOps 連携を解析。</p>
-        </a>
-
-        <!-- Infra / Managed DB Card -->
-        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-rds-tech-deep-dive.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1" id="card-rds-deep-dive">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📊</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">DB_Deep_Dive</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Infra | Managed DB：マネージドデータベースの核心と AIOps 自動修復 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">クラウドDBのパラメータ管理、可用性設計、自動スケーリングから、APIによる自動修復実装まで。</p>
-        </a>
-
-        <!-- Infra / AWS Card -->
-        <a href="https://fununi222.github.io/website/html/infra/cloud/aws-tech-analysis-2026.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🌩️</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">AWS_Cloud</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Infra | AWS：クラウドレジリエンスと AIOps を支える基盤設計 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">基盤システムからイベント駆動による自律修復まで。モダンITインフラのデファクトスタンダードをAIOps視点で再定義。</p>
-        </a>
-
-        <!-- Infra / Cloud DB Protection Card -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-aws-rds-protection.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">☁️</span>
-            <span class="text-[9px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20">Cloud_DB</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-primary transition-colors">Next-Gen | クラウドDB保護の技術詳解 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">SLAドメインによる自動適用、権限管理、監視API連携まで。新バックアップ基盤によるDB保護の最適解を解剖。</p>
-        </a>
-
-        <!-- Infra / Next-Gen Backup Card -->
-        <a href="https://fununi222.github.io/website/html/infra/backup/rubrik-tech-analysis-2026.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🛡️</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Infrastructure</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">Modern Backup | 次世代データ管理アーキテクチャの全容 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">不変ファイルシステム、ライブリカバリ、そしてAIOps連携。ゼロトラスト時代の新バックアップ基盤の技術的解剖。</p>
-        </a>
-
-        <!-- AI / Industry Card -->
-        <a href="https://fununi222.github.io/website/html/ai/automation/sier-ai-structural-shift.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">🏢</span>
-            <span class="text-[9px] font-bold text-tertiary uppercase tracking-widest px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/20">Industry_AI</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-tertiary transition-colors">SIer業界の未来 | 生成AIによる構造変革と人月モデルの終焉 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">生成AIが人月モデルをどう圧縮し、どのタイミングで業界構造が変わるか。NTTデータの事例を軸にした構造変革ロードマップ。</p>
-        </a>
-
-        <!-- Finance Card -->
-        <a href="https://fununi222.github.io/website/html/finance/stockpile-poi-strategy-apr.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📦</span>
-            <span class="text-[9px] font-bold text-amber-500 uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">Finance</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-amber-500 transition-colors">【4月版】備蓄とポイ活の二段構え戦略 | インフレ下の生活防衛術 2026</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">供給リスクへの「備蓄」とAmazon等のキャンペーンを活用した「ポイ活」を組み合わせた、2026年4月の生活防衛戦略。</p>
-        </a>
-
-        <!-- Security Card -->
-        <a href="https://fununi222.github.io/website/html/infra/ops/nowhere-ransomware-deep-analysis.html" class="group relative overflow-hidden rounded-2xl bg-surface-container/50 border border-white/5 p-6 hover:bg-surface-container transition-all hover:-translate-y-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xl">📡</span>
-            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest px-2 py-0.5 rounded bg-secondary/10 border border-secondary/20">Security</span>
-          </div>
-          <h3 class="text-base font-bold font-headline leading-tight line-clamp-2 text-on-surface group-hover:text-secondary transition-colors">ノーウェアランサムの台頭と企業防衛のパラダイムシフト 202X</h3>
-          <p class="text-xs text-on-surface-variant mt-4 line-clamp-3 opacity-60">データの暗号化を伴わない「ノーウェアランサム」の脅威構造と、既存の対策が通用しない過酷な現実。</p>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- Global Optimization Dashboard -->
-    <section class="max-w-7xl mx-auto px-8 pb-20">
-      <div class="bg-surface-container/30 rounded-3xl border border-white/5 p-8 md:p-12 cyber-glow relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-12 text-primary/5">
-          <span class="material-symbols-outlined text-[12rem]">analytics</span>
-        </div>
-        
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <!-- Left: Overview -->
-          <div class="lg:col-span-4 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 text-[10px] font-headline tracking-widest uppercase">
-              Global_Performance_Index
-            </div>
-            <h2 class="text-3xl font-bold font-headline tracking-tight text-on-surface">System Optimization Dashboard</h2>
-            <p class="text-sm text-on-surface-variant leading-relaxed opacity-80">
-              各セクションのパフォーマンスと習得スキルのリアルタイム・マトリクス。LPOシステムからの動的データプロジェクション。
-            </p>
-            <div class="pt-4 grid grid-cols-2 gap-4">
-              <div class="p-4 bg-surface-container-high rounded-xl border border-white/5">
-                <div class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Status</div>
-                <div class="text-secondary font-bold font-headline">OPTIMIZED</div>
-              </div>
-              <div class="p-4 bg-surface-container-high rounded-xl border border-white/5">
-                <div class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Efficiency</div>
-                <div class="text-primary font-bold font-headline">82.4%</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Middle: Radar Chart -->
-          <div class="lg:col-span-4 flex justify-center h-64">
-            <canvas id="homeSkillRadarChart"></canvas>
-          </div>
-
-          <!-- Right: Summary Bars -->
-          <div class="lg:col-span-4 space-y-6">
-            <div class="skill-item">
-              <div class="skill-header"><span>技術適応力</span><span id="score-adapt">--%</span></div>
-              <div class="progress-bg"><div id="bar-adapt" class="progress-fill" style="width: 0%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header"><span>プロジェクト推進力</span><span id="score-project">--%</span></div>
-              <div class="progress-bg"><div id="bar-project" class="progress-fill opacity-60" style="width: 0%;"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header"><span>課題解決・改善提案</span><span id="score-solve">--%</span></div>
-              <div class="progress-bg"><div id="bar-solve" class="progress-fill opacity-60" style="width: 0%;"></div></div>
-            </div>
-            <a href="lpo/index.html" class="flex items-center gap-2 text-[10px] font-bold text-secondary uppercase tracking-widest hover:text-primary transition-colors pt-2">
-              <span class="material-symbols-outlined text-sm">open_in_new</span>
-              View Full Optimization Report
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main class="pt-32 pb-20 max-w-7xl mx-auto px-8">
     
+    <!-- Hero Section -->
+    <header class="mb-20 text-center">
+      <h1 class="text-6xl md:text-7xl font-bold font-headline tracking-tighter text-white mb-6">
+        Strategic Technical Archive
+      </h1>
+      <p class="text-slate-400 max-w-2xl mx-auto">
+        実務検証から導き出された「勝つための技術」を構造化し、2026年の最適解を提示するアーカイブポータル。
+      </p>
+    </header>
+
+    <!-- Strategic Domains (Category Navigation) -->
+    <section class="mb-32">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <a href="infra/index.html" class="glass-card p-8 group hover:border-[#aaa4ff]/40">
+          <div class="flex items-center justify-between mb-6">
+            <span class="material-symbols-outlined text-4xl text-[#aaa4ff]">database</span>
+            <span class="text-[10px] font-bold text-[#aaa4ff] uppercase tracking-widest">Domain_01</span>
+          </div>
+          <h2 class="text-2xl font-bold font-headline text-white mb-3">Infrastructure</h2>
+          <p class="text-sm text-slate-400 leading-relaxed">クラウド、バックアップ、ネットワーク、オブザーバビリティの技術詳解。</p>
+        </a>
+
+        <a href="dev/index.html" class="glass-card p-8 group hover:border-[#00d2ff]/40">
+          <div class="flex items-center justify-between mb-6">
+            <span class="material-symbols-outlined text-4xl text-[#00d2ff]">code</span>
+            <span class="text-[10px] font-bold text-[#00d2ff] uppercase tracking-widest">Domain_Dev</span>
+          </div>
+          <h2 class="text-2xl font-bold font-headline text-white mb-3">Development</h2>
+          <p class="text-sm text-slate-400 leading-relaxed">フロント/バックエンド設計、コンテナ、AIプログラミングツール。</p>
+        </a>
+
+        <a href="ai/index.html" class="glass-card p-8 group hover:border-[#00ffca]/40">
+          <div class="flex items-center justify-between mb-6">
+            <span class="material-symbols-outlined text-4xl text-[#00ffca]">smart_toy</span>
+            <span class="text-[10px] font-bold text-[#00ffca] uppercase tracking-widest">Domain_02</span>
+          </div>
+          <h2 class="text-2xl font-bold font-headline text-white mb-3">AI Research</h2>
+          <p class="text-sm text-slate-400 leading-relaxed">生成AIの実践、RAGガバナンス、自律型エージェントの開発ログ。</p>
+        </a>
+
+        <a href="finance/index.html" class="glass-card p-8 group hover:border-[#fbbf24]/40">
+          <div class="flex items-center justify-between mb-6">
+            <span class="material-symbols-outlined text-4xl text-[#fbbf24]">account_balance_wallet</span>
+            <span class="text-[10px] font-bold text-[#fbbf24] uppercase tracking-widest">Domain_03</span>
+          </div>
+          <h2 class="text-2xl font-bold font-headline text-white mb-3">Finance</h2>
+          <p class="text-sm text-slate-400 leading-relaxed">決済ルートハック、新NISA、インフレ下の資産防衛とポイ活戦略。</p>
+        </a>
+
+        <a href="other/index.html" class="glass-card p-8 group hover:border-[#34d399]/40">
+          <div class="flex items-center justify-between mb-6">
+            <span class="material-symbols-outlined text-4xl text-[#34d399]">explore</span>
+            <span class="text-[10px] font-bold text-[#34d399] uppercase tracking-widest">Domain_04</span>
+          </div>
+          <h2 class="text-2xl font-bold font-headline text-white mb-3">Strategic Life</h2>
+          <p class="text-sm text-slate-400 leading-relaxed">ニセコ旅行術、エスコンフィールドVIP体験、ライフハックと技術哲学。</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- System Telemetry Dashboard (Unchanged) -->
+    <section class="max-w-4xl mx-auto">
+      <div class="glass-card p-12 border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 text-white/5 pointer-events-none">
+          <span class="material-symbols-outlined text-9xl">analytics</span>
+        </div>
+        
+        <div class="relative z-10 space-y-12">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl font-bold font-headline tracking-tighter text-white">System Optimization Dashboard</h2>
+            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Real-time Telemetry & Skill Matrix Projection</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="h-64">
+              <canvas id="homeSkillRadarChart"></canvas>
+            </div>
+            <div class="space-y-8">
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                  <span>技術適応力</span>
+                  <span id="score-adapt" class="text-secondary">--%</span>
+                </div>
+                <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div id="bar-adapt" class="h-full bg-secondary w-0 transition-all duration-1000"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                  <span>プロジェクト推進力</span>
+                  <span id="score-project" class="text-primary">--%</span>
+                </div>
+                <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div id="bar-project" class="h-full bg-primary w-0 transition-all duration-1000"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                  <span>課題解決・改善提案</span>
+                  <span id="score-solve" class="text-emerald-400">--%</span>
+                </div>
+                <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div id="bar-solve" class="h-full bg-emerald-500 w-0 transition-all duration-1000"></div>
+                </div>
+              </div>
+              <a href="SKILL.md" class="flex items-center gap-2 text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-sm">open_in_new</span> System Governance & Skills
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="lg:pl-64 w-full py-12 px-8 mt-auto bg-background/50 backdrop-blur-sm font-body text-xs border-t border-white/5">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-60 hover:opacity-100 transition-opacity">
+  <footer class="py-20 border-t border-white/5 bg-obsidian/50">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
       <div class="flex flex-col gap-2">
-        <span class="text-slate-400">© 2026 FunUni-lab Technical Archive. Clinical Precision. Artistic Flair.</span>
+        <span>© 2026 FunUni-lab Strategic Archive</span>
+        <span class="opacity-40">Clinical Precision. Artistic Flair. Senior Architect Grade.</span>
+      </div>
+      <div class="flex gap-8">
+        <a href="index.html" class="hover:text-white">Dashboard</a>
+        <a href="https://fununi222.github.io/website/html/glossary/system-glossary.html" class="hover:text-white">Glossary</a>
+        <a href="SKILL.md" class="hover:text-white">Governance</a>
       </div>
     </div>
   </footer>
+
   <script>
     let homeSkillChart;
-    const homeDashboardMdPath = 'html/lpo/lpo-system.html';
+    const homeDashboardMdPath = 'SKILL.md';
 
     async function updateHomeDashboard() {
       try {
         const response = await fetch(homeDashboardMdPath);
         const content = await response.text();
         
-        // 1. Extract Scores
         const scores = {};
         const scoreRegex = /- \*\*([^:*]+)\*\*: (\d+)/g;
         let match;
@@ -782,7 +215,6 @@ def create_temp_rds_for_dump(snapshot_id):
           scores[key] = parseInt(match[2]);
         }
 
-        // 2. Update Bars
         const mappings = {
           'score-adapt': '技術適応力',
           'score-project': 'プロジェクト推進力',
@@ -801,7 +233,6 @@ def create_temp_rds_for_dump(snapshot_id):
           if (scores[key]) document.getElementById(id).style.width = scores[key] + '%';
         }
 
-        // 3. Update Chart
         const chartMapping = {
           '適応力': '技術適応力',
           '推進力': 'プロジェクト推進力',
@@ -821,19 +252,20 @@ def create_temp_rds_for_dump(snapshot_id):
           homeSkillChart.data.datasets[0].data = data;
           homeSkillChart.update();
         }
-      } catch (err) {
-        console.error('Home Sync Error:', err);
-      }
+      } catch (err) { console.error('Home Sync Error:', err); }
     }
 
     window.onload = function() {
       const ctx = document.getElementById('homeSkillRadarChart').getContext('2d');
+      Chart.defaults.color = 'rgba(255, 255, 255, 0.4)';
+      Chart.defaults.font.family = 'Space Grotesk';
+      
       homeSkillChart = new Chart(ctx, {
         type: 'radar',
         data: {
           labels: ['適応力', '推進力', '貢献力', '課題解決', 'ドメイン', 'IaC', '監視', '開発', 'AI', 'エージェント'],
           datasets: [{
-            label: 'System Skills',
+            label: 'Skills',
             data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             fill: true,
             backgroundColor: 'rgba(170, 164, 255, 0.1)',
@@ -842,7 +274,7 @@ def create_temp_rds_for_dump(snapshot_id):
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: '#aaa4ff',
-            borderWidth: 2
+            borderWidth: 1.5
           }]
         },
         options: {
@@ -850,20 +282,14 @@ def create_temp_rds_for_dump(snapshot_id):
           maintainAspectRatio: false,
           scales: {
             r: {
-              min: 0,
-              max: 100,
+              min: 0, max: 100,
               ticks: { display: false },
               grid: { color: 'rgba(255, 255, 255, 0.05)' },
               angleLines: { color: 'rgba(255, 255, 255, 0.05)' },
-              pointLabels: {
-                color: 'rgba(255, 255, 255, 0.4)',
-                font: { family: 'Space Grotesk', size: 10 }
-              }
+              pointLabels: { font: { size: 9 } }
             }
           },
-          plugins: {
-            legend: { display: false }
-          }
+          plugins: { legend: { display: false } }
         }
       });
       updateHomeDashboard();
@@ -871,7 +297,3 @@ def create_temp_rds_for_dump(snapshot_id):
   </script>
 </body>
 </html>
-
-
-
-
