@@ -280,8 +280,8 @@
           articles = await response.json();
         }
         
-        // Take top 4 latest
-        const latest = articles.slice(0, 4);
+        // Take top 8 latest
+        const latest = articles.slice(0, 8);
         
         let html = '';
         latest.forEach(article => {

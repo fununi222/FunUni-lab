@@ -6,14 +6,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     const archiveContainer = document.getElementById('archive-list');
     if (!archiveContainer) return;
 
-    // Determine category from URL (e.g. /infra/index.html -> 'infra')
-    const pathParts = window.location.pathname.split('/');
+    // Determine category from URL more robustly
+    const path = window.location.pathname.replace(/\\/g, '/');
+    const pathParts = path.split('/').filter(p => p !== '');
+    
     let category = 'other';
-    if (pathParts.length >= 2) {
-        const potentialCategory = pathParts[pathParts.length - 2];
-        if (potentialCategory && potentialCategory !== '') {
-            category = potentialCategory;
+    // If the path ends in 'index.html', the category is the parent dir
+    // file:///C:/path/website/other/index.html -> parts: [..., 'website', 'other', 'index.html']
+    // https://domain.com/website/other/ -> parts: [..., 'website', 'other']
+    if (pathParts.length > 0) {
+        const lastPart = pathParts[pathParts.length - 1].toLowerCase();
+        if (lastPart === 'index.html' || lastPart === 'index.htm') {
+            category = pathParts.length >= 2 ? pathParts[pathParts.length - 2] : 'other';
+        } else {
+            category = lastPart;
         }
+    }
+    
+    // Safety check for known categories
+    const validCategories = ['infra', 'dev', 'ai', 'finance', 'other'];
+    if (!validCategories.includes(category)) {
+        category = 'other';
     }
 
     try {
@@ -21,17 +34,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (typeof window_article_index !== 'undefined') {
             articles = window_article_index;
         } else {
-            // Fallback for real servers
             const response = await fetch('../assets/data/article_index.json');
             if (!response.ok) throw new Error('Failed to load article index');
             articles = await response.json();
         }
 
         // Filter by category
-        const categoryArticles = articles.filter(a => a.category === category);
+        let categoryArticles = articles.filter(a => a.category === category);
+
+        // DEDUPLICATION: Exclude articles already linked as "Featured" on the page
+        const existingLinks = Array.from(document.querySelectorAll('a')).map(a => {
+            try { return new URL(a.href).pathname.replace(/\\/g, '/'); } catch(e) { return a.getAttribute('href'); }
+        });
+        
+        categoryArticles = categoryArticles.filter(article => {
+            const artPath = article.path.startsWith('/') ? article.path : '/' + article.path;
+            // Check if any existing link ends with the article path (proxy html)
+            const isFeatured = existingLinks.some(link => link && link.endsWith(article.path));
+            return !isFeatured;
+        });
 
         if (categoryArticles.length === 0) {
-            archiveContainer.innerHTML = '<p class="text-slate-500 font-mono text-xs">No research logs found for this domain.</p>';
+            archiveContainer.innerHTML = '<p class="text-slate-500 font-mono text-xs">No additional research logs found for this domain.</p>';
+            const countBadge = document.getElementById('archive-count');
+            if (countBadge) countBadge.textContent = `0 LOGS`;
             return;
         }
 
