@@ -30,28 +30,74 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // Render the list
-        let html = '<div class="space-y-4">';
+        // Group by sub-category
+        const grouped = {};
         categoryArticles.forEach(article => {
-            // article.path is like 'infra/backup/article.html'
-            // Since we are in 'infra/index.html', we need to link to '../html/infra/backup/article.html'
-            const linkHref = `../html/${article.path}`;
+            const parts = article.path.split('/');
+            let subCategory = parts.length > 2 ? parts[1] : parts[0];
+            if (!grouped[subCategory]) grouped[subCategory] = [];
+            grouped[subCategory].push(article);
+        });
+
+        const iconMap = {
+            'backup': '🛡️', 'cloud': '☁️', 'network': '🌐', 'ops': '⚙️',
+            'automation': '🤖', 'llm-research': '🧠', 'ai-coding': '💻',
+            'container': '⚓', 'modern-js': '⚛️', 'finance': '💰',
+            'travel': '✈️', 'gourmet': '🍽️', 'tech-life': '🌌', 'other': '📁'
+        };
+
+        const themeMap = {
+            'backup': 'primary', 'cloud': 'secondary', 'network': 'tertiary', 'ops': 'primary',
+            'automation': 'secondary', 'llm-research': 'tertiary', 'ai-coding': 'secondary',
+            'container': 'primary', 'modern-js': 'tertiary', 'finance': 'amber-400',
+            'travel': 'emerald-400', 'gourmet': 'emerald-500', 'tech-life': 'slate-400', 'other': 'white'
+        };
+
+        let html = '';
+        for (const [subCat, arts] of Object.entries(grouped)) {
+            const displayCat = subCat.charAt(0).toUpperCase() + subCat.slice(1).replace(/-/g, ' ');
+            const theme = themeMap[subCat] || 'primary';
+            const icon = iconMap[subCat] || '📄';
             
             html += `
-                <a href="${linkHref}" class="group block p-4 rounded-xl border border-white/5 bg-surface-glass hover:bg-white/5 hover:border-primary/30 transition-all duration-300">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div class="space-y-1">
-                            <h4 class="text-white font-headline font-bold text-sm group-hover:text-primary transition-colors">${article.title}</h4>
-                            <p class="text-slate-400 text-xs line-clamp-1">${article.description}</p>
-                        </div>
-                        <div class="flex-shrink-0 text-[10px] font-mono text-slate-500">
-                            ${article.date}
-                        </div>
-                    </div>
-                </a>
+            <section class="mb-24">
+              <div class="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
+                <div class="w-1 h-8 bg-${theme} rounded-full"></div>
+                <h2 class="text-3xl font-bold font-headline tracking-tighter text-white uppercase">${displayCat}</h2>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             `;
-        });
-        html += '</div>';
+            
+            arts.forEach(article => {
+                const linkHref = `../html/${article.path}`;
+                // Avoid using tailwind arbitrary values inside template literals if possible, but standard colors like text-primary work.
+                // Note: emerald-400, amber-400 are valid tailwind colors, but our CSS vars are primary, secondary.
+                // We'll use inline styles for the border colors to avoid missing dynamic classes.
+                const colorHexMap = {
+                    'primary': '#aaa4ff', 'secondary': '#00d2ff', 'tertiary': '#00ffca',
+                    'amber-400': '#fbbf24', 'emerald-400': '#34d399', 'emerald-500': '#10b981', 'slate-400': '#94a3b8', 'white': '#ffffff'
+                };
+                const colorHex = colorHexMap[theme] || '#aaa4ff';
+
+                html += `
+                <a href="${linkHref}" class="glass-card p-8 group flex flex-col justify-between" style="--hover-border: ${colorHex}4d;" onmouseover="this.style.borderColor='${colorHex}'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+                  <div class="space-y-4">
+                    <div class="flex items-center justify-between mb-4">
+                      <span class="text-2xl">${icon}</span>
+                      <span class="text-[9px] font-bold uppercase tracking-[0.2em] border px-2 py-1 rounded" style="color: ${colorHex}; border-color: ${colorHex}33; background: ${colorHex}0d;">${article.date}</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-headline leading-tight text-white transition-colors" onmouseover="this.style.color='${colorHex}'" onmouseout="this.style.color='#fff'">
+                      ${article.title}
+                    </h3>
+                    <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+                      ${article.description}
+                    </p>
+                  </div>
+                </a>
+                `;
+            });
+            html += `</div></section>`;
+        }
 
         archiveContainer.innerHTML = html;
 
