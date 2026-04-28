@@ -219,6 +219,7 @@
   </footer>
 
   <script src="assets/js/skill-data.js"></script>
+  <script src="assets/js/article-data.js"></script>
   <script>
     let homeSkillChart;
 
@@ -271,8 +272,13 @@
       if (!feedContainer) return;
 
       try {
-        const response = await fetch('assets/data/article_index.json');
-        const articles = await response.json();
+        let articles = [];
+        if (typeof window_article_index !== 'undefined') {
+          articles = window_article_index;
+        } else {
+          const response = await fetch('assets/data/article_index.json');
+          articles = await response.json();
+        }
         
         // Take top 4 latest
         const latest = articles.slice(0, 4);

@@ -163,6 +163,14 @@ def main():
             f.write(f"const window_skill_data = {json.dumps(scores, ensure_ascii=False)};\n")
         print(f"  [CREATED] assets/js/skill-data.js with {len(scores)} skills.")
 
+    # Generate article data for offline/local view
+    if articles_index:
+        js_dir = os.path.join(ROOT_DIR, 'assets', 'js')
+        js_article_path = os.path.join(js_dir, 'article-data.js')
+        with open(js_article_path, 'w', encoding='utf-8') as f:
+            f.write(f"const window_article_index = {json.dumps(articles_index, ensure_ascii=False)};\n")
+        print(f"  [CREATED] assets/js/article-data.js with {len(articles_index)} entries.")
+
     print(f"\nDone! Generated {count} proxy files and 1 JSON index.")
 
 if __name__ == "__main__":
