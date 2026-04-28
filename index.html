@@ -128,6 +128,26 @@
       </div>
     </section>
 
+    <!-- Latest Research Logs (Global) -->
+    <section class="mb-32">
+      <div class="flex items-center justify-between mb-12 border-b border-white/5 pb-6">
+        <div class="space-y-1">
+          <h2 class="text-3xl font-bold font-headline tracking-tighter text-white">Latest Research Logs</h2>
+          <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Global Feed / Real-time Updates</p>
+        </div>
+        <a href="other/index.html" class="text-[10px] font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em] flex items-center gap-2">
+          View All Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      
+      <div id="latest-articles-feed" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 min-h-[100px]">
+        <div class="animate-pulse flex items-center gap-4 text-slate-500">
+            <span class="material-symbols-outlined text-xl animate-spin">sync</span>
+            <span class="font-mono text-xs">Syncing global research feed...</span>
+        </div>
+      </div>
+    </section>
+
     <!-- System Telemetry Dashboard (Unchanged) -->
     <section class="max-w-4xl mx-auto">
       <div class="glass-card p-12 border-white/5 relative overflow-hidden">
@@ -246,6 +266,49 @@
       } catch (err) { console.error('Home Sync Error:', err); }
     }
 
+    async function fetchLatestArticles() {
+      const feedContainer = document.getElementById('latest-articles-feed');
+      if (!feedContainer) return;
+
+      try {
+        const response = await fetch('assets/data/article_index.json');
+        const articles = await response.json();
+        
+        // Take top 4 latest
+        const latest = articles.slice(0, 4);
+        
+        let html = '';
+        latest.forEach(article => {
+          const colorMap = {
+            'infra': '#aaa4ff', 'dev': '#00d2ff', 'ai': '#00ffca',
+            'finance': '#fbbf24', 'other': '#34d399'
+          };
+          const color = colorMap[article.category] || '#aaa4ff';
+          
+          html += `
+          <a href="html/${article.path}" class="glass-card p-6 group flex flex-col justify-between border-white/5 hover:border-[${color}]/40">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-[9px] font-bold uppercase tracking-widest" style="color: ${color}">${article.category}</span>
+                <span class="text-[9px] font-mono text-slate-500">${article.date}</span>
+              </div>
+              <h3 class="text-sm font-bold font-headline leading-snug text-white group-hover:text-white/90 transition-colors">
+                ${article.title}
+              </h3>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-bold text-slate-500 group-hover:text-white transition-colors">
+              <span>READ LOG</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </a>
+          `;
+        });
+        feedContainer.innerHTML = html;
+      } catch (e) {
+        feedContainer.innerHTML = '<p class="text-xs text-slate-500">Failed to load feed.</p>';
+      }
+    }
+
     window.onload = function() {
       const ctx = document.getElementById('homeSkillRadarChart').getContext('2d');
       Chart.defaults.color = 'rgba(255, 255, 255, 0.4)';
@@ -284,6 +347,7 @@
         }
       });
       updateHomeDashboard();
+      fetchLatestArticles();
     };
   </script>
 </body>
