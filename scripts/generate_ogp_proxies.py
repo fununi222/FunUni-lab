@@ -142,6 +142,27 @@ def main():
         json.dump(articles_index, f, ensure_ascii=False, indent=2)
     print(f"  [CREATED] {JSON_OUT_PATH} with {len(articles_index)} entries.")
 
+    # Generate skill data for offline/local view without CORS
+    skill_md_path = os.path.join(ROOT_DIR, 'SKILL.md')
+    if os.path.exists(skill_md_path):
+        with open(skill_md_path, 'r', encoding='utf-8') as f:
+            skill_content = f.read()
+            
+        scores = {}
+        matches = re.findall(r'- \*\*([^:*]+)\*\*: (\d+)', skill_content)
+        for key, val in matches:
+            clean_key = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', key).strip()
+            scores[clean_key] = int(val)
+            
+        js_dir = os.path.join(ROOT_DIR, 'assets', 'js')
+        if not os.path.exists(js_dir):
+            os.makedirs(js_dir)
+            
+        js_out_path = os.path.join(js_dir, 'skill-data.js')
+        with open(js_out_path, 'w', encoding='utf-8') as f:
+            f.write(f"const window_skill_data = {json.dumps(scores, ensure_ascii=False)};\n")
+        print(f"  [CREATED] assets/js/skill-data.js with {len(scores)} skills.")
+
     print(f"\nDone! Generated {count} proxy files and 1 JSON index.")
 
 if __name__ == "__main__":

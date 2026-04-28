@@ -198,22 +198,13 @@
     </div>
   </footer>
 
+  <script src="assets/js/skill-data.js"></script>
   <script>
     let homeSkillChart;
-    const homeDashboardMdPath = 'SKILL.md';
 
     async function updateHomeDashboard() {
       try {
-        const response = await fetch(homeDashboardMdPath);
-        const content = await response.text();
-        
-        const scores = {};
-        const scoreRegex = /- \*\*([^:*]+)\*\*: (\d+)/g;
-        let match;
-        while ((match = scoreRegex.exec(content)) !== null) {
-          let key = match[1].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
-          scores[key] = parseInt(match[2]);
-        }
+        const scores = typeof window_skill_data !== 'undefined' ? window_skill_data : {};
 
         const mappings = {
           'score-adapt': '技術適応力',
